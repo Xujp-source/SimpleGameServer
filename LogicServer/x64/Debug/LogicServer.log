@@ -1,0 +1,164 @@
+﻿  Agent.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+  AgentManager.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  ConnectServerMgr.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+  GameService.cpp
+g:\vs2017program\project1\logicserver\gameservice.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\player.h(22): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.cpp(123): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.cpp(139): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.cpp(160): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+  BagModule.cpp
+g:\vs2017program\project1\logicserver\logicmoudle\bagmodule.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\player.h(22): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverdata\bagdata.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  BaseModule.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\player.h(22): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
+  MailModule.cpp
+  RoleModule.cpp
+  StoreModule.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\player.h(22): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
+  TaskModule.cpp
+  LogicMsgHandler.cpp
+  main.cpp
+g:\vs2017program\project1\logicserver\main.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+  Object.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+  Player.cpp
+g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\logicserver\player.h(22): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\logicmoudle\bagmodule.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  PlayerManager.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\player.h(22): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\playermanager.cpp(60): warning C4244: “参数”: 从“unsigned __int64”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\playermanager.cpp(67): warning C4244: “参数”: 从“unsigned __int64”转换到“int”，可能丢失数据
+  Bag.pb.cc
+  MsgID.pb.cc
+  Store.pb.cc
+g:\vs2017program\project1\logicserver\protoc\store.pb.cc(160): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+  uuid.cpp
+  CommonConvert.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  正在生成代码...
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(20): warning C4717: “CELLTime::getNowInSec”: 如递归所有控件路径，函数将导致运行时堆栈溢出
+g:\vs2017program\project1\logicserver\player.cpp(43): warning C4715: “CPlayerObject::GetTemp”: 不是所有的控件路径都返回值
+  正在编译...
+  ConfigFile.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+  fdtouid.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+  Rpc.cpp
+  Timer.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\common\timer.cpp(34): warning C4018: “>=”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\common\timer.cpp(42): warning C4244: “参数”: 从“UINT64”转换到“UINT32”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\common\timer.cpp(47): warning C4244: “参数”: 从“UINT64”转换到“UINT32”，可能丢失数据
+  CppMysql.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  正在生成代码...
+libprotobufd.lib(any_lite.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(any_lite.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(arena.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(arena.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(extension_set.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(extension_set.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(generated_message_util.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(generated_message_util.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(implicit_weak_message.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(implicit_weak_message.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(coded_stream.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(coded_stream.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(io_win32.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(io_win32.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(strtod.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(strtod.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(zero_copy_stream.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(zero_copy_stream.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(zero_copy_stream_impl.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(zero_copy_stream_impl.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(zero_copy_stream_impl_lite.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(zero_copy_stream_impl_lite.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(message_lite.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(message_lite.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(parse_context.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(parse_context.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(repeated_field.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(repeated_field.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(common.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(common.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(int128.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(int128.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(status.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(status.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(stringpiece.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(stringpiece.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(stringprintf.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(stringprintf.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(structurally_valid.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(structurally_valid.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(strutil.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(strutil.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(wire_format_lite.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(wire_format_lite.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+  LogicServer.vcxproj -> G:\vs2017program\Project1\x64\Debug\LogicServer.exe
