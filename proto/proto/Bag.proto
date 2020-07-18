@@ -1,0 +1,6 @@
+﻿syntax = "proto3";
+
+//请求解锁背包格子
+message BagUnLockReq
+{    
+}

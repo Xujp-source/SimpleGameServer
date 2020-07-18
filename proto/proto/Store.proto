@@ -1,0 +1,8 @@
+﻿syntax = "proto3";
+
+//请求购买道具
+message StoreBuyReq
+{    
+	uint32 Itemid = 1;
+	int32  count  = 2;
+}
