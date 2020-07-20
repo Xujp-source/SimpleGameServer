@@ -161,9 +161,6 @@
     <ClInclude Include="LogicMoudle\TaskModule.h">
       <Filter>LogicModule</Filter>
     </ClInclude>
-    <ClInclude Include="ServerEngine\CELL.hpp">
-      <Filter>ServerEngine</Filter>
-    </ClInclude>
     <ClInclude Include="ServerEngine\CELLBuffer.hpp">
       <Filter>ServerEngine</Filter>
     </ClInclude>
@@ -256,6 +253,9 @@
     </ClInclude>
     <ClInclude Include="LogicMsgHandler.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELL.hpp">
+      <Filter>ServerEngine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

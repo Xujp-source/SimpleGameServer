@@ -9,6 +9,7 @@ CPlayerObject::CPlayerObject(void)
 
 CPlayerObject::~CPlayerObject(void)
 {
+	UnRegisterAllMoudle();
 }
 
 bool CPlayerObject::Init(unsigned long long u64ID)
@@ -21,6 +22,18 @@ bool CPlayerObject::RegisterAllMoudle()
 {
 	m_MoudleList[MT_STORE] = new CStoreModule(this);
 	m_MoudleList[MT_BAG]   = new CBagModule(this);
+	return true;
+}
+
+bool CPlayerObject::UnRegisterAllMoudle()
+{
+	std::vector<CBaseModule*>::iterator itor = m_MoudleList.begin();
+	for (; itor != m_MoudleList.end();)
+	{
+		delete *itor;
+		*itor = nullptr;
+		m_MoudleList.erase(itor++);
+	}
 	return true;
 }
 

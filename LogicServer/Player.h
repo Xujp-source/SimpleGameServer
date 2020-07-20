@@ -6,6 +6,9 @@
 class CBaseModule;
 class CPlayerObject : public CObject, public Agent
 {
+private:
+	unsigned long long m_uid;
+
 public:
 	CPlayerObject();
 
@@ -16,6 +19,9 @@ public:
 
 	//注册所有玩家相关的模块
 	bool RegisterAllMoudle();
+
+	//反注册所有玩家相关的模块
+	bool UnRegisterAllMoudle();
 
 public:
 	//获取玩家uid
@@ -43,9 +49,6 @@ public:
 	std::map<std::string, int> m_TempList;
 	//定时器管理对象
 	CTimerManager m_Timer;
-
-private:
-	unsigned long long m_uid;
 
 };
 

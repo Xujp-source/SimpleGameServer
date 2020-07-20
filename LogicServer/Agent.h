@@ -8,6 +8,9 @@
 // 连接对象基类
 class Agent
 {
+private:
+	int fd;
+
 public:
 	Agent();
 	virtual ~Agent();
@@ -40,9 +43,6 @@ public:
 	CHandlerManager m_NetMessagePump;
 
 	bool isConFlag = false;
-
-private:
-	int fd;
 
 };
 
