@@ -8,9 +8,6 @@
 // 连接对象基类
 class Agent
 {
-private:
-	int fd;
-
 public:
 	Agent();
 	virtual ~Agent();
@@ -34,13 +31,19 @@ public:
 	void SetConnect(bool res) { isConFlag = res; }
 
 public:
-	bool OnMsgUserHeartReq(NetPacket* pack);	  //玩家的心跳请求
-
+	//*******************消息处理定义**************************
+	bool OnMsgUserHeartReq(NetPacket* pack);	  //Client(玩家)的心跳请求
+	//*********************************************************
+	
 public:
 	//网络消息泵
 	CHandlerManager m_NetMessagePump;
 
 	bool isConFlag = false;
+
+private:
+	int fd;
+
 };
 
 #endif

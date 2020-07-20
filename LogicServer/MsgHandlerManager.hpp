@@ -93,6 +93,7 @@ public:
 		for (std::map<int, CHandlerBase* > ::iterator itor = m_mapHandler.begin(); itor != m_mapHandler.end(); itor++)
 		{
 			delete itor->second;
+			itor->second = nullptr;
 		}
 		m_mapHandler.clear();
 		return true;

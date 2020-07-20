@@ -1,9 +1,17 @@
-Info [2020-7-18 9:11:47]CELLLog::setLogPath success,<serverLog.txt,w>
-Info [2020-7-18 9:11:47]create socket<600> success...
-Info [2020-7-18 9:11:47]bind port<4567> success...
-Info [2020-7-18 9:11:47]listen port<600> success...
-Info [2020-7-18 9:11:48]thread<1>,time<1.000848>,socket<600>,clients<0>,recv<0>,msg<0>
-Info [2020-7-18 9:11:49]thread<1>,time<1.000425>,socket<600>,clients<0>,recv<0>,msg<0>
-Info [2020-7-18 9:11:53]thread<1>,time<2.948042>,socket<600>,clients<0>,recv<0>,msg<0>
-Info [2020-7-18 9:11:54]thread<1>,time<1.377406>,socket<600>,clients<0>,recv<0>,msg<0>
-Info [2020-7-18 9:11:54]thread<1>,time<1.000398>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:22]CELLLog::setLogPath success,<serverLog.txt,w>
+Info [2020-7-20 2:55:22]create socket<608> success...
+Info [2020-7-20 2:55:22]bind port<4567> success...
+Info [2020-7-20 2:55:22]listen port<608> success...
+Info [2020-7-20 2:55:23]thread<1>,time<1.000753>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:24]thread<1>,time<1.000760>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:29]thread<1>,time<3.496903>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:30]thread<1>,time<1.869261>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:31]thread<1>,time<1.350749>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:32]thread<1>,time<1.000471>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:35]thread<1>,time<3.219657>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:36]thread<1>,time<1.000150>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:37]thread<1>,time<1.000566>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:38]thread<1>,time<1.000313>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:39]thread<1>,time<1.000714>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:40]thread<1>,time<1.000702>,socket<608>,clients<0>,recv<0>,msg<0>
+Info [2020-7-20 2:55:41]thread<1>,time<1.000541>,socket<608>,clients<0>,recv<0>,msg<0>

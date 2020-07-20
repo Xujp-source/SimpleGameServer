@@ -14,7 +14,6 @@ CPlayerManager::~CPlayerManager()
 CPlayerManager* CPlayerManager::GetInstancePtr()
 {
 	static CPlayerManager _Instance;
-
 	return &_Instance;
 }
 

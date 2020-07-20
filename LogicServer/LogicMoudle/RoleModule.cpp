@@ -36,5 +36,4 @@
 ////{
 ////
 ////	netmsg_DataHeader* header;
-////	CGameService::GetInstancePtr()->SendData(m_pOwnPlayer->GetFd(), header);
 ////}

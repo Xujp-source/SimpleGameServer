@@ -1,15 +1,15 @@
 #ifndef _STDAFX_H_
 #define _STDAFX_H_
 
-// stl
+// cpp standard library
 #include<vector>
 #include<map>
 #include<list>
 #include<string>
+#include<iostream>
 
 // define
 #include"ServerDefine.h"
-#include<iostream>
 
 // protoc
 #include"./protoc/MsgID.pb.h"

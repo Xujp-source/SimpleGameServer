@@ -33,9 +33,10 @@ g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warni
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\player.h(22): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\gameservice.cpp(123): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\gameservice.cpp(139): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\gameservice.cpp(160): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\playermanager.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\gameservice.cpp(130): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.cpp(143): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.cpp(167): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
   BagModule.cpp
 g:\vs2017program\project1\logicserver\logicmoudle\bagmodule.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -78,6 +79,8 @@ g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含�
 g:\vs2017program\project1\logicserver\player.h(22): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
   TaskModule.cpp
   LogicMsgHandler.cpp
+g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
   main.cpp
 g:\vs2017program\project1\logicserver\main.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -106,12 +109,13 @@ g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warni
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\logicmoudle\bagmodule.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   PlayerManager.cpp
+g:\vs2017program\project1\logicserver\playermanager.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\player.h(22): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\playermanager.cpp(60): warning C4244: “参数”: 从“unsigned __int64”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\playermanager.cpp(67): warning C4244: “参数”: 从“unsigned __int64”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\playermanager.cpp(59): warning C4244: “参数”: 从“unsigned __int64”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\playermanager.cpp(66): warning C4244: “参数”: 从“unsigned __int64”转换到“int”，可能丢失数据
   Bag.pb.cc
   MsgID.pb.cc
   Store.pb.cc
@@ -134,7 +138,7 @@ g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warnin
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\serverengine\common\timer.cpp(34): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\common\timer.cpp(42): warning C4244: “参数”: 从“UINT64”转换到“UINT32”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\common\timer.cpp(40): warning C4244: “参数”: 从“UINT64”转换到“UINT32”，可能丢失数据
 g:\vs2017program\project1\logicserver\serverengine\common\timer.cpp(47): warning C4244: “参数”: 从“UINT64”转换到“UINT32”，可能丢失数据
   CppMysql.cpp
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失

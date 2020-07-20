@@ -8,7 +8,4 @@ CObject::~CObject(void)
 {
 }
 
-//bool CObject::OnUpdate(unsigned long long uTick)
-//{
-//}
 

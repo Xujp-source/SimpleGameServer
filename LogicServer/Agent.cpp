@@ -12,7 +12,7 @@ Agent::~Agent()
 bool Agent::SendData(int MsgID, const google::protobuf::Message & pdata)
 {
 	CGameService::GetInstancePtr()->SendData(fd, MsgID, pdata);
-	return false;
+	return true;
 }
 
 bool Agent::OnMsgUserHeartReq(NetPacket * pack)

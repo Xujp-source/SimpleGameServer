@@ -5,12 +5,12 @@
 #include"Agent.h"
 #include"AgentManager.h"
 #include"ConnectServerMgr.h"
+#include"LogicMsgHandler.h"
 
 CGameService::CGameService()
 {
 	m_dwGateConnID = -1;
 	m_dwLoginConnID = -1;
-	_oldTime = CELLTime::getNowInMilliSec();
 }
 
 CGameService::~CGameService()
@@ -32,23 +32,26 @@ bool CGameService::Init()
 		return false;
 	}
 
-	// get mysql config
+	//get mysql config
 	std::string strHost = CConfigFile::GetInstancePtr()->GetStringValue("mysql_logic_svr_ip");
 	int nPort = CConfigFile::GetInstancePtr()->GetIntValue("mysql_logic_svr_port");
 	std::string strUser = CConfigFile::GetInstancePtr()->GetStringValue("mysql_logic_svr_user");
 	std::string strPwd = CConfigFile::GetInstancePtr()->GetStringValue("mysql_logic_svr_pwd");
 	std::string strDb = CConfigFile::GetInstancePtr()->GetStringValue("mysql_logic_svr_db_name");
-	// mysql connect
+	//mysql connect
 	if(!tDBConnection.open(strHost.c_str(), strUser.c_str(), strPwd.c_str(), strDb.c_str(), nPort))
 	{
 		CELLLog::Info("Error: Can not open mysql database! Reason:%s", tDBConnection.GetErrorMsg());
 		return false;
 	}
 
-	// ConnectServerMgr init
+	//连接本服的其他服管理类初始化
 	ConnectServerMgr::GetInstancePtr()->Init();
 
-	// add heartBeat timer
+	//杂项消息处理类初始化
+	LogicMsgHandler::GetInstancePtr()->Init();
+
+	//增加心跳定时器
 	CSysTimerManager::GetInstancePtr()->AddTimer(2000, 1, &CGameService::HeartBeat, this, true);
 
 	return true;
@@ -71,7 +74,9 @@ bool CGameService::OnSecondTimer()
 //Update
 void CGameService::OnUpdate()
 {
+	//刷新系统定时器
 	CSysTimerManager::GetInstancePtr()->UpdateTimer();
+	//刷新玩家定时器
 	CPlayerManager::GetInstancePtr()->OnUpdate();
 }
 
@@ -119,30 +124,30 @@ bool CGameService::ConnectToLoginServer()
 //客户端加入事件
 void CGameService::OnNetJoin(CELLClient * pClient)
 {
+	//调用基类方法
 	EasyTcpServer::OnNetJoin(pClient);
+	//新建agent对象
 	int fd = pClient->sockfd();
 	Agent* agent = new Agent();
 	agent->SetFd(fd);
-	if (fd == m_dwGateConnID || fd == m_dwLoginConnID)
-	{
-		agent->SetConnect(true);
-	}
-
+	//设置fd和agent的映射关系
 	AgentManager::GetInstancePtr()->SetPortToAgent(fd, agent);
 }
 
 //客户端离开事件
 void CGameService::OnNetLeave(CELLClient * pClient)
 {
-	//移除fd和agent的映射关系
+	//调用基类方法
 	EasyTcpServer::OnNetLeave(pClient);
-	int fd = pClient->sockfd();
-	AgentManager::GetInstancePtr()->RemovePortToAgent(fd);
 	//删除agent对象
+	int fd = pClient->sockfd();
 	Agent* agent = AgentManager::GetInstancePtr()->FindAgentByPort(fd);
 	delete agent;
+	agent = nullptr;
+	//移除fd和agent的映射关系
+	AgentManager::GetInstancePtr()->RemovePortToAgent(fd);
 
-	// 断开连接 重置connectID
+	//断开连接 重置connectID
 	if (fd == m_dwGateConnID)
 	{
 		m_dwGateConnID = -1;
@@ -156,7 +161,9 @@ void CGameService::OnNetLeave(CELLClient * pClient)
 //处理网络消息
 void CGameService::OnNetMsg(CELLServer* pServer, CELLClient* pClient, netmsg_DataHeader* package)
 {
+	//调用基类方法
 	EasyTcpServer::OnNetMsg(pServer, pClient, package);
+	//通过fd找到agent
 	int fd = pClient->sockfd();
 	Agent* agent = AgentManager::GetInstancePtr()->FindAgentByPort(fd);
 	if (agent == nullptr)
@@ -164,8 +171,9 @@ void CGameService::OnNetMsg(CELLServer* pServer, CELLClient* pClient, netmsg_Dat
 		CELLLog::Info("CGameService::OnNetMsg Error Invalid sockfd:%d, MessageID:%d", pClient->sockfd(), package->cmd);
 		return;
 	}
-
+	//打包成业务层用的消息buffer
 	NetPacket pack(fd, package);
+
 	if (!agent->IsUser())
 	{
 		// system or other message
@@ -189,21 +197,23 @@ void CGameService::OnNetMsg(CELLServer* pServer, CELLClient* pClient, netmsg_Dat
 //推送网络消息
 bool CGameService::SendData(int fd, int MsgID, const google::protobuf::Message& pdata)
 {
+	//通过fd找到client
 	CELLClient* pClient = GetClientByFD(fd);
 	if(pClient == nullptr)
 	{
 		CELLLog::Info("Error: pClient is nullptr!!!!!!\n");
 		return false;
 	}
-
+	//google::protobuf::Message Serializer
 	char szBuff[102400] = { 0 };
 	ERROR_RETURN_FALSE(pdata.ByteSizeLong() < 102400);
 	pdata.SerializePartialToArray(szBuff, pdata.GetCachedSize());
-
+	//打包给消息传输层用的消息buffer
 	netmsg_DataHeader data;
 	data.cmd = MsgID;
 	memcpy(data.buff, "%s", sizeof(szBuff));
-	
+	//推送消息
 	pClient->SendData(&data);
 	return true;
 }
+

@@ -37,6 +37,5 @@ bool CStoreModule::OnMsgStoreBuyReq(NetPacket* pack)
 {
 
 	StoreBuyReq req;
-	CGameService::GetInstancePtr()->SendData(m_pOwnPlayer->GetFd(), MSG_STORE_BUY_ACK, req);
 	return true;
 }

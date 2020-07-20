@@ -55,6 +55,5 @@ bool CBagModule::OnMsgBagUnLockReq(NetPacket* pack)
 	BagUnLockReq ack;
 	m_pOwnPlayer->SendData(MSG_BAG_UNLOCK_ACK, ack);
 
-	CGameService::GetInstancePtr()->SendData(pack->m_dwConnID, MSG_BAG_UNLOCK_ACK, ack);
 	return true;
 }

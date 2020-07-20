@@ -37,11 +37,11 @@ public:
 	virtual bool IsUser() { return true; }
 
 public:
-	//模块注册表
+	//系统模块注册表
 	std::vector<CBaseModule*> m_MoudleList;
 	//玩家缓存
 	std::map<std::string, int> m_TempList;
-
+	//定时器管理对象
 	CTimerManager m_Timer;
 
 private:
