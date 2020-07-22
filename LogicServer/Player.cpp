@@ -1,7 +1,7 @@
 #include"Player.h"
-#include"./LogicMoudle/BaseModule.h"
-#include"./LogicMoudle/StoreModule.h"
-#include"./LogicMoudle/BagModule.h"
+#include"./LogicModule/BaseModule.h"
+#include"./LogicModule/StoreModule.h"
+#include"./LogicModule/BagModule.h"
 
 CPlayerObject::CPlayerObject(void)
 {

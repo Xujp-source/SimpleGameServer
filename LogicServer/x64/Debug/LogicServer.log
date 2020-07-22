@@ -38,7 +38,7 @@ g:\vs2017program\project1\logicserver\gameservice.cpp(130): warning C4244: “�
 g:\vs2017program\project1\logicserver\gameservice.cpp(143): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\gameservice.cpp(167): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
   BagModule.cpp
-g:\vs2017program\project1\logicserver\logicmoudle\bagmodule.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\logicmodule\bagmodule.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -107,7 +107,7 @@ g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning 
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\logicmoudle\bagmodule.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\logicserver\logicmodule\bagmodule.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   PlayerManager.cpp
 g:\vs2017program\project1\logicserver\playermanager.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失

@@ -39,11 +39,11 @@ bool CGameService::Init()
 	std::string strPwd = CConfigFile::GetInstancePtr()->GetStringValue("mysql_logic_svr_pwd");
 	std::string strDb = CConfigFile::GetInstancePtr()->GetStringValue("mysql_logic_svr_db_name");
 	//mysql connect
-	if(!tDBConnection.open(strHost.c_str(), strUser.c_str(), strPwd.c_str(), strDb.c_str(), nPort))
-	{
-		CELLLog::Info("Error: Can not open mysql database! Reason:%s", tDBConnection.GetErrorMsg());
-		return false;
-	}
+	//if(!tDBConnection.open(strHost.c_str(), strUser.c_str(), strPwd.c_str(), strDb.c_str(), nPort))
+	//{
+	//	CELLLog::Info("Error: Can not open mysql database! Reason:%s", tDBConnection.GetErrorMsg());
+	//	return false;
+	//}
 
 	//连接本服的其他服管理类初始化
 	ConnectServerMgr::GetInstancePtr()->Init();

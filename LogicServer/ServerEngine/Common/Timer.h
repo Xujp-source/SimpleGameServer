@@ -1,6 +1,7 @@
 #ifndef _TIMER_H__
 #define _TIMER_H__
 #include"stdafx.h"
+#include"../CELLLog.hpp"
 
 //定时器管理模块
 class CTimerBase

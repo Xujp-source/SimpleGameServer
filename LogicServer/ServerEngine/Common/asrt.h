@@ -1,6 +1,6 @@
 #ifndef _GLOBAL_LOG_H_
 #define _GLOBAL_LOG_H_
-#include "./ServerEngine/CELLLog.hpp"
+#include "../CELLLog.hpp"
 
 #define ERROR_RETURN_TRUE(P) \
     if((P) == FALSE)\

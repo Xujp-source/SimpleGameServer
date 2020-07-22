@@ -51,24 +51,6 @@
     <ClCompile Include="PlayerManager.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="LogicMoudle\BagModule.cpp">
-      <Filter>LogicModule</Filter>
-    </ClCompile>
-    <ClCompile Include="LogicMoudle\BaseModule.cpp">
-      <Filter>LogicModule</Filter>
-    </ClCompile>
-    <ClCompile Include="LogicMoudle\MailModule.cpp">
-      <Filter>LogicModule</Filter>
-    </ClCompile>
-    <ClCompile Include="LogicMoudle\RoleModule.cpp">
-      <Filter>LogicModule</Filter>
-    </ClCompile>
-    <ClCompile Include="LogicMoudle\StoreModule.cpp">
-      <Filter>LogicModule</Filter>
-    </ClCompile>
-    <ClCompile Include="LogicMoudle\TaskModule.cpp">
-      <Filter>LogicModule</Filter>
-    </ClCompile>
     <ClCompile Include="ServerEngine\3rd\uuid.cpp">
       <Filter>ServerEngine\3rd</Filter>
     </ClCompile>
@@ -111,6 +93,24 @@
     <ClCompile Include="LogicMsgHandler.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="LogicModule\BagModule.cpp">
+      <Filter>LogicModule</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicModule\BaseModule.cpp">
+      <Filter>LogicModule</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicModule\MailModule.cpp">
+      <Filter>LogicModule</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicModule\RoleModule.cpp">
+      <Filter>LogicModule</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicModule\StoreModule.cpp">
+      <Filter>LogicModule</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicModule\TaskModule.cpp">
+      <Filter>LogicModule</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameService.h">
@@ -142,24 +142,6 @@
     </ClInclude>
     <ClInclude Include="ServerData\StoreData.h">
       <Filter>ServerData</Filter>
-    </ClInclude>
-    <ClInclude Include="LogicMoudle\BagModule.h">
-      <Filter>LogicModule</Filter>
-    </ClInclude>
-    <ClInclude Include="LogicMoudle\BaseModule.h">
-      <Filter>LogicModule</Filter>
-    </ClInclude>
-    <ClInclude Include="LogicMoudle\MailModule.h">
-      <Filter>LogicModule</Filter>
-    </ClInclude>
-    <ClInclude Include="LogicMoudle\RoleModule.h">
-      <Filter>LogicModule</Filter>
-    </ClInclude>
-    <ClInclude Include="LogicMoudle\StoreModule.h">
-      <Filter>LogicModule</Filter>
-    </ClInclude>
-    <ClInclude Include="LogicMoudle\TaskModule.h">
-      <Filter>LogicModule</Filter>
     </ClInclude>
     <ClInclude Include="ServerEngine\CELLBuffer.hpp">
       <Filter>ServerEngine</Filter>
@@ -256,6 +238,24 @@
     </ClInclude>
     <ClInclude Include="ServerEngine\CELL.hpp">
       <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicModule\BagModule.h">
+      <Filter>LogicModule</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicModule\BaseModule.h">
+      <Filter>LogicModule</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicModule\MailModule.h">
+      <Filter>LogicModule</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicModule\RoleModule.h">
+      <Filter>LogicModule</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicModule\StoreModule.h">
+      <Filter>LogicModule</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicModule\TaskModule.h">
+      <Filter>LogicModule</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
