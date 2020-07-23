@@ -1,5 +1,6 @@
 g:\vs2017program\project1\dbserver\x64\debug\vc141.pdb
 g:\vs2017program\project1\dbserver\x64\debug\vc141.idb
+g:\vs2017program\project1\dbserver\x64\debug\dbconnectpool.obj
 g:\vs2017program\project1\dbserver\x64\debug\cppmysql.obj
 g:\vs2017program\project1\dbserver\x64\debug\timer.obj
 g:\vs2017program\project1\dbserver\x64\debug\rpc.obj
@@ -8,10 +9,19 @@ g:\vs2017program\project1\dbserver\x64\debug\configfile.obj
 g:\vs2017program\project1\dbserver\x64\debug\commonconvert.obj
 g:\vs2017program\project1\dbserver\x64\debug\uuid.obj
 g:\vs2017program\project1\dbserver\x64\debug\msgid.pb.obj
+g:\vs2017program\project1\dbserver\x64\debug\dbexcute.pb.obj
 g:\vs2017program\project1\dbserver\x64\debug\main.obj
+g:\vs2017program\project1\dbserver\x64\debug\gameservice.obj
+g:\vs2017program\project1\dbserver\x64\debug\dbmsghandler.obj
 g:\vs2017program\project1\dbserver\x64\debug\connectservermgr.obj
 g:\vs2017program\project1\dbserver\x64\debug\agentmanager.obj
 g:\vs2017program\project1\dbserver\x64\debug\agent.obj
+g:\vs2017program\project1\x64\debug\dbserver.exe
+g:\vs2017program\project1\x64\debug\dbserver.ilk
+g:\vs2017program\project1\x64\debug\dbserver.pdb
 g:\vs2017program\project1\dbserver\x64\debug\dbserver.tlog\cl.command.1.tlog
 g:\vs2017program\project1\dbserver\x64\debug\dbserver.tlog\cl.read.1.tlog
 g:\vs2017program\project1\dbserver\x64\debug\dbserver.tlog\cl.write.1.tlog
+g:\vs2017program\project1\dbserver\x64\debug\dbserver.tlog\link.command.1.tlog
+g:\vs2017program\project1\dbserver\x64\debug\dbserver.tlog\link.read.1.tlog
+g:\vs2017program\project1\dbserver\x64\debug\dbserver.tlog\link.write.1.tlog

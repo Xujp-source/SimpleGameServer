@@ -36,10 +36,10 @@ void CTimerManager::UpdateTimer()
 			//如果是循环定时器
 			if ((*itor)->m_Repeat)
 			{
-				//更新当前触发时间
-				(*itor)->m_dwFireTime = (*itor)->m_dwFireTime + (*itor)->m_dwSec;
 				//执行回调方法
 				(*((*itor)->m_pTimerFuncSlot))((*itor)->m_dwFireTime);
+				//更新下一次触发时间
+				(*itor)->m_dwFireTime = (*itor)->m_dwFireTime + (*itor)->m_dwSec;
 			}
 			else
 			{

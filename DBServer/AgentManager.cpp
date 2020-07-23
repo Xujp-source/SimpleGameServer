@@ -24,6 +24,7 @@ bool AgentManager::RelayComm(Agent * comm, Agent * tocomm)
 	{
 		it->second = tocomm;
 		delete comm;
+		comm = nullptr;
 		return true;
 	}
 	return false;

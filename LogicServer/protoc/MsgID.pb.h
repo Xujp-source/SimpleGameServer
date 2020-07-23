@@ -65,8 +65,6 @@ enum MessageID : int {
   MSG_ACCOUNT_REG_ACK = 100004,
   MSG_ACCOUNT_LOGIN_REQ = 100005,
   MSG_ACCOUNT_LOGIN_ACK = 100006,
-  MSG_DB_EXE_SQL_REQ = 100007,
-  MSG_DB_EXE_SQL_ACK = 100008,
   MSG_SERVER_LIST_REQ = 100009,
   MSG_SERVER_LIST_ACK = 100010,
   MSG_SELECT_SERVER_REQ = 100011,
@@ -144,12 +142,16 @@ enum MessageID : int {
   MSG_MOUNT_RIDING_REQ = 300040,
   MSG_MOUNT_RIDING_ACK = 300041,
   MSG_SCENESVR_MSGID_END = 399999,
+  MSG_DBSVR_MSGID_BEGIN = 400000,
+  MSG_DB_EXE_SQL_REQ = 400001,
+  MSG_DB_EXE_SQL_ACK = 400002,
+  MSG_DBSVR_MSGID_END = 499999,
   MessageID_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   MessageID_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool MessageID_IsValid(int value);
 constexpr MessageID MessageID_MIN = MSG_BEGIN;
-constexpr MessageID MessageID_MAX = MSG_SCENESVR_MSGID_END;
+constexpr MessageID MessageID_MAX = MSG_DBSVR_MSGID_END;
 constexpr int MessageID_ARRAYSIZE = MessageID_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MessageID_descriptor();

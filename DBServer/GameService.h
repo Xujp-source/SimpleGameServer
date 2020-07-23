@@ -28,29 +28,23 @@ public:
 	//连接网关
 	virtual bool ConnectToGateServer();
 
-	//连接登录服
-	virtual bool ConnectToLoginServer();
-
-	//处理网络消息
-	virtual void OnNetMsg(CELLServer* pServer, CELLClient* pClient, netmsg_DataHeader* package);
-
 	//客户端加入事件
 	virtual void OnNetJoin(CELLClient* pClient);
 
 	//客户端离开事件
 	virtual void OnNetLeave(CELLClient* pClient);
 
+	//处理网络消息
+	virtual void OnNetMsg(CELLServer* pServer, CELLClient* pClient, netmsg_DataHeader* package);
+
 	//推送网络消息
 	bool SendData(int fd, int MsgID, const google::protobuf::Message& pdata);
+public:
+	CppMySQL3DB tDBConnection;
 
 private:
 	int m_dwGateConnID;
-	int m_dwLoginConnID;
 
-	CppMySQL3DB tDBConnection;
-
-	//旧的时间戳
-	time_t _oldTime; 
 };
 
 #endif

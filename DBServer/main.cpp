@@ -12,7 +12,7 @@ int main()
 	}
 	//初始化网络服务
 	CGameService::GetInstancePtr()->InitSocket();
-	CGameService::GetInstancePtr()->Bind(nullptr, 4567);
+	CGameService::GetInstancePtr()->Bind(nullptr, 9897);
 	CGameService::GetInstancePtr()->Listen(64);
 	CGameService::GetInstancePtr()->Start(1);
 

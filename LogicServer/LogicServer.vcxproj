@@ -35,6 +35,7 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerManager.cpp" />
     <ClCompile Include="protoc\Bag.pb.cc" />
+    <ClCompile Include="protoc\DBExcute.pb.cc" />
     <ClCompile Include="protoc\MsgID.pb.cc" />
     <ClCompile Include="protoc\Store.pb.cc" />
     <ClCompile Include="ServerEngine\3rd\uuid.cpp" />
@@ -44,6 +45,7 @@
     <ClCompile Include="ServerEngine\Common\Rpc.cpp" />
     <ClCompile Include="ServerEngine\Common\Timer.cpp" />
     <ClCompile Include="ServerEngine\DBInterFace\CppMysql.cpp" />
+    <ClCompile Include="ServerEngine\DBInterFace\DBConnectPool.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h" />
@@ -62,6 +64,7 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerManager.h" />
     <ClInclude Include="protoc\Bag.pb.h" />
+    <ClInclude Include="protoc\DBExcute.pb.h" />
     <ClInclude Include="protoc\MsgID.pb.h" />
     <ClInclude Include="protoc\Store.pb.h" />
     <ClInclude Include="ServerData\BagData.h" />
@@ -89,6 +92,7 @@
     <ClInclude Include="ServerEngine\Common\stdafx.h" />
     <ClInclude Include="ServerEngine\Common\Timer.h" />
     <ClInclude Include="ServerEngine\DBInterFace\CppMysql.h" />
+    <ClInclude Include="ServerEngine\DBInterFace\DBConnectPool.h" />
     <ClInclude Include="ServerEngine\EasyTcpClient.hpp" />
     <ClInclude Include="ServerEngine\EasyTcpServer.hpp" />
     <ClInclude Include="ServerEngine\INetEvent.hpp" />

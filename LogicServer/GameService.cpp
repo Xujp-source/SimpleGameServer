@@ -6,11 +6,14 @@
 #include"AgentManager.h"
 #include"ConnectServerMgr.h"
 #include"LogicMsgHandler.h"
+#include"./protoc/Bag.pb.h"
+#include"./protoc/DBExcute.pb.h"
 
 CGameService::CGameService()
 {
 	m_dwGateConnID = -1;
 	m_dwLoginConnID = -1;
+	m_dwDBConnID = -1;
 }
 
 CGameService::~CGameService()
@@ -32,19 +35,6 @@ bool CGameService::Init()
 		return false;
 	}
 
-	//get mysql config
-	std::string strHost = CConfigFile::GetInstancePtr()->GetStringValue("mysql_logic_svr_ip");
-	int nPort = CConfigFile::GetInstancePtr()->GetIntValue("mysql_logic_svr_port");
-	std::string strUser = CConfigFile::GetInstancePtr()->GetStringValue("mysql_logic_svr_user");
-	std::string strPwd = CConfigFile::GetInstancePtr()->GetStringValue("mysql_logic_svr_pwd");
-	std::string strDb = CConfigFile::GetInstancePtr()->GetStringValue("mysql_logic_svr_db_name");
-	//mysql connect
-	//if(!tDBConnection.open(strHost.c_str(), strUser.c_str(), strPwd.c_str(), strDb.c_str(), nPort))
-	//{
-	//	CELLLog::Info("Error: Can not open mysql database! Reason:%s", tDBConnection.GetErrorMsg());
-	//	return false;
-	//}
-
 	//连接本服的其他服管理类初始化
 	ConnectServerMgr::GetInstancePtr()->Init();
 
@@ -52,7 +42,10 @@ bool CGameService::Init()
 	LogicMsgHandler::GetInstancePtr()->Init();
 
 	//增加心跳定时器
-	CSysTimerManager::GetInstancePtr()->AddTimer(2000, 1, &CGameService::HeartBeat, this, true);
+	CSysTimerManager::GetInstancePtr()->AddTimer(3000, 1, &CGameService::HeartBeat, this, true);
+
+	//test sql
+	CSysTimerManager::GetInstancePtr()->AddTimer(8000, 1, &CGameService::TestSql, this, true);
 
 	return true;
 }
@@ -65,6 +58,9 @@ bool CGameService::OnSecondTimer()
 
 	//连接登录服
 	//ConnectToLoginServer();
+
+	//连接数据库操作服
+	ConnectToDBServer();
 
 	CPlayerManager::GetInstancePtr()->OnSecondTimer();
 
@@ -80,16 +76,30 @@ void CGameService::OnUpdate()
 	CPlayerManager::GetInstancePtr()->OnUpdate();
 }
 
-//给其他服发送心跳包
+//给其他服发送心跳包3
 bool CGameService::HeartBeat(unsigned int msec)
 {
-	if (m_dwLoginConnID != 1)
+	if (m_dwDBConnID != -1)
 	{
-
-		//SendData(m_dwLoginConnID, MSG_GAME_REGTO_LOGIC_ACK, )
+		BagUnLockReq req;
+		SendData(m_dwDBConnID, MSG_HEART_BEAT_REQ, req);
 	}
 	return true;
 }
+
+//
+bool CGameService::TestSql(unsigned int msec)
+{
+	if (m_dwDBConnID != -1)
+	{
+		DBExeSqlReq req;
+		req.set_exectype(SQL_READ);
+		req.set_sqlcmd("select * from copy");
+		SendData(m_dwDBConnID, MSG_DB_EXE_SQL_REQ, req);
+	}
+	return true;
+}
+
 
 //连接网关
 bool CGameService::ConnectToGateServer()
@@ -118,6 +128,21 @@ bool CGameService::ConnectToLoginServer()
 	std::string strLoginIp = CConfigFile::GetInstancePtr()->GetStringValue("login_svr_ip");
 	m_dwLoginConnID = Connect(strLoginIp.c_str(), nLoginPort);
 	ERROR_RETURN_FALSE(m_dwLoginConnID != -1);
+	return true;
+}
+
+//连接数据库操作服
+bool CGameService::ConnectToDBServer()
+{
+	if (m_dwDBConnID != -1)
+	{
+		return true;
+	}
+
+	UINT32 nDBPort = CConfigFile::GetInstancePtr()->GetIntValue("db_svr_port");
+	std::string strDBIp = CConfigFile::GetInstancePtr()->GetStringValue("db_svr_ip");
+	m_dwDBConnID = Connect(strDBIp.c_str(), nDBPort);
+	ERROR_RETURN_FALSE(m_dwDBConnID != -1);
 	return true;
 }
 
@@ -205,13 +230,13 @@ bool CGameService::SendData(int fd, int MsgID, const google::protobuf::Message& 
 		return false;
 	}
 	//google::protobuf::Message Serializer
-	char szBuff[102400] = { 0 };
-	ERROR_RETURN_FALSE(pdata.ByteSizeLong() < 102400);
+	char szBuff[1023] = { 0 };
+	ERROR_RETURN_FALSE(pdata.ByteSizeLong() < 1023);
 	pdata.SerializePartialToArray(szBuff, pdata.GetCachedSize());
 	//打包给消息传输层用的消息buffer
 	netmsg_DataHeader data;
 	data.cmd = MsgID;
-	memcpy(data.buff, "%s", sizeof(szBuff));
+	memcpy(data.buff, szBuff, strlen(szBuff)+1);
 	//推送消息
 	pClient->SendData(&data);
 	return true;

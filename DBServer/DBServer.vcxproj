@@ -131,8 +131,10 @@
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="AgentManager.cpp" />
     <ClCompile Include="ConnectServerMgr.cpp" />
+    <ClCompile Include="DBMsgHandler.cpp" />
     <ClCompile Include="GameService.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="protoc\DBExcute.pb.cc" />
     <ClCompile Include="protoc\MsgID.pb.cc" />
     <ClCompile Include="ServerEngine\3rd\uuid.cpp" />
     <ClCompile Include="ServerEngine\Common\CommonConvert.cpp" />
@@ -141,13 +143,16 @@
     <ClCompile Include="ServerEngine\Common\Rpc.cpp" />
     <ClCompile Include="ServerEngine\Common\Timer.cpp" />
     <ClCompile Include="ServerEngine\DBInterFace\CppMysql.cpp" />
+    <ClCompile Include="ServerEngine\DBInterFace\DBConnectPool.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h" />
     <ClInclude Include="AgentManager.h" />
     <ClInclude Include="ConnectServerMgr.h" />
+    <ClInclude Include="DBMsgHandler.h" />
     <ClInclude Include="GameService.h" />
     <ClInclude Include="MsgHandlerManager.hpp" />
+    <ClInclude Include="protoc\DBExcute.pb.h" />
     <ClInclude Include="protoc\MsgID.pb.h" />
     <ClInclude Include="ServerDefine.h" />
     <ClInclude Include="ServerEngine\3rd\uuid.h" />
@@ -171,6 +176,7 @@
     <ClInclude Include="ServerEngine\Common\stdafx.h" />
     <ClInclude Include="ServerEngine\Common\Timer.h" />
     <ClInclude Include="ServerEngine\DBInterFace\CppMysql.h" />
+    <ClInclude Include="ServerEngine\DBInterFace\DBConnectPool.h" />
     <ClInclude Include="ServerEngine\EasyTcpClient.hpp" />
     <ClInclude Include="ServerEngine\EasyTcpServer.hpp" />
     <ClInclude Include="ServerEngine\INetEvent.hpp" />

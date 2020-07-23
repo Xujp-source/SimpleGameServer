@@ -10,7 +10,7 @@ class CELLLog
 	//Debug
 	//Warring
 	//Error
-private:
+public:
 	CELLLog()
 	{
 		_taskServer.Start();
@@ -41,7 +41,7 @@ public:
 			fclose(_logFile);
 			_logFile = nullptr;
 		}
-			
+
 
 		_logFile = fopen(logPath, mode);
 		if (_logFile)
@@ -75,6 +75,7 @@ public:
 	template<typename ...Args>
 	static void Info(const char* pformat, Args ... args)
 	{
+#ifdef _WIN32
 		CELLLog* pLog = &Instance();
 		pLog->_taskServer.addTask([=]() {
 			if (pLog->_logFile)
@@ -90,6 +91,9 @@ public:
 			}
 			printf(pformat, args...);
 		});
+#else
+		printf(pformat, args...);
+#endif
 	}
 private:
 	FILE* _logFile = nullptr;

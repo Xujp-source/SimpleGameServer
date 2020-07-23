@@ -25,11 +25,16 @@ public:
 	//给其他服发送心跳包
 	bool HeartBeat(unsigned int msec);
 
+	bool TestSql(unsigned int msec);
+
 	//连接网关
 	virtual bool ConnectToGateServer();
 
 	//连接登录服
 	virtual bool ConnectToLoginServer();
+
+	//连接数据库操作服
+	virtual bool ConnectToDBServer();
 
 	//客户端加入事件
 	virtual void OnNetJoin(CELLClient* pClient);
@@ -46,6 +51,7 @@ public:
 private:
 	int m_dwGateConnID;
 	int m_dwLoginConnID;
+	int m_dwDBConnID;
 
 	CppMySQL3DB tDBConnection;
 

@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="LogicModule">
-      <UniqueIdentifier>{79d316e5-4502-4b86-8bee-3c6270782aaa}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ServerData">
       <UniqueIdentifier>{d28be669-e195-4410-94e7-14d968e57789}</UniqueIdentifier>
     </Filter>
@@ -75,6 +72,15 @@
     <ClCompile Include="ServerEngine\DBInterFace\CppMysql.cpp">
       <Filter>ServerEngine\DBInterFace</Filter>
     </ClCompile>
+    <ClCompile Include="ServerEngine\DBInterFace\DBConnectPool.cpp">
+      <Filter>ServerEngine\DBInterFace</Filter>
+    </ClCompile>
+    <ClCompile Include="DBMsgHandler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="protoc\DBExcute.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="protoc\MsgID.pb.h">
@@ -93,9 +99,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="MsgHandlerManager.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ServerDefine.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
@@ -175,6 +178,18 @@
     </ClInclude>
     <ClInclude Include="ServerEngine\DBInterFace\CppMysql.h">
       <Filter>ServerEngine\DBInterFace</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\DBInterFace\DBConnectPool.h">
+      <Filter>ServerEngine\DBInterFace</Filter>
+    </ClInclude>
+    <ClInclude Include="DBMsgHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\DBExcute.pb.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDefine.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

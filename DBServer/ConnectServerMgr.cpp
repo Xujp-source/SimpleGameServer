@@ -27,9 +27,8 @@ bool ConnectServerMgr::Init()
 
 void ConnectServerMgr::RegisterMessageHanler()
 {
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &ConnectServerMgr::OnMsgGameSvrRegister, this);
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &ConnectServerMgr::OnMsgGameSvrHeartReq, this);
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &ConnectServerMgr::OnMsgLoginSvrHeartAck, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &ConnectServerMgr::OnMsgLogicSvrRegister, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_HEART_BEAT_REQ, &ConnectServerMgr::OnMsgLogicSvrHeartReq, this);
 }
 
 bool ConnectServerMgr::SendData(int ServerID, int MsgID, const google::protobuf::Message & pdata)
@@ -37,7 +36,7 @@ bool ConnectServerMgr::SendData(int ServerID, int MsgID, const google::protobuf:
 	std::map<int, int>::iterator it = m_connServerMap.find(ServerID);
 	if (it == m_connServerMap.end())
 	{
-		CELLLog::Info("Other Server Not Register, ServerID : %d, MsgID : %d", ServerID, MsgID);
+		CELLLog::Info("Other Server Not Register, ServerID : %d, MsgID : %d\n", ServerID, MsgID);
 		return false;
 	}
 	int fd = it->second;
@@ -48,7 +47,7 @@ bool ConnectServerMgr::SendData(int ServerID, int MsgID, const google::protobuf:
 	return true;
 }
 
-bool ConnectServerMgr::OnMsgGameSvrRegister(NetPacket* pack)
+bool ConnectServerMgr::OnMsgLogicSvrRegister(NetPacket* pack)
 {
 	int serverid;
 
@@ -56,12 +55,9 @@ bool ConnectServerMgr::OnMsgGameSvrRegister(NetPacket* pack)
 	return true;
 }
 
-bool ConnectServerMgr::OnMsgGameSvrHeartReq(NetPacket * pack)
+bool ConnectServerMgr::OnMsgLogicSvrHeartReq(NetPacket * pack)
 {
+	CELLLog::Info("logic server heart beat!!!!!!!!!!!!!!!!!!\n");
 	return false;
 }
 
-bool ConnectServerMgr::OnMsgLoginSvrHeartAck(NetPacket * pack)
-{
-	return false;
-}

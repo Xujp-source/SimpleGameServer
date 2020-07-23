@@ -30,11 +30,11 @@ unsigned long long Uuid::NewGuid()
 		guid.Data4[7]);
 	return atoi((std::string(cBuffer)).c_str());
 #else
-	auto uidGen = boost::uuids::random_generator();
-	boost::uuids::uuid uid = uidGen();
-	std::stringstream sGuid;
-	sGuid << uid;
-	return atoi(sGuid.str());
+	// auto uidGen = boost::uuids::random_generator();
+	// boost::uuids::uuid uid = uidGen();
+	// std::stringstream sGuid;
+	// sGuid << uid;
+	// return atoi(sGuid.str());
 
 #endif
 

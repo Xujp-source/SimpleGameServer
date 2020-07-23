@@ -1,6 +1,6 @@
 #include"StoreModule.h"
 #include"../ServerData/StoreData.h"
-#include "../protoc/Store.pb.h"
+#include"../protoc/Store.pb.h"
 
 CStoreModule::CStoreModule(CPlayerObject* pOwner): CBaseModule(pOwner)
 {

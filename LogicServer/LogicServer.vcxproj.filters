@@ -111,6 +111,12 @@
     <ClCompile Include="LogicModule\TaskModule.cpp">
       <Filter>LogicModule</Filter>
     </ClCompile>
+    <ClCompile Include="ServerEngine\DBInterFace\DBConnectPool.cpp">
+      <Filter>ServerEngine\DBInterFace</Filter>
+    </ClCompile>
+    <ClCompile Include="protoc\DBExcute.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameService.h">
@@ -256,6 +262,12 @@
     </ClInclude>
     <ClInclude Include="LogicModule\TaskModule.h">
       <Filter>LogicModule</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\DBInterFace\DBConnectPool.h">
+      <Filter>ServerEngine\DBInterFace</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\DBExcute.pb.h">
+      <Filter>protoc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
