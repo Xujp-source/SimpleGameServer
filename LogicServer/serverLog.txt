@@ -1,43 +1,290 @@
-Info [2020-7-23 9:36:36]CELLLog::setLogPath success,<serverLog.txt,w>
-Info [2020-7-23 9:36:36]create socket<408> success...
-Info [2020-7-23 9:36:36]bind port<4567> success...
-Info [2020-7-23 9:36:36]listen port<408> success...
-Info [2020-7-23 9:36:37]thread<1>,time<1.000033>,socket<408>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:38]thread<1>,time<1.000997>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:39]thread<1>,time<1.000267>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:40]thread<1>,time<1.000281>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:41]thread<1>,time<1.000324>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:42]thread<1>,time<1.000326>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:43]thread<1>,time<1.000288>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:44]thread<1>,time<1.000283>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:45]thread<1>,time<1.000323>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:46]thread<1>,time<1.000283>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:47]thread<1>,time<1.000297>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:48]thread<1>,time<1.000334>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:49]thread<1>,time<1.000299>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:50]thread<1>,time<1.001070>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:51]thread<1>,time<1.000456>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:52]thread<1>,time<1.000277>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:53]thread<1>,time<1.000317>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:54]thread<1>,time<1.000309>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:55]thread<1>,time<1.000284>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:56]thread<1>,time<1.000340>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:57]thread<1>,time<1.000244>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:58]thread<1>,time<1.000305>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:59]thread<1>,time<1.000304>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:0]thread<1>,time<1.000303>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:1]thread<1>,time<1.000305>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:2]thread<1>,time<1.000324>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:3]thread<1>,time<1.000277>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:4]thread<1>,time<1.000317>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:5]thread<1>,time<1.000304>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:6]thread<1>,time<1.000265>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:7]thread<1>,time<1.000310>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:8]thread<1>,time<1.000312>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:9]thread<1>,time<1.000295>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:10]thread<1>,time<1.000340>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:11]thread<1>,time<1.000211>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:12]thread<1>,time<1.000316>,socket<408>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:13]s=1 CELLClient1.~CELLClient
-Info [2020-7-23 9:37:13]thread<1>,time<1.000921>,socket<408>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:37:14]thread<1>,time<1.000903>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:52:23]CELLLog::setLogPath success,<serverLog.txt,w>
+Info [2020-7-24 1:52:23]create socket<408> success...
+Info [2020-7-24 1:52:23]bind port<4567> success...
+Info [2020-7-24 1:52:23]listen port<408> success...
+Info [2020-7-24 1:52:24]thread<1>,time<1.000093>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:52:25]thread<1>,time<1.000528>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:26]thread<1>,time<1.000624>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:27]thread<1>,time<1.000082>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:28]thread<1>,time<1.000245>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:29]thread<1>,time<1.000552>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:30]thread<1>,time<1.000586>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:35]thread<1>,time<5.380575>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:36]thread<1>,time<1.000374>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:37]thread<1>,time<1.000194>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:38]thread<1>,time<1.000454>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:48]thread<1>,time<9.440673>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:49]thread<1>,time<1.000437>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:50]thread<1>,time<1.000322>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:51]thread<1>,time<1.000411>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:52]thread<1>,time<1.000432>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:53]thread<1>,time<1.000453>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:54]thread<1>,time<1.000356>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:55]thread<1>,time<1.000523>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:56]thread<1>,time<1.000623>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:57]thread<1>,time<1.000554>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:58]thread<1>,time<1.000626>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:52:59]thread<1>,time<1.000565>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:0]thread<1>,time<1.000570>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:1]thread<1>,time<1.000577>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:2]thread<1>,time<1.000580>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:3]thread<1>,time<1.000437>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:4]thread<1>,time<1.000383>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:5]thread<1>,time<1.000412>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:6]thread<1>,time<1.000412>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:7]thread<1>,time<1.000482>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:8]thread<1>,time<1.000421>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:9]thread<1>,time<1.000436>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:10]thread<1>,time<1.000421>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:11]thread<1>,time<1.000379>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:12]thread<1>,time<1.000388>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:13]thread<1>,time<1.000473>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:14]thread<1>,time<1.000354>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:15]thread<1>,time<1.000410>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:16]thread<1>,time<1.000413>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:17]thread<1>,time<1.000413>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:18]thread<1>,time<1.000369>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:19]thread<1>,time<1.000592>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:20]thread<1>,time<1.000147>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:21]thread<1>,time<1.000656>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:22]thread<1>,time<1.000556>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:23]thread<1>,time<1.000590>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:24]thread<1>,time<1.000598>,socket<408>,clients<1>,recv<0>,msg<0>
+Info [2020-7-24 1:53:24]checkHeart dead:s=372,time=60000
+Info [2020-7-24 1:53:24]s=1 CELLClient1.~CELLClient
+Info [2020-7-24 1:53:25]thread<1>,time<1.000388>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:26]thread<1>,time<1.000380>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:26]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:27]thread<1>,time<1.000058>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:27]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:28]thread<1>,time<1.000293>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:29]thread<1>,time<1.000364>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:29]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:30]thread<1>,time<1.000004>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:31]thread<1>,time<1.000296>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:32]thread<1>,time<1.000163>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:32]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:33]thread<1>,time<1.000448>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:34]thread<1>,time<1.000392>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:35]thread<1>,time<1.000444>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:35]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:35]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:36]thread<1>,time<1.000427>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:37]thread<1>,time<1.000354>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:38]thread<1>,time<1.000266>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:38]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:39]thread<1>,time<1.000312>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:40]thread<1>,time<1.000267>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:41]thread<1>,time<1.000393>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:41]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:42]thread<1>,time<1.000340>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:43]thread<1>,time<1.000428>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:43]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:44]thread<1>,time<1.000241>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:44]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:45]thread<1>,time<1.000374>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:46]thread<1>,time<1.000263>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:47]thread<1>,time<1.000080>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:47]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:48]thread<1>,time<1.000439>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:49]thread<1>,time<1.000456>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:50]thread<1>,time<1.000431>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:50]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:51]thread<1>,time<1.000462>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:51]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:52]thread<1>,time<1.000010>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:53]thread<1>,time<1.000413>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:53]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:54]thread<1>,time<1.000415>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:55]thread<1>,time<1.000349>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:56]thread<1>,time<1.000138>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:56]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:57]thread<1>,time<1.000366>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:58]thread<1>,time<1.000007>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:59]thread<1>,time<1.000216>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:53:59]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:53:59]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:0]thread<1>,time<1.000783>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:1]thread<1>,time<1.000239>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:2]thread<1>,time<1.000227>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:2]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:3]thread<1>,time<1.000255>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:4]thread<1>,time<1.000036>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:5]thread<1>,time<1.000440>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:5]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:6]thread<1>,time<1.000461>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:7]thread<1>,time<1.000445>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:7]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:8]thread<1>,time<1.000028>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:8]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:9]thread<1>,time<1.000111>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:10]thread<1>,time<1.000411>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:11]thread<1>,time<1.000255>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:11]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:12]thread<1>,time<1.000089>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:13]thread<1>,time<1.000439>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:14]thread<1>,time<1.000095>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:14]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:15]thread<1>,time<1.000496>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:15]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:16]thread<1>,time<1.000391>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:17]thread<1>,time<1.000489>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:17]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:18]thread<1>,time<1.000423>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:19]thread<1>,time<1.000343>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:20]thread<1>,time<1.000286>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:20]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:21]thread<1>,time<1.000429>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:22]thread<1>,time<1.000222>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:23]thread<1>,time<1.000207>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:23]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:23]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:24]thread<1>,time<1.000534>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:25]thread<1>,time<1.000288>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:26]thread<1>,time<1.000326>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:26]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:27]thread<1>,time<1.000302>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:28]thread<1>,time<1.000669>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:29]thread<1>,time<1.000422>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:29]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:30]thread<1>,time<1.000189>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:31]thread<1>,time<1.000338>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:31]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:32]thread<1>,time<1.000378>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:32]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:33]thread<1>,time<1.000202>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:34]thread<1>,time<1.000049>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:35]thread<1>,time<1.000414>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:35]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:36]thread<1>,time<1.000462>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:37]thread<1>,time<1.000510>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:38]thread<1>,time<1.000319>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:38]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:39]thread<1>,time<1.000132>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:39]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:40]thread<1>,time<1.000282>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:41]thread<1>,time<1.000405>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:41]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:42]thread<1>,time<1.000107>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:43]thread<1>,time<1.000255>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:44]thread<1>,time<1.000039>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:44]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:45]thread<1>,time<1.000425>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:46]thread<1>,time<1.000200>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:47]thread<1>,time<1.000182>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:47]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:47]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:48]thread<1>,time<1.000200>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:49]thread<1>,time<1.000111>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:50]thread<1>,time<1.000486>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:50]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:51]thread<1>,time<1.000048>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:52]thread<1>,time<1.000411>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:53]thread<1>,time<1.000441>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:53]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:54]thread<1>,time<1.000291>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:55]thread<1>,time<1.000413>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:55]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:56]thread<1>,time<1.000433>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:56]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:54:57]thread<1>,time<1.000489>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:58]thread<1>,time<1.000172>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:59]thread<1>,time<1.000194>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:54:59]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:0]thread<1>,time<1.000119>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:1]thread<1>,time<1.000222>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:2]thread<1>,time<1.000030>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:2]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:3]thread<1>,time<1.000430>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:3]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:4]thread<1>,time<1.000433>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:5]thread<1>,time<1.000419>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:5]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:6]thread<1>,time<1.000041>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:7]thread<1>,time<1.000403>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:8]thread<1>,time<1.000149>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:8]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:9]thread<1>,time<1.000377>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:10]thread<1>,time<1.000258>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:11]thread<1>,time<1.000464>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:11]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:11]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:12]thread<1>,time<1.000078>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:13]thread<1>,time<1.000511>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:14]thread<1>,time<1.000155>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:14]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:15]thread<1>,time<1.000618>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:16]thread<1>,time<1.000295>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:17]thread<1>,time<1.000397>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:17]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:18]thread<1>,time<1.000342>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:19]thread<1>,time<1.000419>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:19]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:20]thread<1>,time<1.000106>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:20]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:21]thread<1>,time<1.000012>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:22]thread<1>,time<1.000685>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:23]thread<1>,time<1.000191>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:23]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:24]thread<1>,time<1.000276>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:25]thread<1>,time<1.000375>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:26]thread<1>,time<1.000460>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:26]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:27]thread<1>,time<1.000241>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:27]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:28]thread<1>,time<1.000206>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:29]thread<1>,time<1.000156>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:29]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:30]thread<1>,time<1.000327>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:31]thread<1>,time<1.000303>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:32]thread<1>,time<1.000224>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:32]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:33]thread<1>,time<1.000149>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:34]thread<1>,time<1.000495>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:35]thread<1>,time<1.000381>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:35]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:35]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:36]thread<1>,time<1.000278>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:37]thread<1>,time<1.000873>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:38]thread<1>,time<1.000433>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:38]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:39]thread<1>,time<1.000108>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:40]thread<1>,time<1.000341>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:41]thread<1>,time<1.000528>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:41]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:42]thread<1>,time<1.000510>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:43]thread<1>,time<1.000506>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:43]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:44]thread<1>,time<1.000440>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:44]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:45]thread<1>,time<1.000396>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:46]thread<1>,time<1.000297>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:47]thread<1>,time<1.000188>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:47]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:48]thread<1>,time<1.000341>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:49]thread<1>,time<1.000261>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:50]thread<1>,time<1.000149>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:50]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:51]thread<1>,time<1.000102>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:51]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:52]thread<1>,time<1.000010>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:53]thread<1>,time<1.000070>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:53]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:54]thread<1>,time<1.000010>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:55]thread<1>,time<1.000396>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:56]thread<1>,time<1.000404>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:56]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:57]thread<1>,time<1.000078>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:58]thread<1>,time<1.000406>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:59]thread<1>,time<1.000282>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:55:59]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:55:59]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:56:0]thread<1>,time<1.000339>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:56:1]thread<1>,time<1.000199>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:56:2]thread<1>,time<1.000418>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:56:2]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:56:3]thread<1>,time<1.000183>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:56:4]thread<1>,time<1.000472>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:56:5]thread<1>,time<1.000381>,socket<408>,clients<0>,recv<0>,msg<0>
+Info [2020-7-24 1:56:5]Error: pClient is nullptr!!!!!!
+Info [2020-7-24 1:56:6]thread<1>,time<1.000418>,socket<408>,clients<0>,recv<0>,msg<0>

@@ -1,4 +1,17 @@
-﻿  DBMsgHandler.cpp
+﻿  Agent.cpp
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+  AgentManager.cpp
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  ConnectServerMgr.cpp
 g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\dbserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -9,4 +22,55 @@ g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(194): warning C40
 g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+  DBMsgHandler.cpp
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\dbserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+  GameService.cpp
+g:\vs2017program\project1\dbserver\gameservice.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\dbserver\gameservice.cpp(105): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\dbserver\gameservice.cpp(118): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\dbserver\gameservice.cpp(138): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+  ConfigFile.cpp
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+  Timer.cpp
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\common\timer.cpp(34): warning C4018: “>=”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\common\timer.cpp(40): warning C4244: “参数”: 从“UINT64”转换到“UINT32”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\common\timer.cpp(47): warning C4244: “参数”: 从“UINT64”转换到“UINT32”，可能丢失数据
+  fdtouid.cpp
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+  main.cpp
+g:\vs2017program\project1\dbserver\main.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+  正在生成代码...
   DBServer.vcxproj -> G:\vs2017program\Project1\x64\Debug\DBServer.exe

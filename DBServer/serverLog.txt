@@ -1,89 +1,68 @@
-Info [2020-7-23 9:35:38]CELLLog::setLogPath success,<serverLog.txt,w>
-Info [2020-7-23 9:35:38]create socket<580> success...
-Info [2020-7-23 9:35:38]bind port<9897> success...
-Info [2020-7-23 9:35:38]listen port<580> success...
-Info [2020-7-23 9:35:39]thread<1>,time<1.000031>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:40]thread<1>,time<1.000431>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:41]thread<1>,time<1.000495>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:42]thread<1>,time<1.000841>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:43]thread<1>,time<1.000416>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:44]thread<1>,time<1.000779>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:45]thread<1>,time<1.000252>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:46]thread<1>,time<1.000312>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:47]thread<1>,time<1.000296>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:48]thread<1>,time<1.000307>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:49]thread<1>,time<1.000762>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:50]thread<1>,time<1.000559>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:51]thread<1>,time<1.000395>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:52]thread<1>,time<1.000432>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:53]thread<1>,time<1.000395>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:54]thread<1>,time<1.000553>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:55]thread<1>,time<1.000330>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:56]thread<1>,time<1.001055>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:57]thread<1>,time<1.000311>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:58]thread<1>,time<1.000594>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:35:59]thread<1>,time<1.000787>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:0]thread<1>,time<1.000370>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:1]thread<1>,time<1.000369>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:2]thread<1>,time<1.000289>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:3]thread<1>,time<1.000348>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:4]thread<1>,time<1.000247>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:5]thread<1>,time<1.000290>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:6]thread<1>,time<1.000564>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:7]thread<1>,time<1.000539>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:8]thread<1>,time<1.000664>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:9]thread<1>,time<1.000218>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:10]thread<1>,time<1.000829>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:11]thread<1>,time<1.000589>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:12]thread<1>,time<1.000658>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:13]thread<1>,time<1.000483>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:14]thread<1>,time<1.000302>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:15]thread<1>,time<1.000337>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:16]thread<1>,time<1.000251>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:17]thread<1>,time<1.000364>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:18]thread<1>,time<1.000269>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:19]thread<1>,time<1.000666>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:20]thread<1>,time<1.000338>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:21]thread<1>,time<1.000942>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:22]thread<1>,time<1.000411>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:23]thread<1>,time<1.000160>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:24]thread<1>,time<1.000969>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:25]thread<1>,time<1.000319>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:26]thread<1>,time<1.000431>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:27]thread<1>,time<1.000679>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:28]thread<1>,time<1.000725>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:29]thread<1>,time<1.000357>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:30]thread<1>,time<1.000678>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:31]thread<1>,time<1.000308>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:32]thread<1>,time<1.000324>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:33]thread<1>,time<1.000300>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:34]thread<1>,time<1.000275>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:35]thread<1>,time<1.000303>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:36]thread<1>,time<1.000314>,socket<580>,clients<0>,recv<0>,msg<0>
-Info [2020-7-23 9:36:37]thread<1>,time<1.000297>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:38]thread<1>,time<1.000345>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:39]logic server heart beat!!!!!!!!!!!!!!!!!!
-Info [2020-7-23 9:36:39]thread<1>,time<1.000250>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:40]thread<1>,time<1.000294>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:41]thread<1>,time<1.000310>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:42]logic server heart beat!!!!!!!!!!!!!!!!!!
-Info [2020-7-23 9:36:42]thread<1>,time<1.000307>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:43]thread<1>,time<1.000291>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:36:53]thread<1>,time<6.952084>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:0]thread<1>,time<1.492928>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:2]copyid = 1, roleid = 1
-Info [2020-7-23 9:37:2]logic server heart beat!!!!!!!!!!!!!!!!!!
-Info [2020-7-23 9:37:2]logic server heart beat!!!!!!!!!!!!!!!!!!
-Info [2020-7-23 9:37:2]logic server heart beat!!!!!!!!!!!!!!!!!!
-Info [2020-7-23 9:37:2]thread<1>,time<7.949637>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:2]copyid = 1, roleid = 1
-Info [2020-7-23 9:37:2]logic server heart beat!!!!!!!!!!!!!!!!!!
-Info [2020-7-23 9:37:2]logic server heart beat!!!!!!!!!!!!!!!!!!
-Info [2020-7-23 9:37:2]logic server heart beat!!!!!!!!!!!!!!!!!!
-Info [2020-7-23 9:37:3]logic server heart beat!!!!!!!!!!!!!!!!!!
-Info [2020-7-23 9:37:3]thread<1>,time<1.000117>,socket<580>,clients<1>,recv<0>,msg<3>
-Info [2020-7-23 9:37:4]thread<1>,time<1.000309>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:5]thread<1>,time<1.000299>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:6]logic server heart beat!!!!!!!!!!!!!!!!!!
-Info [2020-7-23 9:37:6]thread<1>,time<1.000278>,socket<580>,clients<1>,recv<0>,msg<0>
-Info [2020-7-23 9:37:7]thread<1>,time<1.000327>,socket<580>,clients<1>,recv<0>,msg<0>
+Info [2020-7-23 12:41:26]CELLLog::setLogPath success,<serverLog.txt,w>
+Info [2020-7-23 12:41:26]create socket<600> success...
+Info [2020-7-23 12:41:26]bind port<9897> success...
+Info [2020-7-23 12:41:26]listen port<600> success...
+Info [2020-7-23 12:41:27]thread<1>,time<1.000847>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:28]thread<1>,time<1.000386>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:29]thread<1>,time<1.000349>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:30]thread<1>,time<1.000233>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:31]thread<1>,time<1.000365>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:32]thread<1>,time<1.000531>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:33]thread<1>,time<1.000642>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:34]thread<1>,time<1.000588>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:35]thread<1>,time<1.000341>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:36]thread<1>,time<1.000288>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:37]thread<1>,time<1.000335>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:38]thread<1>,time<1.000580>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:39]thread<1>,time<1.000235>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:40]thread<1>,time<1.000299>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:41]thread<1>,time<1.000348>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:42]thread<1>,time<1.000303>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:43]thread<1>,time<1.000594>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:44]thread<1>,time<1.000301>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:45]thread<1>,time<1.000337>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:46]thread<1>,time<1.000277>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:47]thread<1>,time<1.000281>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:48]thread<1>,time<1.000330>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:49]thread<1>,time<1.000521>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:50]thread<1>,time<1.000218>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:51]thread<1>,time<1.000282>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:52]thread<1>,time<1.000333>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:53]thread<1>,time<1.000410>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:54]thread<1>,time<1.000333>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:55]thread<1>,time<1.000295>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:56]thread<1>,time<1.000498>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:57]thread<1>,time<1.000209>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:58]thread<1>,time<1.000270>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:41:59]thread<1>,time<1.000576>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:0]thread<1>,time<1.000236>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:1]thread<1>,time<1.000358>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:2]thread<1>,time<1.000320>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:3]thread<1>,time<1.000322>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:4]thread<1>,time<1.000216>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:5]thread<1>,time<1.000326>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:6]thread<1>,time<1.000540>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:7]thread<1>,time<1.000209>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:8]thread<1>,time<1.000386>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:9]thread<1>,time<1.000228>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:10]thread<1>,time<1.000313>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:11]thread<1>,time<1.000347>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:12]thread<1>,time<1.000254>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:13]thread<1>,time<1.000285>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:14]thread<1>,time<1.000328>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:15]thread<1>,time<1.000282>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:16]thread<1>,time<1.000269>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:17]thread<1>,time<1.000360>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:18]thread<1>,time<1.000374>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:19]thread<1>,time<1.000395>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:20]thread<1>,time<1.000436>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:21]thread<1>,time<1.000293>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:22]thread<1>,time<1.000316>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:23]thread<1>,time<1.000366>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:24]thread<1>,time<1.000302>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:25]thread<1>,time<1.000314>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:26]thread<1>,time<1.000307>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:27]thread<1>,time<1.000298>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:28]thread<1>,time<1.000478>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:29]thread<1>,time<1.000266>,socket<600>,clients<0>,recv<0>,msg<0>
+Info [2020-7-23 12:42:30]thread<1>,time<1.000284>,socket<600>,clients<0>,recv<0>,msg<0>

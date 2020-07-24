@@ -22,7 +22,7 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema* schemas = n
 static constexpr ::PROTOBUF_NAMESPACE_ID::Message* const* file_default_instances = nullptr;
 
 const char descriptor_table_protodef_MsgID_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\013MsgID.proto*\365\023\n\tMessageID\022\r\n\tMSG_BEGIN"
+  "\n\013MsgID.proto*\337\025\n\tMessageID\022\r\n\tMSG_BEGIN"
   "\020\000\022\034\n\026MSG_NORMAL_MSGID_BEGIN\020\240\215\006\022\033\n\025MSG_"
   "CHECK_VERSION_REQ\020\241\215\006\022\033\n\025MSG_CHECK_VERSI"
   "ON_ACK\020\242\215\006\022\031\n\023MSG_ACCOUNT_REG_REQ\020\243\215\006\022\031\n"
@@ -85,8 +85,14 @@ const char descriptor_table_protodef_MsgID_2eproto[] PROTOBUF_SECTION_VARIABLE(p
   "\032\n\024MSG_MOUNT_RIDING_ACK\020\211\250\022\022\034\n\026MSG_SCENE"
   "SVR_MSGID_END\020\377\264\030\022\033\n\025MSG_DBSVR_MSGID_BEG"
   "IN\020\200\265\030\022\030\n\022MSG_DB_EXE_SQL_REQ\020\201\265\030\022\030\n\022MSG_"
-  "DB_EXE_SQL_ACK\020\202\265\030\022\031\n\023MSG_DBSVR_MSGID_EN"
-  "D\020\237\302\036b\006proto3"
+  "DB_EXE_SQL_ACK\020\202\265\030\022\"\n\034MSG_ACCOUNT_LOGIN_"
+  "VERIFY_REQ\020\203\265\030\022\"\n\034MSG_ACCOUNT_LOGIN_VERI"
+  "FY_ACK\020\204\265\030\022\"\n\034MSG_ACCOUNT_REG_TO_DBSVR_R"
+  "EQ\020\205\265\030\022\"\n\034MSG_ACCOUNT_REG_TO_DBSVR_ACK\020\206"
+  "\265\030\022+\n%MSG_LOAD_LOGICSVR_LIST_FROM_DBSVR_"
+  "REQ\020\207\265\030\022+\n%MSG_LOAD_LOGICSVR_LIST_FROM_D"
+  "BSVR_ACK\020\210\265\030\022\031\n\023MSG_DBSVR_MSGID_END\020\237\302\036b"
+  "\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_MsgID_2eproto_deps[1] = {
 };
@@ -94,7 +100,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Msg
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_MsgID_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_MsgID_2eproto = {
-  false, false, descriptor_table_protodef_MsgID_2eproto, "MsgID.proto", 2573,
+  false, false, descriptor_table_protodef_MsgID_2eproto, "MsgID.proto", 2807,
   &descriptor_table_MsgID_2eproto_once, descriptor_table_MsgID_2eproto_sccs, descriptor_table_MsgID_2eproto_deps, 0, 0,
   schemas, file_default_instances, TableStruct_MsgID_2eproto::offsets,
   file_level_metadata_MsgID_2eproto, 0, file_level_enum_descriptors_MsgID_2eproto, file_level_service_descriptors_MsgID_2eproto,
@@ -196,6 +202,12 @@ bool MessageID_IsValid(int value) {
     case 400000:
     case 400001:
     case 400002:
+    case 400003:
+    case 400004:
+    case 400005:
+    case 400006:
+    case 400007:
+    case 400008:
     case 499999:
       return true;
     default:

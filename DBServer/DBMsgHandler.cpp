@@ -45,14 +45,21 @@ bool DBMsgHandler::OnMsgDBExeSqlReq(NetPacket * pack)
 	{
 		CppMySQLQuery res = CGameService::GetInstancePtr()->tDBConnection.querySQL(req.sqlcmd().c_str());
 		CELLLog::Info("copyid = %d, roleid = %d\n", res.getIntField("copyid"), res.getIntField("roleid"));
+		return true;
 	}
 	else
 	{
 		int res = CGameService::GetInstancePtr()->tDBConnection.execSQL(req.sqlcmd().c_str());
-		if (res != -1)
+		if (res == -1)
 		{
-			CELLLog::Info("sql falied !!!!!!!!!!!!!!!!!!\n");
+			CELLLog::Info("sql execute falied ........\n");
+			CGameService::GetInstancePtr()->SendData(pack->m_dwConnID, MSG_DB_EXE_SQL_ACK, req);
+			return false;
 			//CGameService::GetInstancePtr()->SendData(pack->m_dwConnID, MSG_DB_EXE_SQL_ACK, req);
+		}
+		else
+		{
+
 		}
 	}
 	

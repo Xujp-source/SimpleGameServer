@@ -76,7 +76,7 @@ void CGameService::OnUpdate()
 	CPlayerManager::GetInstancePtr()->OnUpdate();
 }
 
-//给其他服发送心跳包3
+//给其他服发送心跳包
 bool CGameService::HeartBeat(unsigned int msec)
 {
 	if (m_dwDBConnID != -1)
@@ -172,7 +172,7 @@ void CGameService::OnNetLeave(CELLClient * pClient)
 	//移除fd和agent的映射关系
 	AgentManager::GetInstancePtr()->RemovePortToAgent(fd);
 
-	//断开连接 重置connectID
+	//当网关服异常，心跳定时未收到网关的ack，移除pClient，重置connID
 	if (fd == m_dwGateConnID)
 	{
 		m_dwGateConnID = -1;
@@ -180,6 +180,10 @@ void CGameService::OnNetLeave(CELLClient * pClient)
 	else if (fd == m_dwLoginConnID)
 	{
 		m_dwLoginConnID = -1;
+	}
+	else if (fd == m_dwDBConnID)
+	{
+		m_dwDBConnID = -1;
 	}
 }
 

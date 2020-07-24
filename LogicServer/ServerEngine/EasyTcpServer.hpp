@@ -161,7 +161,7 @@ public:
 		int ret = connect(_pClient->sockfd(), (sockaddr*)&_sin, sizeof(sockaddr_in));
 		if (SOCKET_ERROR == ret)
 		{
-			CELLLog::Info("Error: socket = %d, ip = %s, port = %d,connect failed....\n", (int)_pClient->sockfd(), inet_ntoa(_sin.sin_addr), port);
+			CELLLog::Info("Error: socket = %d, ip = %s, port = %d,connect failed....WSAERROR = %d\n", (int)_pClient->sockfd(), inet_ntoa(_sin.sin_addr), port, WSAGetLastError());
 			delete _pClient;
 			return ret;
 		}
