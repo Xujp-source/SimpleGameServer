@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ServerEngine">
+      <UniqueIdentifier>{c0d5acb8-460e-43f3-86ca-f38316632fd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServerData">
+      <UniqueIdentifier>{b9e92a1f-2fe9-4126-b5a8-5f266694a672}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protoc">
+      <UniqueIdentifier>{b0225582-1d9e-4161-a82e-565b2dc78f0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServerEngine\3rd">
+      <UniqueIdentifier>{e9cfbccb-5c2c-4cbf-b4c7-cc07ca81785f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServerEngine\Common">
+      <UniqueIdentifier>{d17298a5-74b1-4771-bf05-eff316702ad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ServerEngine\DBInterFace">
+      <UniqueIdentifier>{1271acfe-a02d-4240-b55c-74c076e85852}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="protoc\DBExcute.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
+    <ClCompile Include="protoc\Login.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
+    <ClCompile Include="protoc\MsgID.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerEngine\3rd\uuid.cpp">
+      <Filter>ServerEngine\3rd</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerEngine\Common\CommonConvert.cpp">
+      <Filter>ServerEngine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerEngine\Common\ConfigFile.cpp">
+      <Filter>ServerEngine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerEngine\Common\fdtouid.cpp">
+      <Filter>ServerEngine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerEngine\Common\Rpc.cpp">
+      <Filter>ServerEngine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerEngine\Common\Timer.cpp">
+      <Filter>ServerEngine\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerEngine\DBInterFace\CppMysql.cpp">
+      <Filter>ServerEngine\DBInterFace</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerEngine\DBInterFace\DBConnectPool.cpp">
+      <Filter>ServerEngine\DBInterFace</Filter>
+    </ClCompile>
+    <ClCompile Include="Agent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AgentManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectServerMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameService.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="protoc\DBExcute.pb.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\Login.pb.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\MsgID.pb.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\3rd\uuid.h">
+      <Filter>ServerEngine\3rd</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\Common\asrt.h">
+      <Filter>ServerEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\Common\CommonConvert.h">
+      <Filter>ServerEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\Common\ConfigFile.h">
+      <Filter>ServerEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\Common\fdtouid.h">
+      <Filter>ServerEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\Common\Rpc.h">
+      <Filter>ServerEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\Common\stdafx.h">
+      <Filter>ServerEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\Common\Timer.h">
+      <Filter>ServerEngine\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\DBInterFace\CppMysql.h">
+      <Filter>ServerEngine\DBInterFace</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\DBInterFace\DBConnectPool.h">
+      <Filter>ServerEngine\DBInterFace</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELL.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELLBuffer.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELLClient.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELLLog.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELLMsgStream.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELLNetWork.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELLSemaphore.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELLServer.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELLStream.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELLTask.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELLThread.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\CELLTimestamp.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\EasyTcpClient.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\EasyTcpServer.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\INetEvent.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerEngine\MessageHeader.hpp">
+      <Filter>ServerEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Agent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AgentManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectServerMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameService.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgHandlerManager.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDefine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ServerEngine\servercfg.ini">
+      <Filter>ServerEngine</Filter>
+    </None>
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>
