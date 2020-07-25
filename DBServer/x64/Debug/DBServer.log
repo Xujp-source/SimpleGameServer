@@ -48,18 +48,6 @@ g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(292): warning 
 g:\vs2017program\project1\dbserver\gameservice.cpp(105): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\dbserver\gameservice.cpp(118): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\dbserver\gameservice.cpp(138): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
-  ConfigFile.cpp
-g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
-  Timer.cpp
-g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
-g:\vs2017program\project1\dbserver\serverengine\common\timer.cpp(34): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\dbserver\serverengine\common\timer.cpp(40): warning C4244: “参数”: 从“UINT64”转换到“UINT32”，可能丢失数据
-g:\vs2017program\project1\dbserver\serverengine\common\timer.cpp(47): warning C4244: “参数”: 从“UINT64”转换到“UINT32”，可能丢失数据
-  fdtouid.cpp
-g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
   main.cpp
 g:\vs2017program\project1\dbserver\main.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\dbserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -72,5 +60,49 @@ g:\vs2017program\project1\dbserver\serverengine\cellserver.hpp(194): warning C40
 g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\dbserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+  DBExcute.pb.cc
+  MsgID.pb.cc
+  uuid.cpp
+  CommonConvert.cpp
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  ConfigFile.cpp
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+  fdtouid.cpp
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+  Rpc.cpp
+  Timer.cpp
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\dbserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\common\timer.cpp(34): warning C4018: “>=”: 有符号/无符号不匹配
+g:\vs2017program\project1\dbserver\serverengine\common\timer.cpp(40): warning C4244: “参数”: 从“UINT64”转换到“UINT32”，可能丢失数据
+g:\vs2017program\project1\dbserver\serverengine\common\timer.cpp(47): warning C4244: “参数”: 从“UINT64”转换到“UINT32”，可能丢失数据
+  CppMysql.cpp
+g:\vs2017program\project1\dbserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  DBConnectPool.cpp
   正在生成代码...
+g:\vs2017program\project1\dbserver\dbmsghandler.cpp(40): warning C4172: 返回局部变量或临时变量的地址: res
+libprotobufd.lib(any_lite.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(any_lite.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(arena.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(arena.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(extension_set.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(extension_set.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(generated_message_util.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(generated_message_util.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(implicit_weak_message.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(implicit_weak_message.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(coded_stream.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(coded_stream.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(io_win32.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(io_win32.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(strtod.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(strtod.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(zero_copy_stream.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(zero_copy_stream.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(zero_copy_stream_impl.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(zero_copy_stream_impl.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(zero_copy_stream_impl_lite.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(zero_copy_stream_impl_lite.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(message_lite.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(message_lite.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(parse_context.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(parse_context.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(repeated_field.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(repeated_field.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(common.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(common.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(int128.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(int128.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(status.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(status.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(stringpiece.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(stringpiece.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(stringprintf.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(stringprintf.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(structurally_valid.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(structurally_valid.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(strutil.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(strutil.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
+libprotobufd.lib(wire_format_lite.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(wire_format_lite.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
   DBServer.vcxproj -> G:\vs2017program\Project1\x64\Debug\DBServer.exe

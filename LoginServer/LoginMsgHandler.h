@@ -29,8 +29,8 @@ public:
 	bool OnMsgLoadLogicSvrListReq(NetPacket* pack);			//加载逻辑服的列表
 	bool OnMsgLoadLogicSvrListFromDBAck(NetPacket* pack);   //加载逻辑服的列表结果来自DBServer
 
-	//bool OnMsgSelectEnterLogicSvrReq(NetPacket* pack);	//选择进入哪个逻辑服
-
+	bool OnMsgSelectEnterLogicSvrReq(NetPacket* pack);	//选择进入哪个逻辑服
+	bool OnMsgSelectEnterLogicSvrFromLogicAck(NetPacket* pack);	//选择进入哪个逻辑服结果来自LogicServer
 	//***************************************************************************************************
 };
 

@@ -56,7 +56,6 @@ g:\vs2017program\project1\loginserver\loginmsghandler.cpp(92): warning C4477: �
   g:\vs2017program\project1\loginserver\loginmsghandler.cpp(92): note: 请考虑在格式字符串中使用“%lld”
   g:\vs2017program\project1\loginserver\loginmsghandler.cpp(92): note: 请考虑在格式字符串中使用“%Id”
   g:\vs2017program\project1\loginserver\loginmsghandler.cpp(92): note: 请考虑在格式字符串中使用“%I64d”
-g:\vs2017program\project1\loginserver\loginmsghandler.cpp(92): warning C4477: “snprintf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 3 拥有了类型“std::string”
   main.cpp
 g:\vs2017program\project1\loginserver\main.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\loginserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失

@@ -127,4 +127,12 @@ bool LoginMsgHandler::OnMsgLoadLogicSvrListFromDBAck(NetPacket * pack)
 	return false;
 }
 
+bool LoginMsgHandler::OnMsgSelectEnterLogicSvrReq(NetPacket * pack)
+{
+	return false;
+}
 
+bool LoginMsgHandler::OnMsgSelectEnterLogicSvrFromLogicAck(NetPacket * pack)
+{
+	return false;
+}
