@@ -1,2 +1,2 @@
-# CenterServer
-中心服务器
+# GameServer
+战斗服务器
