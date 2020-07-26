@@ -12,7 +12,7 @@ MY_LIB=-L/usr/lib64/ \
 	-L/usr/local/lib \
 	-lpthread -lprotobuf -ldl 
 
-TARGET=DBServer
+TARGET=CenterServer
 
 SRCS=$(wildcard *.cpp)
 SRCS:=$(SRCS) $(wildcard ./ServerEngine/3rd/*.cpp) \
