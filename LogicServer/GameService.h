@@ -3,6 +3,7 @@
 #include "./ServerEngine/EasyTcpServer.hpp"
 #include "google/protobuf/message.h"
 #include "./ServerEngine/DBInterFace/CppMysql.h"
+#include "Agent.h"
 
 class CGameService : public EasyTcpServer
 {
@@ -28,9 +29,6 @@ public:
 	//测试
 	bool TestSql(unsigned int msec);
 
-	//连接网关
-	virtual bool ConnectToGateServer();
-
 	//连接登录服
 	virtual bool ConnectToLoginServer();
 
@@ -50,10 +48,9 @@ public:
 	bool SendData(int fd, int MsgID, const google::protobuf::Message& pdata);
 
 	//推送事件
-	bool NotifyEvent(int EventID, const google::protobuf::Message & pdata);
+	bool NotifyEvent(Agent* agent, int EventID, const google::protobuf::Message & pdata);
 
 private:
-	int m_dwGateConnID;
 	int m_dwLoginConnID;
 	int m_dwDBConnID;
 

@@ -17,7 +17,7 @@ void CMatchModule::RegisterMessageHanler()
 
 void CMatchModule::RegisterEventHanler()
 {
-	CEventHandlerManager::GetInstancePtr()->RegisterEventHandle(EVENT_LOGOUT, &CMatchModule::LogoutCallback, this);
+	m_pOwnPlayer->m_EventPump.RegisterEventHandle(EVENT_LOGOUT, &CMatchModule::LogoutCallback, this);
 }
 
 bool CMatchModule::ReadFromDBLoginData()

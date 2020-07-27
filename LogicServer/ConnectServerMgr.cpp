@@ -28,7 +28,6 @@ bool ConnectServerMgr::Init()
 void ConnectServerMgr::RegisterMessageHanler()
 {
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &ConnectServerMgr::OnMsgGameSvrRegister, this);
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &ConnectServerMgr::OnMsgGameSvrHeartReq, this);
 }
 
 bool ConnectServerMgr::SendData(int ServerID, int MsgID, const google::protobuf::Message & pdata)
@@ -55,8 +54,4 @@ bool ConnectServerMgr::OnMsgGameSvrRegister(NetPacket* pack)
 	return true;
 }
 
-bool ConnectServerMgr::OnMsgGameSvrHeartReq(NetPacket * pack)
-{
-	return false;
-}
 

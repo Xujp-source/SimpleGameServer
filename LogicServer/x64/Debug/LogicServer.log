@@ -37,9 +37,9 @@ g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warni
 g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\player.h(28): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\playermanager.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-g:\vs2017program\project1\logicserver\gameservice.cpp(151): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\gameservice.cpp(164): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\gameservice.cpp(199): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.cpp(132): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.cpp(145): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\gameservice.cpp(173): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
   BagModule.cpp
 g:\vs2017program\project1\logicserver\logicmodule\bagmodule.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失

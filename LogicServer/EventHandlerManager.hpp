@@ -4,24 +4,13 @@
 #include "google/protobuf/message.h"
 //事件分发框架
 
-struct CEventHandle
+class CEventHandler : public CHandlerManager
 {
-
-};
-
-class CEventHandlerManager : public CHandlerManager
-{
-private:
-	CEventHandlerManager(void) {};
-	virtual ~CEventHandlerManager(void) {};
+public:
+	CEventHandler(void) {};
+	virtual ~CEventHandler(void) {};
 
 public:
-	static CEventHandlerManager* GetInstancePtr()
-	{
-		static CEventHandlerManager _Instance;
-		return &_Instance;
-	}
-
 	template<typename TClass>
 	bool RegisterEventHandle(int nEventID, bool(TClass::*FuncPtr)(const google::protobuf::Message*), TClass* pObj)
 	{
@@ -34,5 +23,19 @@ public:
 	}
 };
 
+
+class CEventHandlerManager : public CEventHandler
+{
+private:
+	CEventHandlerManager(void) {};
+	virtual ~CEventHandlerManager(void) {};
+
+public:
+	static CEventHandlerManager* GetInstancePtr()
+	{
+		static CEventHandlerManager _Instance;
+		return &_Instance;
+	}
+};
 
 #endif

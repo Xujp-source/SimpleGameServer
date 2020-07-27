@@ -3,16 +3,13 @@
 #include"EventHandlerManager.hpp"
 #include"Player.h"
 #include"PlayerManager.h"
-#include"Agent.h"
 #include"AgentManager.h"
 #include"ConnectServerMgr.h"
 #include"LogicMsgHandler.h"
-#include"./protoc/Bag.pb.h"
 #include"./protoc/DBExcute.pb.h"
 
 CGameService::CGameService()
 {
-	m_dwGateConnID = -1;
 	m_dwLoginConnID = -1;
 	m_dwDBConnID = -1;
 }
@@ -77,13 +74,13 @@ bool CGameService::HeartBeat(unsigned int msec)
 {
 	if (m_dwDBConnID != -1)
 	{
-		BagUnLockReq req;
+		EmptyReq req;
 		SendData(m_dwDBConnID, MSG_HEART_BEAT_REQ, req);
 	}
 	return true;
 }
 
-//
+//test
 bool CGameService::TestSql(unsigned int msec)
 {
 	if (m_dwDBConnID != -1)
@@ -93,22 +90,6 @@ bool CGameService::TestSql(unsigned int msec)
 		req.set_sqlcmd("select * from copy");
 		SendData(m_dwDBConnID, MSG_DB_EXE_SQL_REQ, req);
 	}
-	return true;
-}
-
-
-//连接网关
-bool CGameService::ConnectToGateServer()
-{
-	if (m_dwGateConnID != -1)
-	{
-		return true;
-	}
-
-	UINT32 nGatePort = CConfigFile::GetInstancePtr()->GetIntValue("gate_svr_port");
-	std::string strGateIp = CConfigFile::GetInstancePtr()->GetStringValue("gate_svr_ip");
-	m_dwGateConnID = Connect(strGateIp.c_str(), nGatePort);
-	ERROR_RETURN_FALSE(m_dwGateConnID != -1);
 	return true;
 }
 
@@ -163,24 +144,17 @@ void CGameService::OnNetLeave(CELLClient * pClient)
 	//获取agent对象
 	int fd = pClient->sockfd();
 	Agent* agent = AgentManager::GetInstancePtr()->FindAgentByPort(fd);
-	//抛出玩家登出事件
-	if (agent->IsUser())
-	{
-		EmptyReq req;
-		NotifyEvent(EVENT_LOGOUT, req);
-	}
+	//抛出客户端离开事件
+	EmptyReq req;
+	NotifyEvent(agent, EVENT_LOGOUT, req);
 	//删除agent对象
 	delete agent;
 	agent = nullptr;
 	//移除fd和agent的映射关系
 	AgentManager::GetInstancePtr()->RemovePortToAgent(fd);
 
-	//当网关服异常，心跳定时未收到网关的ack，移除pClient，重置connID
-	if (fd == m_dwGateConnID)
-	{
-		m_dwGateConnID = -1;
-	}
-	else if (fd == m_dwLoginConnID)
+	//当登录服异常，未收到登录服的心跳定时ack，移除pClient，重置connID
+	if (fd == m_dwLoginConnID)
 	{
 		m_dwLoginConnID = -1;
 	}
@@ -205,24 +179,17 @@ void CGameService::OnNetMsg(CELLServer* pServer, CELLClient* pClient, netmsg_Dat
 	}
 	//打包成业务层用的消息buffer
 	NetPacket pack(fd, package);
-	if (!agent->IsUser())
+	// system or other message
+	if (CMsgHandlerManager::GetInstancePtr()->ExecuteMessage(package->cmd, &pack))
 	{
-		// system or other message
-		if (!CMsgHandlerManager::GetInstancePtr()->ExecuteMessage(package->cmd, &pack))
-		{
-			CELLLog::Info("ERROR:CGameService::OnNetMsg Not Find SystemMessage sockfd:%d, MessageID:%d\n", pClient->sockfd(), package->cmd);
-			return;
-		}
+		return;
 	}
-	else
+	// agent message
+	if (agent->m_NetMessagePump.ExecuteMessage(package->cmd, &pack))
 	{
-		// player message
-		if (!agent->m_NetMessagePump.ExecuteMessage(package->cmd, &pack))
-		{
-			CELLLog::Info("ERROR:CGameService::OnNetMsg Not Find PlayerMessage sockfd:%d, MessageID:%d\n", pClient->sockfd(), package->cmd);
-			return;
-		}
+		return;
 	}
+	CELLLog::Info("ERROR:CGameService::OnNetMsg Not Find Message sockfd:%d, MessageID:%d\n", pClient->sockfd(), package->cmd);
 }
 
 //推送网络消息
@@ -248,9 +215,10 @@ bool CGameService::SendData(int fd, int MsgID, const google::protobuf::Message& 
 	return true;
 }
 
-bool CGameService::NotifyEvent(int EventID, const google::protobuf::Message& pdata)
+//推送事件
+bool CGameService::NotifyEvent(Agent* agent, int EventID, const google::protobuf::Message & pdata)
 {
-	if (!CEventHandlerManager::GetInstancePtr()->NotifyEventHandle(EventID, &pdata))
+	if (!agent->m_EventPump.NotifyEventHandle(EventID, &pdata))
 	{
 		CELLLog::Info("ERROR:CGameService::OnEventMsg Not Find EventMessage EventID:%d\n", EventID);
 		return false;

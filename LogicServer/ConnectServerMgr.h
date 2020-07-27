@@ -23,7 +23,6 @@ public:
 public:
 	//*******************消息处理定义**************************
 	bool OnMsgGameSvrRegister(NetPacket* pack);  //游戏服务器连接后的注册请求
-	bool OnMsgGameSvrHeartReq(NetPacket* pack);	 //游戏服务器的心跳请求
 	//*********************************************************
 
 private:
