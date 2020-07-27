@@ -13,8 +13,8 @@ public:
 public:
 	//*********************模块通用方法定义*********************
 	virtual void RegisterMessageHanler();
-	//virtual bool ReadFromDBLoginData(DBRoleLoginAck& Ack);
-	//virtual bool SaveToClientLoginData(RoleLoginAck& Ack);
+	virtual void RegisterEventHanler();
+	virtual bool ReadFromDBLoginData();
 	virtual bool SaveChangeData();
 	//**********************************************************
 

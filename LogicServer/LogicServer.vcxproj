@@ -26,6 +26,7 @@
     <ClCompile Include="LogicModule\BagModule.cpp" />
     <ClCompile Include="LogicModule\BaseModule.cpp" />
     <ClCompile Include="LogicModule\MailModule.cpp" />
+    <ClCompile Include="LogicModule\MatchModule.cpp" />
     <ClCompile Include="LogicModule\RoleModule.cpp" />
     <ClCompile Include="LogicModule\StoreModule.cpp" />
     <ClCompile Include="LogicModule\TaskModule.cpp" />
@@ -36,7 +37,9 @@
     <ClCompile Include="PlayerManager.cpp" />
     <ClCompile Include="protoc\Bag.pb.cc" />
     <ClCompile Include="protoc\DBExcute.pb.cc" />
+    <ClCompile Include="protoc\EventID.pb.cc" />
     <ClCompile Include="protoc\MsgID.pb.cc" />
+    <ClCompile Include="protoc\Other.pb.cc" />
     <ClCompile Include="protoc\Store.pb.cc" />
     <ClCompile Include="ServerEngine\3rd\uuid.cpp" />
     <ClCompile Include="ServerEngine\Common\CommonConvert.cpp" />
@@ -51,10 +54,12 @@
     <ClInclude Include="Agent.h" />
     <ClInclude Include="AgentManager.h" />
     <ClInclude Include="ConnectServerMgr.h" />
+    <ClInclude Include="EventHandlerManager.hpp" />
     <ClInclude Include="GameService.h" />
     <ClInclude Include="LogicModule\BagModule.h" />
     <ClInclude Include="LogicModule\BaseModule.h" />
     <ClInclude Include="LogicModule\MailModule.h" />
+    <ClInclude Include="LogicModule\MatchModule.h" />
     <ClInclude Include="LogicModule\RoleModule.h" />
     <ClInclude Include="LogicModule\StoreModule.h" />
     <ClInclude Include="LogicModule\TaskModule.h" />
@@ -65,7 +70,9 @@
     <ClInclude Include="PlayerManager.h" />
     <ClInclude Include="protoc\Bag.pb.h" />
     <ClInclude Include="protoc\DBExcute.pb.h" />
+    <ClInclude Include="protoc\EventID.pb.h" />
     <ClInclude Include="protoc\MsgID.pb.h" />
+    <ClInclude Include="protoc\Other.pb.h" />
     <ClInclude Include="protoc\Store.pb.h" />
     <ClInclude Include="ServerData\BagData.h" />
     <ClInclude Include="ServerData\RoleData.h" />

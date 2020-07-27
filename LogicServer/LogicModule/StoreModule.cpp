@@ -17,15 +17,15 @@ void CStoreModule::RegisterMessageHanler()
 	m_pOwnPlayer->m_NetMessagePump.RegisterMessageHandle(MSG_STORE_BUY_REQ, &CStoreModule::OnMsgStoreBuyReq, this);
 }
 
-//bool CStoreModule::ReadFromDBLoginData(DBRoleLoginAck& Ack)
-//{
-//
-//}
-//
-//bool CStoreModule::SaveToClientLoginData(RoleLoginAck& Ack)
-//{
-//
-//}
+void CStoreModule::RegisterEventHanler()
+{
+
+}
+
+bool CStoreModule::ReadFromDBLoginData()
+{
+	return false;
+}
 
 bool CStoreModule::SaveChangeData()
 {

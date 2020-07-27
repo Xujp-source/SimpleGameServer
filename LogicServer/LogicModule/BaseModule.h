@@ -3,6 +3,7 @@
 #include "../stdafx.h"
 #include "../GameService.h"
 #include "../Player.h"
+#include "../EventHandlerManager.hpp"
 
 class CBaseModule
 {
@@ -13,8 +14,8 @@ public:
 
 public:
 	virtual void RegisterMessageHanler() = 0;
-	/*virtual bool ReadFromDBLoginData(DBRoleLoginAck& Ack) = 0;
-	virtual bool SaveToClientLoginData(RoleLoginAck& Ack) = 0;*/
+	virtual void RegisterEventHanler() = 0;
+	virtual bool ReadFromDBLoginData() = 0;
 	virtual bool SaveChangeData() = 0;
 
 protected:

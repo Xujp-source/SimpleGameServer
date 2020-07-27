@@ -1,5 +1,6 @@
 #include"GameService.h"
 #include"MsgHandlerManager.hpp"
+#include"EventHandlerManager.hpp"
 #include"Player.h"
 #include"PlayerManager.h"
 #include"Agent.h"
@@ -31,7 +32,7 @@ bool CGameService::Init()
 {
 	if(!CConfigFile::GetInstancePtr()->Load("./ServerEngine/servercfg.ini"))
 	{
-		CELLLog::Info("加载 servercfg.ini文件失败!");
+		CELLLog::Info("加载 servercfg.ini文件失败!\n");
 		return false;
 	}
 
@@ -53,15 +54,10 @@ bool CGameService::Init()
 //定时操作
 bool CGameService::OnSecondTimer()
 {
-	//连接网关
-	//ConnectToGateServer();
-
-	//连接登录服
-	//ConnectToLoginServer();
-
 	//连接数据库操作服
 	ConnectToDBServer();
 
+	//玩家每秒定时操作
 	CPlayerManager::GetInstancePtr()->OnSecondTimer();
 
 	return true;
@@ -164,9 +160,16 @@ void CGameService::OnNetLeave(CELLClient * pClient)
 {
 	//调用基类方法
 	EasyTcpServer::OnNetLeave(pClient);
-	//删除agent对象
+	//获取agent对象
 	int fd = pClient->sockfd();
 	Agent* agent = AgentManager::GetInstancePtr()->FindAgentByPort(fd);
+	//抛出玩家登出事件
+	if (agent->IsUser())
+	{
+		EmptyReq req;
+		NotifyEvent(EVENT_LOGOUT, req);
+	}
+	//删除agent对象
 	delete agent;
 	agent = nullptr;
 	//移除fd和agent的映射关系
@@ -197,27 +200,26 @@ void CGameService::OnNetMsg(CELLServer* pServer, CELLClient* pClient, netmsg_Dat
 	Agent* agent = AgentManager::GetInstancePtr()->FindAgentByPort(fd);
 	if (agent == nullptr)
 	{
-		CELLLog::Info("CGameService::OnNetMsg Error Invalid sockfd:%d, MessageID:%d", pClient->sockfd(), package->cmd);
+		CELLLog::Info("CGameService::OnNetMsg Error Invalid sockfd:%d, MessageID:%d\n", pClient->sockfd(), package->cmd);
 		return;
 	}
 	//打包成业务层用的消息buffer
 	NetPacket pack(fd, package);
-
 	if (!agent->IsUser())
 	{
 		// system or other message
 		if (!CMsgHandlerManager::GetInstancePtr()->ExecuteMessage(package->cmd, &pack))
 		{
-			CELLLog::Info("CGameService::OnNetMsg Not Find SystemMessage sockfd:%d, MessageID:%d", pClient->sockfd(), package->cmd);
+			CELLLog::Info("ERROR:CGameService::OnNetMsg Not Find SystemMessage sockfd:%d, MessageID:%d\n", pClient->sockfd(), package->cmd);
 			return;
 		}
 	}
 	else
 	{
 		// player message
-		if (agent->m_NetMessagePump.ExecuteMessage(package->cmd, &pack))
+		if (!agent->m_NetMessagePump.ExecuteMessage(package->cmd, &pack))
 		{
-			CELLLog::Info("CGameService::OnNetMsg Not Find PlayerMessage sockfd:%d, MessageID:%d", pClient->sockfd(), package->cmd);
+			CELLLog::Info("ERROR:CGameService::OnNetMsg Not Find PlayerMessage sockfd:%d, MessageID:%d\n", pClient->sockfd(), package->cmd);
 			return;
 		}
 	}
@@ -243,6 +245,16 @@ bool CGameService::SendData(int fd, int MsgID, const google::protobuf::Message& 
 	memcpy(data.buff, szBuff, strlen(szBuff)+1);
 	//推送消息
 	pClient->SendData(&data);
+	return true;
+}
+
+bool CGameService::NotifyEvent(int EventID, const google::protobuf::Message& pdata)
+{
+	if (!CEventHandlerManager::GetInstancePtr()->NotifyEventHandle(EventID, &pdata))
+	{
+		CELLLog::Info("ERROR:CGameService::OnEventMsg Not Find EventMessage EventID:%d\n", EventID);
+		return false;
+	}
 	return true;
 }
 

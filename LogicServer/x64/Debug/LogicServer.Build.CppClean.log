@@ -1,8 +1,7 @@
 g:\vs2017program\project1\logicserver\x64\debug\vc141.pdb
 g:\vs2017program\project1\logicserver\x64\debug\vc141.idb
-g:\vs2017program\project1\logicserver\x64\debug\uuid.obj
-g:\vs2017program\project1\logicserver\x64\debug\store.pb.obj
 g:\vs2017program\project1\logicserver\x64\debug\msgid.pb.obj
+g:\vs2017program\project1\logicserver\x64\debug\eventid.pb.obj
 g:\vs2017program\project1\logicserver\x64\debug\dbexcute.pb.obj
 g:\vs2017program\project1\logicserver\x64\debug\bag.pb.obj
 g:\vs2017program\project1\logicserver\x64\debug\playermanager.obj
@@ -27,12 +26,9 @@ g:\vs2017program\project1\logicserver\x64\debug\rpc.obj
 g:\vs2017program\project1\logicserver\x64\debug\fdtouid.obj
 g:\vs2017program\project1\logicserver\x64\debug\configfile.obj
 g:\vs2017program\project1\logicserver\x64\debug\commonconvert.obj
-g:\vs2017program\project1\x64\debug\logicserver.exe
-g:\vs2017program\project1\x64\debug\logicserver.ilk
-g:\vs2017program\project1\x64\debug\logicserver.pdb
+g:\vs2017program\project1\logicserver\x64\debug\uuid.obj
+g:\vs2017program\project1\logicserver\x64\debug\store.pb.obj
+g:\vs2017program\project1\logicserver\x64\debug\other.pb.obj
 g:\vs2017program\project1\logicserver\x64\debug\logicserver.tlog\cl.command.1.tlog
 g:\vs2017program\project1\logicserver\x64\debug\logicserver.tlog\cl.read.1.tlog
 g:\vs2017program\project1\logicserver\x64\debug\logicserver.tlog\cl.write.1.tlog
-g:\vs2017program\project1\logicserver\x64\debug\logicserver.tlog\link.command.1.tlog
-g:\vs2017program\project1\logicserver\x64\debug\logicserver.tlog\link.read.1.tlog
-g:\vs2017program\project1\logicserver\x64\debug\logicserver.tlog\link.write.1.tlog

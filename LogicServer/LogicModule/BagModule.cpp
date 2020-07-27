@@ -16,15 +16,15 @@ void CBagModule::RegisterMessageHanler()
 	m_pOwnPlayer->m_NetMessagePump.RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &CBagModule::OnMsgBagUnLockReq, this);
 }
 
-//BOOL CBagModule::ReadFromDBLoginData(DBRoleLoginAck& Ack)
-//{
-//
-//}
-//
-//BOOL CBagModule::SaveToClientLoginData(RoleLoginAck& Ack)
-//{
-//
-//}
+void CBagModule::RegisterEventHanler()
+{
+
+}
+
+bool CBagModule::ReadFromDBLoginData()
+{
+	return false;
+}
 
 bool CBagModule::SaveChangeData()
 {

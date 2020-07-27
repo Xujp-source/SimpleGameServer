@@ -117,6 +117,15 @@
     <ClCompile Include="protoc\DBExcute.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
+    <ClCompile Include="LogicModule\MatchModule.cpp">
+      <Filter>LogicModule</Filter>
+    </ClCompile>
+    <ClCompile Include="protoc\EventID.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
+    <ClCompile Include="protoc\Other.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameService.h">
@@ -267,6 +276,18 @@
       <Filter>ServerEngine\DBInterFace</Filter>
     </ClInclude>
     <ClInclude Include="protoc\DBExcute.pb.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicModule\MatchModule.h">
+      <Filter>LogicModule</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandlerManager.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\EventID.pb.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\Other.pb.h">
       <Filter>protoc</Filter>
     </ClInclude>
   </ItemGroup>

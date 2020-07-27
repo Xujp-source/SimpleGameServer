@@ -25,6 +25,7 @@ public:
 	//给其他服发送心跳包
 	bool HeartBeat(unsigned int msec);
 
+	//测试
 	bool TestSql(unsigned int msec);
 
 	//连接网关
@@ -48,12 +49,13 @@ public:
 	//推送网络消息
 	bool SendData(int fd, int MsgID, const google::protobuf::Message& pdata);
 
+	//推送事件
+	bool NotifyEvent(int EventID, const google::protobuf::Message & pdata);
+
 private:
 	int m_dwGateConnID;
 	int m_dwLoginConnID;
 	int m_dwDBConnID;
-
-	CppMySQL3DB tDBConnection;
 
 };
 
