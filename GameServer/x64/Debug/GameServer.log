@@ -22,6 +22,17 @@ g:\vs2017program\project1\gameserver\serverengine\cellserver.hpp(194): warning C
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+  GameScene.cpp
+g:\vs2017program\project1\gameserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\gameserver\gamemodule\gamescene.h(40): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
+g:\vs2017program\project1\gameserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\gameserver\gamemodule\gamescene.cpp(68): warning C4018: “>=”: 有符号/无符号不匹配
+  GameSceneGrid.cpp
+  GameSceneManager.cpp
+g:\vs2017program\project1\gameserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+g:\vs2017program\project1\gameserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
+g:\vs2017program\project1\gameserver\gamemodule\gamescene.h(40): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
+g:\vs2017program\project1\gameserver\gamemodule\gamescenemanager.cpp(59): warning C4244: “参数”: 从“unsigned __int64”转换到“int”，可能丢失数据
   GameService.cpp
 g:\vs2017program\project1\gameserver\gameservice.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\gameserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -34,9 +45,9 @@ g:\vs2017program\project1\gameserver\serverengine\cellserver.hpp(194): warning C
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\gameserver\gameservice.cpp(109): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\gameserver\gameservice.cpp(122): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\gameserver\gameservice.cpp(146): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\gameserver\gameservice.cpp(71): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\gameserver\gameservice.cpp(84): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\gameserver\gameservice.cpp(99): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
   main.cpp
 g:\vs2017program\project1\gameserver\main.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\gameserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -72,6 +83,8 @@ g:\vs2017program\project1\gameserver\serverengine\common\timer.cpp(47): warning 
 g:\vs2017program\project1\gameserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   DBConnectPool.cpp
   正在生成代码...
+g:\vs2017program\project1\gameserver\serverengine\celltimestamp.hpp(20): warning C4717: “CELLTime::getNowInSec”: 如递归所有控件路径，函数将导致运行时堆栈溢出
+g:\vs2017program\project1\gameserver\serverengine\celltimestamp.hpp(20): warning C4717: “CELLTime::getNowInSec”: 如递归所有控件路径，函数将导致运行时堆栈溢出
 libprotobufd.lib(any_lite.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(any_lite.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
 libprotobufd.lib(arena.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(arena.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样
 libprotobufd.lib(extension_set.obj) : warning LNK4099: 未找到 PDB“libprotobuf-lite.pdb”(使用“libprotobufd.lib(extension_set.obj)”或在“G:\vs2017program\Project1\x64\Debug\libprotobuf-lite.pdb”中寻找)；正在链接对象，如同没有调试信息一样

@@ -12,9 +12,55 @@ enum
 	//事务
 	SQL_TRANSACTION,
 	//replace
-	SQL_REPLACE,
-	SQL_END
+	SQL_REPLACE
 };
+
+enum BATTLE_MODE
+{
+	//未战斗
+	BATTLE_MODE_NONE,
+	//战斗初始化
+	BATTLE_MODE_INIT,
+	//处在战斗中
+	BATTLE_MODE_BATTLE,
+	//战斗结束
+	BATTLE_MODE_FINISH
+};
+
+enum BATTLE_TARGET
+{
+	//攻击方
+	ATK_TARGET,
+	//防守方
+	DEFINE_TARGET
+};
+
+enum BATTLE_COMMAND
+{
+	//初始化空命令
+	BATTLE_COMMAND_NONE,
+	//发起普通攻击命令
+	BATTLE_COMMAND_ATK,
+	//发起释放技能命令
+	BATTLE_COMMAND_SKILL,
+	//发起防御命令
+	BATTLE_COMMAND_DEFINE,
+	//发起使用道具命令
+	BATTLE_COMMAND_USING,
+	//发起逃跑命令
+	BATTLE_COMMAND_ESCAPE
+
+};
+
+enum BATTLE_ROUND_LOCK
+{
+	BATTLE_COMMAND_LOCK,
+	BATTLE_COMMAND_UNLOCK
+};
+
+
+//阵营数
+#define BATTLE_SIDE_COUNT 2
 
 
 #endif

@@ -3,12 +3,11 @@
 #include"Agent.h"
 #include"AgentManager.h"
 #include"ConnectServerMgr.h"
-#include"./protoc/Login.pb.h"
+#include"./GameModule/GameSceneManager.h"
 
 CGameService::CGameService()
 {
-	m_dwGateConnID = -1;
-	m_dwDBConnID = -1;
+
 }
 
 CGameService::~CGameService()
@@ -43,11 +42,6 @@ bool CGameService::Init()
 //定时操作
 bool CGameService::OnSecondTimer()
 {
-	//连接网关
-	//ConnectToGateServer();
-
-	//连接DB
-	ConnectToDBServer();
 
 	return true;
 }
@@ -55,6 +49,9 @@ bool CGameService::OnSecondTimer()
 //Update
 void CGameService::OnUpdate()
 {
+	//GameLoop
+	GameSceneManager::GetInstancePtr()->GameLoop();
+
 	//刷新系统定时器
 	CSysTimerManager::GetInstancePtr()->UpdateTimer();
 }
@@ -62,41 +59,6 @@ void CGameService::OnUpdate()
 //给其他服发送心跳包
 bool CGameService::HeartBeat(unsigned int msec)
 {
-	if (m_dwDBConnID != -1)
-	{
-		AccountLoginReq req;
-		SendData(m_dwDBConnID, MSG_HEART_BEAT_REQ, req);
-	}
-	return true;
-}
-
-//连接网关
-bool CGameService::ConnectToGateServer()
-{
-	if (m_dwGateConnID != -1)
-	{
-		return true;
-	}
-
-	UINT32 nGatePort = CConfigFile::GetInstancePtr()->GetIntValue("gate_svr_port");
-	std::string strGateIp = CConfigFile::GetInstancePtr()->GetStringValue("gate_svr_ip");
-	m_dwGateConnID = Connect(strGateIp.c_str(), nGatePort);
-	ERROR_RETURN_FALSE(m_dwGateConnID != -1);
-	return true;
-}
-
-//连接数据库操作服
-bool CGameService::ConnectToDBServer()
-{
-	if (m_dwDBConnID != -1)
-	{
-		return true;
-	}
-
-	UINT32 nDBPort = CConfigFile::GetInstancePtr()->GetIntValue("db_svr_port");
-	std::string strDBIp = CConfigFile::GetInstancePtr()->GetStringValue("db_svr_ip");
-	m_dwDBConnID = Connect(strDBIp.c_str(), nDBPort);
-	ERROR_RETURN_FALSE(m_dwDBConnID != -1);
 	return true;
 }
 
@@ -126,15 +88,6 @@ void CGameService::OnNetLeave(CELLClient * pClient)
 	//移除fd和agent的映射关系
 	AgentManager::GetInstancePtr()->RemovePortToAgent(fd);
 
-	//当网关服异常，心跳定时未收到网关的ack，移除pClient，重置connID
-	if (fd == m_dwGateConnID)
-	{
-		m_dwGateConnID = -1;
-	}
-	else if (fd == m_dwDBConnID)
-	{
-		m_dwDBConnID = -1;
-	}
 }
 
 //处理网络消息

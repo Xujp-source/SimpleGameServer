@@ -31,17 +31,11 @@
     <Filter Include="ServerEngine\DBInterFace">
       <UniqueIdentifier>{1271acfe-a02d-4240-b55c-74c076e85852}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameModule">
+      <UniqueIdentifier>{406c7349-9ed2-4a25-b312-6058bed07e2a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="protoc\DBExcute.pb.cc">
-      <Filter>protoc</Filter>
-    </ClCompile>
-    <ClCompile Include="protoc\Login.pb.cc">
-      <Filter>protoc</Filter>
-    </ClCompile>
-    <ClCompile Include="protoc\MsgID.pb.cc">
-      <Filter>protoc</Filter>
-    </ClCompile>
     <ClCompile Include="ServerEngine\3rd\uuid.cpp">
       <Filter>ServerEngine\3rd</Filter>
     </ClCompile>
@@ -81,17 +75,26 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="GameModule\GameScene.cpp">
+      <Filter>GameModule</Filter>
+    </ClCompile>
+    <ClCompile Include="GameModule\GameSceneGrid.cpp">
+      <Filter>GameModule</Filter>
+    </ClCompile>
+    <ClCompile Include="GameModule\GameSceneManager.cpp">
+      <Filter>GameModule</Filter>
+    </ClCompile>
+    <ClCompile Include="protoc\MsgID.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
+    <ClCompile Include="protoc\DBExcute.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
+    <ClCompile Include="protoc\Login.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="protoc\DBExcute.pb.h">
-      <Filter>protoc</Filter>
-    </ClInclude>
-    <ClInclude Include="protoc\Login.pb.h">
-      <Filter>protoc</Filter>
-    </ClInclude>
-    <ClInclude Include="protoc\MsgID.pb.h">
-      <Filter>protoc</Filter>
-    </ClInclude>
     <ClInclude Include="ServerEngine\3rd\uuid.h">
       <Filter>ServerEngine\3rd</Filter>
     </ClInclude>
@@ -190,6 +193,30 @@
     </ClInclude>
     <ClInclude Include="stdafx.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameModule\GameScene.h">
+      <Filter>GameModule</Filter>
+    </ClInclude>
+    <ClInclude Include="GameModule\GameSceneGrid.h">
+      <Filter>GameModule</Filter>
+    </ClInclude>
+    <ClInclude Include="GameModule\GameSceneManager.h">
+      <Filter>GameModule</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandlerManager.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\MsgID.pb.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerData\BattleData.h">
+      <Filter>ServerData</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\DBExcute.pb.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\Login.pb.h">
+      <Filter>protoc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

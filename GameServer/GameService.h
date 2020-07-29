@@ -13,8 +13,6 @@ private:
 public:
 	static CGameService* GetInstancePtr();
 
-	int GetDBConnID() { return m_dwDBConnID; }
-
 public:
 	//服务初始化
 	bool Init();
@@ -27,12 +25,6 @@ public:
 
 	//给其他服发送心跳包
 	bool HeartBeat(unsigned int msec);
-
-	//连接网关
-	virtual bool ConnectToGateServer();
-
-	//连接数据库操作服
-	virtual bool ConnectToDBServer();
 
 	//客户端加入事件
 	virtual void OnNetJoin(CELLClient* pClient);
@@ -47,8 +39,7 @@ public:
 	bool SendData(int fd, int MsgID, const google::protobuf::Message& pdata);
 
 private:
-	int m_dwGateConnID;
-	int m_dwDBConnID;
+
 
 };
 

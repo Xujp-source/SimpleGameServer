@@ -19,5 +19,6 @@
 #include"./ServerEngine/Common/Timer.h"
 #include"./ServerEngine/Common/asrt.h"
 #include"./ServerEngine/Common/ConfigFile.h"
+#include"./ServerEngine/3rd/uuid.h"
 
 #endif

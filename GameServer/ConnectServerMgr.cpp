@@ -27,8 +27,7 @@ bool ConnectServerMgr::Init()
 
 void ConnectServerMgr::RegisterMessageHanler()
 {
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &ConnectServerMgr::OnMsgLogicSvrRegister, this);
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_HEART_BEAT_REQ, &ConnectServerMgr::OnMsgLogicSvrHeartReq, this);
+
 }
 
 bool ConnectServerMgr::SendData(int ServerID, int MsgID, const google::protobuf::Message & pdata)
@@ -36,7 +35,7 @@ bool ConnectServerMgr::SendData(int ServerID, int MsgID, const google::protobuf:
 	std::map<int, int>::iterator it = m_connServerMap.find(ServerID);
 	if (it == m_connServerMap.end())
 	{
-		CELLLog::Info("Other Server Not Register, ServerID : %d, MsgID : %d\n", ServerID, MsgID);
+		CELLLog::Info("Other Server Not Register, ServerID : %d, MsgID : %d", ServerID, MsgID);
 		return false;
 	}
 	int fd = it->second;
@@ -47,17 +46,4 @@ bool ConnectServerMgr::SendData(int ServerID, int MsgID, const google::protobuf:
 	return true;
 }
 
-bool ConnectServerMgr::OnMsgLogicSvrRegister(NetPacket* pack)
-{
-	int serverid;
-
-	m_connServerMap.insert(std::make_pair(serverid, pack->m_dwConnID));
-	return true;
-}
-
-bool ConnectServerMgr::OnMsgLogicSvrHeartReq(NetPacket * pack)
-{
-	CELLLog::Info("logic server heart beat!!!!!!!!!!!!!!!!!!\n");
-	return false;
-}
 
