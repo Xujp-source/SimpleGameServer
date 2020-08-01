@@ -1,0 +1,8 @@
+﻿syntax = "proto3";
+
+//数据库操作请求
+message DBExeSqlReq
+{
+	uint32 exectype = 1;
+	string sqlcmd  = 2;
+}

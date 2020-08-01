@@ -1,0 +1,8 @@
+﻿syntax = "proto3";
+enum EventID {
+
+    EVENT_BEGIN                        = 0;
+	EVENT_LOGOUT					   = 1;
+  
+}
+

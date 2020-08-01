@@ -1,0 +1,47 @@
+﻿syntax = "proto3";
+
+//发起普攻指令消息
+message CommandAtkReq
+{
+	uint64 uid = 1;
+	int32  cmd = 2;
+}
+
+//发起释放技能指令消息
+message CommandSkillReq
+{
+	uint64 uid = 1;
+	int32  cmd = 2;
+	int32  skillid = 3;
+}
+
+//发起防御指令消息
+message CommandDefineReq
+{
+	uint64 uid = 1;
+	int32  cmd = 2;
+}
+
+//发起使用道具指令消息
+message CommandUsingReq
+{
+	uint64 uid = 1;
+	int32  cmd = 2;
+	uint64 itemuid = 3;
+	int32  count = 4;
+}
+
+//发起切换卡牌指令消息
+message CommandChangeCard
+{
+	uint64 uid = 1;
+	int32  cmd = 2;
+	uint64 carduid = 3;
+}
+
+//发起逃跑指令消息
+message CommandEscapeReq
+{
+	uint64 uid = 1;
+	int32  cmd = 2;
+}

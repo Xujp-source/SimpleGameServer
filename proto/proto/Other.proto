@@ -1,0 +1,7 @@
+﻿syntax = "proto3";
+
+//空操作
+message EmptyReq
+{    
+
+}

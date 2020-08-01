@@ -4,11 +4,10 @@
 #include"AgentManager.h"
 #include"ConnectServerMgr.h"
 #include"LoginMsgHandler.h"
-#include"./protoc/Login.pb.h"
 
 CGameService::CGameService()
 {
-	m_dwGateConnID = -1;
+	m_dwLogicConnID = -1;
 	m_dwDBConnID = -1;
 }
 
@@ -47,8 +46,8 @@ bool CGameService::Init()
 //定时操作
 bool CGameService::OnSecondTimer()
 {
-	//连接网关
-	//ConnectToGateServer();
+	//连接逻辑服
+	ConnectToLogicServer();
 
 	//连接DB
 	ConnectToDBServer();
@@ -68,24 +67,15 @@ bool CGameService::HeartBeat(unsigned int msec)
 {
 	if (m_dwDBConnID != -1)
 	{
-		AccountLoginReq req;
-		SendData(m_dwDBConnID, MSG_HEART_BEAT_REQ, req);
+		EmptyReq req;
+		SendData(m_dwDBConnID, MSG_DBSVR_HEART_REQ, req);
 	}
-	return true;
-}
 
-//连接网关
-bool CGameService::ConnectToGateServer()
-{
-	if (m_dwGateConnID != -1)
+	if (m_dwLogicConnID != -1)
 	{
-		return true;
+		EmptyReq req;
+		SendData(m_dwLogicConnID, MSG_LOGICSVR_HEART_REQ, req);
 	}
-
-	UINT32 nGatePort = CConfigFile::GetInstancePtr()->GetIntValue("gate_svr_port");
-	std::string strGateIp = CConfigFile::GetInstancePtr()->GetStringValue("gate_svr_ip");
-	m_dwGateConnID = Connect(strGateIp.c_str(), nGatePort);
-	ERROR_RETURN_FALSE(m_dwGateConnID != -1);
 	return true;
 }
 
@@ -104,6 +94,21 @@ bool CGameService::ConnectToDBServer()
 	return true;
 }
 
+//连接逻辑服
+bool CGameService::ConnectToLogicServer()
+{
+	if (m_dwLogicConnID != -1)
+	{
+		return true;
+	}
+
+	UINT32 nLogicPort = CConfigFile::GetInstancePtr()->GetIntValue("logic_svr_port");
+	std::string strLogicIp = CConfigFile::GetInstancePtr()->GetStringValue("logic_svr_ip");
+	m_dwLogicConnID = Connect(strLogicIp.c_str(), nLogicPort);
+	ERROR_RETURN_FALSE(m_dwLogicConnID != -1);
+	return true;
+}
+
 //客户端加入事件
 void CGameService::OnNetJoin(CELLClient * pClient)
 {
@@ -117,7 +122,7 @@ void CGameService::OnNetJoin(CELLClient * pClient)
 	AgentManager::GetInstancePtr()->SetPortToAgent(fd, agent);
 }
 
-//客户端离开事件
+//客户端异常离开事件
 void CGameService::OnNetLeave(CELLClient * pClient)
 {
 	//调用基类方法
@@ -130,14 +135,14 @@ void CGameService::OnNetLeave(CELLClient * pClient)
 	//移除fd和agent的映射关系
 	AgentManager::GetInstancePtr()->RemovePortToAgent(fd);
 
-	//当网关服异常，心跳定时未收到网关的ack，移除pClient，重置connID
-	if (fd == m_dwGateConnID)
-	{
-		m_dwGateConnID = -1;
-	}
-	else if (fd == m_dwDBConnID)
+	//当数据库操作服异常，心跳定时未收到数据库的ack，移除pClient，重置connID
+	if (fd == m_dwDBConnID)
 	{
 		m_dwDBConnID = -1;
+	}
+	else if (fd == m_dwLogicConnID)
+	{
+		m_dwLogicConnID = -1;
 	}
 }
 

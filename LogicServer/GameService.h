@@ -29,9 +29,6 @@ public:
 	//测试
 	bool TestSql(unsigned int msec);
 
-	//连接登录服
-	virtual bool ConnectToLoginServer();
-
 	//连接数据库操作服
 	virtual bool ConnectToDBServer();
 
@@ -51,7 +48,6 @@ public:
 	bool NotifyEvent(Agent* agent, int EventID, const google::protobuf::Message & pdata);
 
 private:
-	int m_dwLoginConnID;
 	int m_dwDBConnID;
 
 };

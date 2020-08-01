@@ -87,10 +87,10 @@
     <ClCompile Include="protoc\MsgID.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
-    <ClCompile Include="protoc\DBExcute.pb.cc">
+    <ClCompile Include="protoc\Battle.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
-    <ClCompile Include="protoc\Login.pb.cc">
+    <ClCompile Include="protoc\Other.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
   </ItemGroup>
@@ -212,10 +212,10 @@
     <ClInclude Include="ServerData\BattleData.h">
       <Filter>ServerData</Filter>
     </ClInclude>
-    <ClInclude Include="protoc\DBExcute.pb.h">
+    <ClInclude Include="protoc\Battle.pb.h">
       <Filter>protoc</Filter>
     </ClInclude>
-    <ClInclude Include="protoc\Login.pb.h">
+    <ClInclude Include="protoc\Other.pb.h">
       <Filter>protoc</Filter>
     </ClInclude>
   </ItemGroup>

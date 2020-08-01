@@ -15,9 +15,9 @@ struct Card
 //一个阵营的信息
 struct BattleSide
 {
-	unsigned long long usr_id;
+	unsigned long long playeruid;
 	int is_robot;
-	int sequence;  //参战的第几只
+	unsigned long long carduid; //参战的唯一卡牌id
 	Card Entry[5];
 };
 

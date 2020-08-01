@@ -13,6 +13,7 @@
 
 // protoc
 #include"./protoc/MsgID.pb.h"
+#include"./protoc/Other.pb.h"
 
 // engine
 #include"./ServerEngine/Common/fdtouid.h"

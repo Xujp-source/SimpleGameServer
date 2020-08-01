@@ -8,7 +8,7 @@ class CStoreModule  : public CBaseModule
 public:
 	CStoreModule(CPlayerObject* pOwner);
 
-	~CStoreModule();
+	virtual ~CStoreModule();
 
 public:
 	virtual void RegisterMessageHanler();

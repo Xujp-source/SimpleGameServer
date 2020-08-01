@@ -7,7 +7,7 @@
 
 CGameService::CGameService()
 {
-
+	m_dwLogicConnID = -1;
 }
 
 CGameService::~CGameService()
@@ -42,7 +42,8 @@ bool CGameService::Init()
 //定时操作
 bool CGameService::OnSecondTimer()
 {
-
+	//连接逻辑服
+	ConnectToLogicServer();
 	return true;
 }
 
@@ -59,8 +60,29 @@ void CGameService::OnUpdate()
 //给其他服发送心跳包
 bool CGameService::HeartBeat(unsigned int msec)
 {
+	if (m_dwLogicConnID != -1)
+	{
+		EmptyReq req;
+		SendData(m_dwLogicConnID, MSG_LOGICSVR_HEART_REQ, req);
+	}
 	return true;
 }
+
+//连接数据库操作服
+bool CGameService::ConnectToLogicServer()
+{
+	if (m_dwLogicConnID != -1)
+	{
+		return true;
+	}
+
+	UINT32 nLogicPort = CConfigFile::GetInstancePtr()->GetIntValue("logic_svr_port");
+	std::string strLogicIp = CConfigFile::GetInstancePtr()->GetStringValue("logic_svr_ip");
+	m_dwLogicConnID = Connect(strLogicIp.c_str(), nLogicPort);
+	ERROR_RETURN_FALSE(m_dwLogicConnID != -1);
+	return true;
+}
+
 
 //客户端加入事件
 void CGameService::OnNetJoin(CELLClient * pClient)
@@ -88,6 +110,11 @@ void CGameService::OnNetLeave(CELLClient * pClient)
 	//移除fd和agent的映射关系
 	AgentManager::GetInstancePtr()->RemovePortToAgent(fd);
 
+	//当逻辑服异常，心跳定时未收到逻辑服的ack，移除pClient，重置connID
+	if (fd == m_dwLogicConnID)
+	{
+		m_dwLogicConnID = -1;
+	}
 }
 
 //处理网络消息

@@ -47,6 +47,8 @@ enum BATTLE_COMMAND
 	BATTLE_COMMAND_DEFINE,
 	//发起使用道具命令
 	BATTLE_COMMAND_USING,
+	//发起切换卡牌命令
+	BATTLE_COMMAND_CHANGECARD,
 	//发起逃跑命令
 	BATTLE_COMMAND_ESCAPE
 
@@ -54,13 +56,18 @@ enum BATTLE_COMMAND
 
 enum BATTLE_ROUND_LOCK
 {
+	//当前回合收到指令后的加锁标记
 	BATTLE_COMMAND_LOCK,
+	//下一回合指令解锁标记
 	BATTLE_COMMAND_UNLOCK
 };
 
 
 //阵营数
 #define BATTLE_SIDE_COUNT 2
-
+//当前回合选择操作指令的时间限制
+#define ROUND_TIME 20
+//一场战斗持续的最大时间
+#define BATTLE_MAX_TIME 60*60
 
 #endif

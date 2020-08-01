@@ -25,9 +25,9 @@
     <ClCompile Include="GameService.cpp" />
     <ClCompile Include="LogicModule\BagModule.cpp" />
     <ClCompile Include="LogicModule\BaseModule.cpp" />
+    <ClCompile Include="LogicModule\CardModule.cpp" />
     <ClCompile Include="LogicModule\MailModule.cpp" />
     <ClCompile Include="LogicModule\MatchModule.cpp" />
-    <ClCompile Include="LogicModule\RoleModule.cpp" />
     <ClCompile Include="LogicModule\StoreModule.cpp" />
     <ClCompile Include="LogicModule\TaskModule.cpp" />
     <ClCompile Include="LogicMsgHandler.cpp" />
@@ -58,9 +58,9 @@
     <ClInclude Include="GameService.h" />
     <ClInclude Include="LogicModule\BagModule.h" />
     <ClInclude Include="LogicModule\BaseModule.h" />
+    <ClInclude Include="LogicModule\CardModule.h" />
     <ClInclude Include="LogicModule\MailModule.h" />
     <ClInclude Include="LogicModule\MatchModule.h" />
-    <ClInclude Include="LogicModule\RoleModule.h" />
     <ClInclude Include="LogicModule\StoreModule.h" />
     <ClInclude Include="LogicModule\TaskModule.h" />
     <ClInclude Include="LogicMsgHandler.h" />

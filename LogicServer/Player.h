@@ -34,7 +34,7 @@ public:
 	void SetTemp(std::string key, int value);
 
 	//获取玩家缓存
-	int  GetTemp(std::string key);
+	int GetTemp(std::string key);
 
 	//保存改变的数据
 	bool SaveData();

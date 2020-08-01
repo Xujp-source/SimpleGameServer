@@ -27,7 +27,8 @@ bool ConnectServerMgr::Init()
 
 void ConnectServerMgr::RegisterMessageHanler()
 {
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &ConnectServerMgr::OnMsgGameSvrRegister, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_GAMESVR_REGISTER_REQ, &ConnectServerMgr::OnMsgGameSvrRegister, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_LOGINSVR_REGISTER_REQ, &ConnectServerMgr::OnMsgLoginSvrRegister, this);
 }
 
 bool ConnectServerMgr::SendData(int ServerID, int MsgID, const google::protobuf::Message & pdata)
@@ -52,6 +53,11 @@ bool ConnectServerMgr::OnMsgGameSvrRegister(NetPacket* pack)
 
 	m_connServerMap.insert(std::make_pair(serverid, pack->m_dwConnID));
 	return true;
+}
+
+bool ConnectServerMgr::OnMsgLoginSvrRegister(NetPacket * pack)
+{
+	return false;
 }
 
 

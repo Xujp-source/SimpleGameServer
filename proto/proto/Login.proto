@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+
+//请求账号登录
+message AccountLoginReq
+{    
+	uint64 account = 1;
+	string password = 2;
+}
+
+//请求账号注册
+message AccountRegisterReq
+{    
+	uint64 account = 1;
+	string password = 2;
+	string name = 3;
+}
+
+//加载逻辑服列表
+message LoadLogicSvrReq
+{    
+	
+}

@@ -24,14 +24,14 @@ g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(170): warnin
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
   GameScene.cpp
 g:\vs2017program\project1\gameserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-g:\vs2017program\project1\gameserver\gamemodule\gamescene.h(40): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
 g:\vs2017program\project1\gameserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
-g:\vs2017program\project1\gameserver\gamemodule\gamescene.cpp(68): warning C4018: “>=”: 有符号/无符号不匹配
+g:\vs2017program\project1\gameserver\gamemodule\gamescene.h(39): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
+g:\vs2017program\project1\gameserver\gamemodule\gamescene.cpp(79): warning C4018: “>=”: 有符号/无符号不匹配
   GameSceneGrid.cpp
   GameSceneManager.cpp
 g:\vs2017program\project1\gameserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\gameserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
-g:\vs2017program\project1\gameserver\gamemodule\gamescene.h(40): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
+g:\vs2017program\project1\gameserver\gamemodule\gamescene.h(39): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
 g:\vs2017program\project1\gameserver\gamemodule\gamescenemanager.cpp(59): warning C4244: “参数”: 从“unsigned __int64”转换到“int”，可能丢失数据
   GameService.cpp
 g:\vs2017program\project1\gameserver\gameservice.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -45,9 +45,9 @@ g:\vs2017program\project1\gameserver\serverengine\cellserver.hpp(194): warning C
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\gameserver\gameservice.cpp(71): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\gameserver\gameservice.cpp(84): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\gameserver\gameservice.cpp(99): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\gameserver\gameservice.cpp(93): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\gameserver\gameservice.cpp(106): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\gameserver\gameservice.cpp(126): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
   main.cpp
 g:\vs2017program\project1\gameserver\main.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\gameserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -60,9 +60,17 @@ g:\vs2017program\project1\gameserver\serverengine\cellserver.hpp(194): warning C
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\gameserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-  DBExcute.pb.cc
-  Login.pb.cc
+  Battle.pb.cc
+g:\vs2017program\project1\gameserver\protoc\battle.pb.cc(311): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\gameserver\protoc\battle.pb.cc(542): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\gameserver\protoc\battle.pb.cc(549): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\gameserver\protoc\battle.pb.cc(796): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\gameserver\protoc\battle.pb.cc(1027): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\gameserver\protoc\battle.pb.cc(1041): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\gameserver\protoc\battle.pb.cc(1304): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\gameserver\protoc\battle.pb.cc(1558): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
   MsgID.pb.cc
+  Other.pb.cc
   uuid.cpp
   CommonConvert.cpp
 g:\vs2017program\project1\gameserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失

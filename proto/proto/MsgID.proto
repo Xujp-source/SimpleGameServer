@@ -8,8 +8,8 @@ enum MessageID {
     //============================================================================================
     MSG_NORMAL_MSGID_BEGIN           = 100000;
 
-    MSG_CHECK_VERSION_REQ            = 100001;    //版本验证
-    MSG_CHECK_VERSION_ACK            = 100002;    //版本验证返回
+    MSG_DBSVR_HEART_REQ              = 100001;    //发给数据库操作服心跳请求
+    MSG_DBSVR_HEART_ACK              = 100002;    //数据库操作服心跳请求返回
 
     MSG_ACCOUNT_REG_REQ              = 100003;    //注册账号
     MSG_ACCOUNT_REG_ACK              = 100004;    //注册账号返回
@@ -17,122 +17,86 @@ enum MessageID {
     MSG_ACCOUNT_LOGIN_REQ            = 100005;    //账号登录
     MSG_ACCOUNT_LOGIN_ACK            = 100006;    //账号登录返回
     
-    MSG_DB_EXE_SQL_REQ               = 100007;    //执行Sql语句请求
-    MSG_DB_EXE_SQL_ACK               = 100008;    //执行Sql语句请求返回
-    
     MSG_SERVER_LIST_REQ              = 100009;    //服务器列表请求
     MSG_SERVER_LIST_ACK              = 100010;    //服务器列表的返回
     
     MSG_SELECT_SERVER_REQ            = 100011;    //选择服务器请求
     MSG_SELECT_SERVER_ACK            = 100012;    //选择服务器请求返回
     
-    MSG_LOGIC_REGTO_LOGIN_REQ        = 100013;    //注册服务器请求
-    MSG_LOGIC_REGTO_LOGIN_ACK        = 100014;    //注册服务器请求返回
+    MSG_HEART_BEAT_REQ               = 100013;    //客户端心跳请求
+    MSG_HEART_BEAT_ACK               = 100014;    //客户端心跳请求返回
 
-    MSG_LOGIC_UPDATE_REQ             = 100015;
-    MSG_LOGIC_UPDATE_ACK             = 100016;
+    MSG_LOGICSVR_HEART_REQ           = 100015;    //发给逻辑服心跳请求
+    MSG_LOGICSVR_HEART_ACK           = 100016;    //逻辑服心跳请求返回
 
-    MSG_GAME_REGTO_LOGIC_REQ         = 100017;
-    MSG_GAME_REGTO_LOGIC_ACK         = 100018;
+    MSG_LOST_CONNECT_REQ             = 100017;    //断开连接请求
 
-    MSG_LOGIC_REGTO_CENTER_REQ       = 100019;
-    MSG_LOGIC_REGTO_CENTER_ACK       = 100020;
+    MSG_GAMESVR_REGISTER_REQ         = 100018;    //游戏服务器注册请求
+    MSG_GAMESVR_REGISTER_ACK         = 100019;    //游戏服务器注册请求返回
 
-    MSG_LOG_DATA_NTF                 = 100021;
+    MSG_LOGINSVR_REGISTER_REQ        = 100020;    //登录服务器注册请求
+    MSG_LOGINSVR_REGISTER_ACK        = 100021;    //登录服务器注册请求返回
 
-    MSG_PHP_GM_COMMAND_REQ           = 100022;
-    MSG_PHP_GM_COMMAND_ACK           = 100023;
+    MSG_LOAD_PLAYER_LIST_REQ         = 100022;    //加载角色列表请求
+    MSG_LOAD_PLAYER_LIST_ACK         = 100023;    //加载角色列表请求返回
 
-    MSG_WATCH_HEART_BEAT_REQ         = 100024;
-    MSG_WATCH_HEART_BEAT_ACK         = 100025;
+    MSG_CREATE_PLAYER_REQ            = 100024;    //创建角色请求
+    MSG_CREATE_PLAYER_ACK            = 100025;    //创建角色请求返回
 
-    MSG_REMOVE_CONNECT_NTY           = 100026;
-    MSG_DISCONNECT_NTY               = 100032;    //断开连接
+    MSG_SELECT_PLAYER_ENTER_REQ      = 100026;    //选择角色进入游戏请求
+    MSG_SELECT_PLAYER_ENTER_ACK      = 100027;    //选择角色进入游戏请求返回
 
-    MSG_ROLE_DATA_CHANGE_NTY         = 100033;
-    
-    MSG_SET_LAST_SERVER_NTY          = 100034;
-    
-    MSG_GM_SHUTDOWN_SVR_REQ          = 100035;
-    MSG_GM_SHUTDOWN_SVR_ACK          = 100036;
-    
-    MSG_UDP_CONNECT_REQ              = 100037;
-    MSG_UDP_CONNECT_ACK              = 100038;
+    MSG_SELECT_ENTER_LOGICSVR_REQ    = 100028;    //选择进入的逻辑服请求
+    MSG_SELECT_ENTER_LOGICSVR_ACK    = 100029;    //选择进入的逻辑服请求返回
 
-    MSG_SEAL_ACCOUNT_REQ             = 100039;   //封号请求
-    MSG_SEAL_ACCOUNT_ACK             = 100040;   //封号请求返回
-    
-    MSG_DB_WRITE_ERROR_NTY           = 100041;   //DB写错误通知
-    
+    MSG_LOGOUT_REQ                   = 100030;    //登出角色请求
+    MSG_LOGOUT_ACK                   = 100031;    //登出角色请求返回
+
     MSG_NORMAL_MSGID_END             = 199999;
     
     //============================================================================================
     //                 Cient <==> LogicSVR
     //============================================================================================
     MSG_LOGICSVR_MSGID_BEGIN         = 200000;
-    MSG_BAG_UNLOCK_REQ               = 200001;
-    MSG_BAG_UNLOCK_ACK               = 200002;
-	MSG_STORE_BUY_REQ                = 200010;
-	MSG_STORE_BUY_ACK                = 200011;
+    MSG_BAG_UNLOCK_REQ               = 200001;    //解锁背包格子请求
+    MSG_BAG_UNLOCK_ACK               = 200002;    //解锁背包格子请求返回
+	MSG_STORE_BUY_REQ                = 200010;    //商城购买请求
+	MSG_STORE_BUY_ACK                = 200011;    //商城购买请求返回
     
     //============================================================================================
-    //                 Cient <==> SceneSVR
+    //                 Cient <==> GameSVR
     //============================================================================================
-    MSG_SCENESVR_MSGID_BEGIN         = 300000;
-    MSG_CREATE_SCENE_REQ             = 300001;
-    MSG_CREATE_SCENE_ACK             = 300002;
-    MSG_DELETE_SCENE_REQ             = 300003;
-    MSG_DELETE_SCENE_ACK             = 300004;
-    MSG_SCENE_DESTROY_REQ            = 300005;
-    MSG_SCENE_DESTROY_ACK            = 300006;
-    MSG_TRANSFER_DATA_REQ            = 300007;
-    MSG_TRANSFER_DATA_ACK            = 300008;
-    MSG_NOTIFY_ROLE_ENTER_REQ        = 300009;
-    MSG_NOTIFY_ROLE_ENTER_ACK        = 300010;
-    MSG_ENTER_SCENE_REQ              = 300011;
-    MSG_ENTER_SCENE_ACK              = 300012; //发送自己的数据
-    MSG_LEAVE_SCENE_REQ              = 300013;
-    MSG_LEAVE_SCENE_ACK              = 300014;
-    MSG_ABORT_SCENE_REQ              = 300015;
-    MSG_ABORT_SCENE_ACK              = 300016;
-    
-    MSG_SKILL_CAST_REQ               = 300017;
-    MSG_SKILL_CAST_ACK               = 300018;
-    MSG_SKILL_CAST_NTF               = 300019;
-    MSG_SKILL_RESULT_NTF             = 300020;
+    MSG_GAMESVR_MSGID_BEGIN          = 300000;
+    MSG_COMMAND_ATK_REQ              = 300001;    //普通攻击请求
+    MSG_COMMAND_ATK_ACK              = 300002;    //普通攻击请求返回
+    MSG_COMMAND_SKILL_REQ            = 300003;    //释放技能请求
+    MSG_COMMAND_SKILL_ACK            = 300004;    //释放技能请求返回
+    MSG_COMMAND_DEFINE_REQ           = 300005;    //防御请求
+    MSG_COMMAND_DEFINE_ACK           = 300006;    //防御请求返回
+    MSG_COMMAND_USING_REQ            = 300007;    //使用道具请求
+    MSG_COMMAND_USING_ACK            = 300008;    //使用道具请求返回
+    MSG_COMMAND_CHANGE_CARD_REQ      = 300009;    //切换卡牌请求
+    MSG_COMMAND_CHANGE_CARD_ACK      = 300010;    //切换卡牌请求返回
+    MSG_COMMAND_ESCAPE_REQ           = 300011;    //逃跑请求
+    MSG_COMMAND_ESCAPE_ACK           = 300012;    //逃跑请求返回
 
-    MSG_OBJECT_NEW_NTF               = 300021;
-    MSG_OBJECT_CHANGE_NTF            = 300022;
-    MSG_OBJECT_REMOVE_NTF            = 300023;
+    //============================================================================================
+    //                 OtherSVR <==> DbSVR
+    //============================================================================================
+    MSG_DBSVR_MSGID_BEGIN			 = 400000;
 
-    MSG_OBJECT_ACTION_REQ            = 300024;
-    MSG_OBJECT_ACTION_ACK            = 300025;
+    MSG_DB_EXE_SQL_REQ               = 400001;            //执行Sql语句请求
+    MSG_DB_EXE_SQL_ACK               = 400002;            //执行Sql语句请求返回
 
-    MSG_HEART_BEAT_REQ               = 300026;
-    MSG_HEART_BEAT_ACK               = 300027;
+	MSG_ACCOUNT_LOGIN_VERIFY_REQ	 = 400003;            //登录账号验证
+	MSG_ACCOUNT_LOGIN_VERIFY_ACK	 = 400004;            //登录账号验证返回结果
 
-    MSG_USE_HP_BOOTTLE_REQ           = 300028;
-    MSG_USE_HP_BOOTTLE_ACK           = 300029;
+	MSG_ACCOUNT_REG_TO_DBSVR_REQ	 = 400005;            //账号注册
+	MSG_ACCOUNT_REG_TO_DBSVR_ACK	 = 400006;            //账号注册结果返回
 
-    MSG_USE_MP_BOOTTLE_REQ           = 300030;
-    MSG_USE_MP_BOOTTLE_ACK           = 300031;
+	MSG_LOAD_LOGICSVR_LIST_FROM_DBSVR_REQ	= 400007;     //加载逻辑服务器列表信息
+	MSG_LOAD_LOGICSVR_LIST_FROM_DBSVR_ACK	= 400008;     //加载逻辑服务器列表信息结果返回
 
-    MSG_OBJECT_DIE_NOTIFY            = 300032;
-
-    MSG_BATTLE_CHAT_REQ              = 300033;
-    MSG_BATTLE_CHAT_ACK              = 300034;
-
-    MSG_BULLET_NEW_NTF               = 300035;
-
-    MSG_SWITCH_MOUNT_REQ             = 300036;
-    MSG_SWITCH_MOUNT_ACK             = 300037;
-    
-    MSG_PLAYER_CHAGE_NTF             = 300038;
-    MSG_ACTOR_HITEFFECT_NTF          = 300039;
-    
-    MSG_MOUNT_RIDING_REQ             = 300040;
-    MSG_MOUNT_RIDING_ACK             = 300041;
-
-    MSG_SCENESVR_MSGID_END           = 399999;
+    MSG_DBSVR_MSGID_END              = 499999;
 }
 

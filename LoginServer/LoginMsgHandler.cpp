@@ -26,7 +26,9 @@ bool LoginMsgHandler::Init()
 
 void LoginMsgHandler::RegisterMessageHanler()
 {
-	//CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &DBMsgHandler::OnMsgGateSvrHeartAck, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_LOGICSVR_HEART_ACK, &LoginMsgHandler::OnMsgLogicSvrHeartAck, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_DBSVR_HEART_ACK, &LoginMsgHandler::OnMsgDBSvrHeartAck, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_LOST_CONNECT_REQ, &LoginMsgHandler::OnMsgLostConnectReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_REG_REQ, &LoginMsgHandler::OnMsgAccountRegReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_LOGIN_REQ, &LoginMsgHandler::OnMsgAccountLoginReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_SERVER_LIST_REQ, &LoginMsgHandler::OnMsgLoadLogicSvrListReq, this);
@@ -35,7 +37,12 @@ void LoginMsgHandler::RegisterMessageHanler()
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_LOAD_LOGICSVR_LIST_FROM_DBSVR_ACK, &LoginMsgHandler::OnMsgLoadLogicSvrListFromDBAck, this);
 }
 
-bool LoginMsgHandler::OnMsgGateSvrHeartAck(NetPacket * pack)
+bool LoginMsgHandler::OnMsgLogicSvrHeartAck(NetPacket * pack)
+{
+	return false;
+}
+
+bool LoginMsgHandler::OnMsgDBSvrHeartAck(NetPacket * pack)
 {
 	return false;
 }
@@ -133,6 +140,11 @@ bool LoginMsgHandler::OnMsgSelectEnterLogicSvrReq(NetPacket * pack)
 }
 
 bool LoginMsgHandler::OnMsgSelectEnterLogicSvrFromLogicAck(NetPacket * pack)
+{
+	return false;
+}
+
+bool LoginMsgHandler::OnMsgLostConnectReq(NetPacket * pack)
 {
 	return false;
 }

@@ -10,7 +10,6 @@
 
 CGameService::CGameService()
 {
-	m_dwLoginConnID = -1;
 	m_dwDBConnID = -1;
 }
 
@@ -75,7 +74,7 @@ bool CGameService::HeartBeat(unsigned int msec)
 	if (m_dwDBConnID != -1)
 	{
 		EmptyReq req;
-		SendData(m_dwDBConnID, MSG_HEART_BEAT_REQ, req);
+		SendData(m_dwDBConnID, MSG_DBSVR_HEART_REQ, req);
 	}
 	return true;
 }
@@ -90,21 +89,6 @@ bool CGameService::TestSql(unsigned int msec)
 		req.set_sqlcmd("select * from copy");
 		SendData(m_dwDBConnID, MSG_DB_EXE_SQL_REQ, req);
 	}
-	return true;
-}
-
-//连接登录服
-bool CGameService::ConnectToLoginServer()
-{
-	if (m_dwLoginConnID != -1)
-	{
-		return true;
-	}
-
-	UINT32 nLoginPort = CConfigFile::GetInstancePtr()->GetIntValue("login_svr_port");
-	std::string strLoginIp = CConfigFile::GetInstancePtr()->GetStringValue("login_svr_ip");
-	m_dwLoginConnID = Connect(strLoginIp.c_str(), nLoginPort);
-	ERROR_RETURN_FALSE(m_dwLoginConnID != -1);
 	return true;
 }
 
@@ -136,7 +120,7 @@ void CGameService::OnNetJoin(CELLClient * pClient)
 	AgentManager::GetInstancePtr()->SetPortToAgent(fd, agent);
 }
 
-//客户端离开事件
+//客户端异常离开事件
 void CGameService::OnNetLeave(CELLClient * pClient)
 {
 	//调用基类方法
@@ -145,20 +129,16 @@ void CGameService::OnNetLeave(CELLClient * pClient)
 	int fd = pClient->sockfd();
 	Agent* agent = AgentManager::GetInstancePtr()->FindAgentByPort(fd);
 	//抛出客户端离开事件
-	EmptyReq req;
-	NotifyEvent(agent, EVENT_LOGOUT, req);
+	//EmptyReq req;
+	//NotifyEvent(agent, EVENT_LOGOUT, req);
 	//删除agent对象
 	delete agent;
 	agent = nullptr;
 	//移除fd和agent的映射关系
 	AgentManager::GetInstancePtr()->RemovePortToAgent(fd);
 
-	//当登录服异常，未收到登录服的心跳定时ack，移除pClient，重置connID
-	if (fd == m_dwLoginConnID)
-	{
-		m_dwLoginConnID = -1;
-	}
-	else if (fd == m_dwDBConnID)
+	//当数据库服异常，未收到数据库服的心跳定时ack，移除pClient，重置connID
+	if (fd == m_dwDBConnID)
 	{
 		m_dwDBConnID = -1;
 	}

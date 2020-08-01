@@ -19,9 +19,6 @@
     <Filter Include="ServerData">
       <UniqueIdentifier>{255c57b8-31ce-475d-afc2-2801fc54f1fc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="LogicModule">
-      <UniqueIdentifier>{c4f40f65-1f2d-47fa-bbd2-d09c710157c1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ServerEngine\DBInterFace">
       <UniqueIdentifier>{984dc4d6-79fa-4789-9f8f-d347fd8a3d38}</UniqueIdentifier>
     </Filter>
@@ -36,9 +33,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="protoc\MsgID.pb.cc">
-      <Filter>protoc</Filter>
-    </ClCompile>
     <ClCompile Include="Agent.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -81,17 +75,20 @@
     <ClCompile Include="LoginMsgHandler.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="protoc\DBExcute.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
     <ClCompile Include="protoc\Login.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
-    <ClCompile Include="protoc\DBExcute.pb.cc">
+    <ClCompile Include="protoc\MsgID.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
+    <ClCompile Include="protoc\Other.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="protoc\MsgID.pb.h">
-      <Filter>protoc</Filter>
-    </ClInclude>
     <ClInclude Include="Agent.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -194,10 +191,19 @@
     <ClInclude Include="LoginMsgHandler.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="EventHandlerManager.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\DBExcute.pb.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
     <ClInclude Include="protoc\Login.pb.h">
       <Filter>protoc</Filter>
     </ClInclude>
-    <ClInclude Include="protoc\DBExcute.pb.h">
+    <ClInclude Include="protoc\MsgID.pb.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\Other.pb.h">
       <Filter>protoc</Filter>
     </ClInclude>
   </ItemGroup>

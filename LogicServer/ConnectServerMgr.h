@@ -22,7 +22,8 @@ public:
 
 public:
 	//*******************消息处理定义**************************
-	bool OnMsgGameSvrRegister(NetPacket* pack);  //游戏服务器连接后的注册请求
+	bool OnMsgGameSvrRegister(NetPacket* pack);		//游戏服务器连接后的注册请求
+	bool OnMsgLoginSvrRegister(NetPacket* pack);	//登录服务器连接后的注册请求
 	//*********************************************************
 
 private:

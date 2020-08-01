@@ -34,9 +34,9 @@ g:\vs2017program\project1\loginserver\serverengine\cellserver.hpp(194): warning 
 g:\vs2017program\project1\loginserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\loginserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\loginserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\loginserver\gameservice.cpp(113): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\loginserver\gameservice.cpp(126): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\loginserver\gameservice.cpp(150): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\loginserver\gameservice.cpp(118): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\loginserver\gameservice.cpp(131): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\loginserver\gameservice.cpp(155): warning C4244: “初始化”: 从“SOCKET”转换到“int”，可能丢失数据
   LoginMsgHandler.cpp
 g:\vs2017program\project1\loginserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\loginserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
@@ -48,14 +48,14 @@ g:\vs2017program\project1\loginserver\serverengine\cellserver.hpp(194): warning 
 g:\vs2017program\project1\loginserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\loginserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\loginserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\loginserver\loginmsghandler.cpp(58): warning C4477: “snprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“unsigned __int64”
-  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(58): note: 请考虑在格式字符串中使用“%lld”
-  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(58): note: 请考虑在格式字符串中使用“%Id”
-  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(58): note: 请考虑在格式字符串中使用“%I64d”
-g:\vs2017program\project1\loginserver\loginmsghandler.cpp(92): warning C4477: “snprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“unsigned __int64”
-  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(92): note: 请考虑在格式字符串中使用“%lld”
-  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(92): note: 请考虑在格式字符串中使用“%Id”
-  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(92): note: 请考虑在格式字符串中使用“%I64d”
+g:\vs2017program\project1\loginserver\loginmsghandler.cpp(65): warning C4477: “snprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“unsigned __int64”
+  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(65): note: 请考虑在格式字符串中使用“%lld”
+  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(65): note: 请考虑在格式字符串中使用“%Id”
+  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(65): note: 请考虑在格式字符串中使用“%I64d”
+g:\vs2017program\project1\loginserver\loginmsghandler.cpp(99): warning C4477: “snprintf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“unsigned __int64”
+  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(99): note: 请考虑在格式字符串中使用“%lld”
+  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(99): note: 请考虑在格式字符串中使用“%Id”
+  g:\vs2017program\project1\loginserver\loginmsghandler.cpp(99): note: 请考虑在格式字符串中使用“%I64d”
   main.cpp
 g:\vs2017program\project1\loginserver\main.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\loginserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -71,6 +71,7 @@ g:\vs2017program\project1\loginserver\serverengine\easytcpserver.hpp(292): warni
   DBExcute.pb.cc
   Login.pb.cc
   MsgID.pb.cc
+  Other.pb.cc
   uuid.cpp
   CommonConvert.cpp
 g:\vs2017program\project1\loginserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失

@@ -102,9 +102,6 @@
     <ClCompile Include="LogicModule\MailModule.cpp">
       <Filter>LogicModule</Filter>
     </ClCompile>
-    <ClCompile Include="LogicModule\RoleModule.cpp">
-      <Filter>LogicModule</Filter>
-    </ClCompile>
     <ClCompile Include="LogicModule\StoreModule.cpp">
       <Filter>LogicModule</Filter>
     </ClCompile>
@@ -125,6 +122,9 @@
     </ClCompile>
     <ClCompile Include="protoc\Other.pb.cc">
       <Filter>protoc</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicModule\CardModule.cpp">
+      <Filter>LogicModule</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -263,9 +263,6 @@
     <ClInclude Include="LogicModule\MailModule.h">
       <Filter>LogicModule</Filter>
     </ClInclude>
-    <ClInclude Include="LogicModule\RoleModule.h">
-      <Filter>LogicModule</Filter>
-    </ClInclude>
     <ClInclude Include="LogicModule\StoreModule.h">
       <Filter>LogicModule</Filter>
     </ClInclude>
@@ -289,6 +286,9 @@
     </ClInclude>
     <ClInclude Include="protoc\Other.pb.h">
       <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicModule\CardModule.h">
+      <Filter>LogicModule</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

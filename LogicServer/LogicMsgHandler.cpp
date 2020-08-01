@@ -23,16 +23,16 @@ bool LogicMsgHandler::Init()
 
 void LogicMsgHandler::RegisterMessageHanler()
 {
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &LogicMsgHandler::OnMsgLoginSvrHeartAck, this);
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &LogicMsgHandler::OnMsgGateSvrHeartAck, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_DBSVR_HEART_ACK, &LogicMsgHandler::OnMsgDBSvrHeartAck, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_LOAD_PLAYER_LIST_REQ, &LogicMsgHandler::OnMsgLoadPlayerListReq, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_CREATE_PLAYER_REQ, &LogicMsgHandler::OnMsgCreatePlayerReq, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_SELECT_PLAYER_ENTER_REQ, &LogicMsgHandler::OnMsgSelectPlayerEnterReq, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_SELECT_ENTER_LOGICSVR_REQ, &LogicMsgHandler::OnMsgSelectEnterLogicSvrReq, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_LOST_CONNECT_REQ, &LogicMsgHandler::OnMsgLostConnectReq, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_LOGOUT_REQ, &LogicMsgHandler::OnMsgLogoutReq, this);
 }
 
-bool LogicMsgHandler::OnMsgLoginSvrHeartAck(NetPacket * pack)
-{
-	return false;
-}
-
-bool LogicMsgHandler::OnMsgGateSvrHeartAck(NetPacket * pack)
+bool LogicMsgHandler::OnMsgDBSvrHeartAck(NetPacket * pack)
 {
 	return false;
 }
@@ -82,6 +82,16 @@ bool LogicMsgHandler::OnMsgSelectEnterLogicSvrReq(NetPacket * pack)
 
 	//回传给LoginServer创建结果
 
+	return false;
+}
+
+bool LogicMsgHandler::OnMsgLostConnectReq(NetPacket * pack)
+{
+	return false;
+}
+
+bool LogicMsgHandler::OnMsgLogoutReq(NetPacket * pack)
+{
 	return false;
 }
 

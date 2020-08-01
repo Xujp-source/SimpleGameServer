@@ -8,9 +8,9 @@ g:\vs2017program\project1\gameserver\x64\debug\fdtouid.obj
 g:\vs2017program\project1\gameserver\x64\debug\configfile.obj
 g:\vs2017program\project1\gameserver\x64\debug\commonconvert.obj
 g:\vs2017program\project1\gameserver\x64\debug\uuid.obj
+g:\vs2017program\project1\gameserver\x64\debug\other.pb.obj
 g:\vs2017program\project1\gameserver\x64\debug\msgid.pb.obj
-g:\vs2017program\project1\gameserver\x64\debug\login.pb.obj
-g:\vs2017program\project1\gameserver\x64\debug\dbexcute.pb.obj
+g:\vs2017program\project1\gameserver\x64\debug\battle.pb.obj
 g:\vs2017program\project1\gameserver\x64\debug\main.obj
 g:\vs2017program\project1\gameserver\x64\debug\gameservice.obj
 g:\vs2017program\project1\gameserver\x64\debug\gamescenemanager.obj
