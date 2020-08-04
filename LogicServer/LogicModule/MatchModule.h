@@ -17,7 +17,10 @@ public:
 
 public:
 	//*******************消息处理定义**************************
-	bool OnMsgMatchReq(NetPacket* pack);  //匹配请求
+	bool OnMsgMatchReq(NetPacket* pack);	     //匹配请求
+	bool OnMsgMatchAck(NetPacket* pack);         //匹配返还的结果
+	bool OnMsgCancelMatchReq(NetPacket* pack);   //取消匹配请求
+	bool OnMsgCancelMatchAck(NetPacket* pack);   //取消匹配返还的结果
 	//*********************************************************
 
 	//*******************事件处理定义**************************

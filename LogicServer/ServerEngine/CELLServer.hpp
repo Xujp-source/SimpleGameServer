@@ -46,6 +46,8 @@ public:
 	{
 		while (pThread->isRun())
 		{
+			_pNetEvent->time4msg();
+			_pNetEvent->OnUpdate();
 			if (!_clientsBuff.empty())
 			{	
 				//从缓冲队列里取出客户数据

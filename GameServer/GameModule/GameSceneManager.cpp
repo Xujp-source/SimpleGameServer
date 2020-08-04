@@ -7,6 +7,7 @@ GameSceneManager::GameSceneManager()
 
 GameSceneManager::~GameSceneManager()
 {
+	ClearAllScene();
 }
 
 GameSceneManager * GameSceneManager::GetInstancePtr()
@@ -33,6 +34,7 @@ bool GameSceneManager::GameLoop()
 			break;
 		case BATTLE_MODE_FINISH://Õ½¶·½áÊø
 			battleScene->BATTLEFinish();
+			DeleteScene(itor->first);
 			break;
 		default:
 			break;
@@ -43,7 +45,9 @@ bool GameSceneManager::GameLoop()
 
 GameScene * GameSceneManager::GetSceneObj(unsigned long long uid)
 {
-	return nullptr;
+	std::map<unsigned long long, GameScene*>::iterator itor = m_scenemap.find(uid);
+	if (itor != m_scenemap.end())
+		return itor->second;
 }
 
 GameScene * GameSceneManager::CreateScene(BattleSide& atk, BattleSide& def)
@@ -59,4 +63,26 @@ GameScene * GameSceneManager::CreateScene(BattleSide& atk, BattleSide& def)
 	scene->SetUid(uid);
 	m_scenemap.insert(std::make_pair(uid, scene));
 	return scene;
+}
+
+void GameSceneManager::DeleteScene(unsigned long long uid)
+{
+	std::map<unsigned long long, GameScene*>::iterator itor = m_scenemap.find(uid);
+	if (itor != m_scenemap.end())
+	{
+		delete itor->second;
+		itor->second = nullptr;
+		m_scenemap.erase(itor);
+	}
+}
+
+void GameSceneManager::ClearAllScene()
+{
+	std::map<unsigned long long, GameScene*>::iterator itor = m_scenemap.begin();
+	for (; itor != m_scenemap.end(); itor++)
+	{
+		delete itor->second;
+		itor->second = nullptr;
+	}
+	m_scenemap.clear();
 }

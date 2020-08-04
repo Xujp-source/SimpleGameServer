@@ -10,7 +10,6 @@ class CELLServer;
 class INetEvent
 {
 public:
-	//纯虚函数
 	//客户端加入事件
 	virtual void OnNetJoin(CELLClient* pClient) = 0;
 	//客户端离开事件
@@ -19,7 +18,10 @@ public:
 	virtual void OnNetMsg(CELLServer* pServer, CELLClient* pClient, netmsg_DataHeader* header) = 0;
 	//recv事件
 	virtual void OnNetRecv(CELLClient* pClient) = 0;
-private:
+	//每秒操作
+	virtual void time4msg() = 0;
+	//更新操作
+	virtual void OnUpdate() = 0;
 
 };
 

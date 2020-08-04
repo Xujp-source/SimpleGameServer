@@ -49,6 +49,7 @@ g:\vs2017program\project1\centerserver\serverengine\cellserver.hpp(194): warning
 g:\vs2017program\project1\centerserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\centerserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\centerserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+  MatchModule.cpp
   DBExcute.pb.cc
   Login.pb.cc
   MsgID.pb.cc

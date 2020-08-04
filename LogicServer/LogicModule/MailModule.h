@@ -25,10 +25,10 @@ public:
 
 public:
 	//*********************消息处理定义开始*****************************
-	bool OnMsgLoadMailReq(NetPacket* pNetPacket);		  //请求加载邮件
+	bool OnMsgLoadMailReq(NetPacket* pNetPacket);         //请求加载邮件
 	bool OnMsgReadMailReq(NetPacket* pNetPacket);         //读邮件
 	bool OnMsgAcquireMailReq(NetPacket* pNetPacket);      //领取邮件奖励
-	bool OnMsgDeleteMailReq(NetPacket* pNetPacket);		  //删除邮件
+	bool OnMsgDeleteMailReq(NetPacket* pNetPacket);       //删除邮件
 	//******************************************************************
 
 public:

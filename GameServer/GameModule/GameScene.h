@@ -43,12 +43,12 @@ public:
 
 public:
 	//*******************消息处理定义**************************
-	bool OnMsgCommandAtkReq(NetPacket* pack);			//普通攻击请求
-	bool OnMsgCommandSkillReq(NetPacket* pack);			//释放技能请求
-	bool OnMsgCommandDefineReq(NetPacket* pack);		//防御请求
-	bool OnMsgCommandUsingReq(NetPacket* pack);			//使用道具请求
-	bool OnMsgCommandChangeCardReq(NetPacket* pack);	//切换卡牌请求
-	bool OnMsgCommandEscapeReq(NetPacket* pack);		//逃跑请求
+	bool OnMsgCommandAtkReq(NetPacket* pack);           //普通攻击请求
+	bool OnMsgCommandSkillReq(NetPacket* pack);         //释放技能请求
+	bool OnMsgCommandDefineReq(NetPacket* pack);        //防御请求
+	bool OnMsgCommandUsingReq(NetPacket* pack);         //使用道具请求
+	bool OnMsgCommandChangeCardReq(NetPacket* pack);    //切换卡牌请求
+	bool OnMsgCommandEscapeReq(NetPacket* pack);        //逃跑请求
 	//*********************************************************
 
 public:

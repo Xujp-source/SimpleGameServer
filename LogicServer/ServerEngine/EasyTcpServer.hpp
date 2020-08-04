@@ -161,7 +161,7 @@ public:
 		int ret = connect(_pClient->sockfd(), (sockaddr*)&_sin, sizeof(sockaddr_in));
 		if (SOCKET_ERROR == ret)
 		{
-			CELLLog::Info("Error: socket = %d, ip = %s, port = %d,connect failed....WSAERROR = %d\n", (int)_pClient->sockfd(), inet_ntoa(_sin.sin_addr), port, WSAGetLastError());
+			CELLLog::Info("Error: socket = %d, ip = %s, port = %d,connect failed....\n", (int)_pClient->sockfd(), inet_ntoa(_sin.sin_addr), port);
 			delete _pClient;
 			return ret;
 		}
@@ -272,6 +272,20 @@ public:
 	{
 
 	}
+
+	//每秒操作
+	virtual void time4msg()
+	{
+		auto t1 = _tTime.getElapsedSecond();
+		if (t1 >= 1.0)
+		{
+			OnSecondTimer();
+			CELLLog::Info("thread<%d>,time<%lf>,socket<%d>,clients<%d>,recv<%d>,msg<%d>\n", (int)_cellServers.size(), t1, _sock, (int)_clientCount, (int)(_recvCount / t1), (int)(_msgCount / t1));
+			_recvCount = 0;
+			_msgCount = 0;
+			_tTime.update();
+		}
+	}
 private:
 	//处理新客户端接收
 	void OnRun(CELLThread* pThread)
@@ -302,20 +316,6 @@ private:
 				FD_CLR(_sock, &fdRead);
 				Accept();
 			}
-		}
-	}
-
-	//计算并输出每秒收到的网络消息
-	void time4msg()
-	{
-		auto t1 = _tTime.getElapsedSecond();
-		if (t1 >= 1.0)
-		{
-			OnSecondTimer();
-			CELLLog::Info("thread<%d>,time<%lf>,socket<%d>,clients<%d>,recv<%d>,msg<%d>\n", (int)_cellServers.size(), t1, _sock, (int)_clientCount, (int)(_recvCount / t1), (int)(_msgCount / t1));
-			_recvCount = 0;
-			_msgCount = 0;
-			_tTime.update();
 		}
 	}
 };

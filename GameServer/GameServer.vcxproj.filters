@@ -93,6 +93,9 @@
     <ClCompile Include="protoc\Other.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
+    <ClCompile Include="GameModule\SkillModule.cpp">
+      <Filter>GameModule</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ServerEngine\3rd\uuid.h">
@@ -217,6 +220,9 @@
     </ClInclude>
     <ClInclude Include="protoc\Other.pb.h">
       <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="GameModule\SkillModule.h">
+      <Filter>GameModule</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

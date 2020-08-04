@@ -43,7 +43,7 @@ bool CGameService::Init()
 bool CGameService::OnSecondTimer()
 {
 	//连接逻辑服
-	ConnectToLogicServer();
+	//ConnectToLogicServer();
 	return true;
 }
 

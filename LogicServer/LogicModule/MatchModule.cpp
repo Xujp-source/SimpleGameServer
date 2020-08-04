@@ -37,6 +37,21 @@ bool CMatchModule::OnMsgMatchReq(NetPacket* pack)
 	return true;
 }
 
+bool CMatchModule::OnMsgMatchAck(NetPacket * pack)
+{
+	return false;
+}
+
+bool CMatchModule::OnMsgCancelMatchReq(NetPacket * pack)
+{
+	return false;
+}
+
+bool CMatchModule::OnMsgCancelMatchAck(NetPacket * pack)
+{
+	return false;
+}
+
 //登出回调
 bool CMatchModule::LogoutCallback(const google::protobuf::Message* pdata)
 {

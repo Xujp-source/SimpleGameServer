@@ -51,9 +51,6 @@
     <ClCompile Include="protoc\DBExcute.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
-    <ClCompile Include="protoc\Login.pb.cc">
-      <Filter>protoc</Filter>
-    </ClCompile>
     <ClCompile Include="protoc\MsgID.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
@@ -81,6 +78,9 @@
     <ClCompile Include="ServerEngine\DBInterFace\DBConnectPool.cpp">
       <Filter>ServerEngine\DBInterFace</Filter>
     </ClCompile>
+    <ClCompile Include="MatchModule.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h">
@@ -105,9 +105,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="protoc\DBExcute.pb.h">
-      <Filter>protoc</Filter>
-    </ClInclude>
-    <ClInclude Include="protoc\Login.pb.h">
       <Filter>protoc</Filter>
     </ClInclude>
     <ClInclude Include="protoc\MsgID.pb.h">
@@ -190,6 +187,12 @@
     </ClInclude>
     <ClInclude Include="ServerEngine\DBInterFace\DBConnectPool.h">
       <Filter>ServerEngine\DBInterFace</Filter>
+    </ClInclude>
+    <ClInclude Include="MatchModule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandlerManager.hpp">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

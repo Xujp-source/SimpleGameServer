@@ -150,6 +150,7 @@
     <ClInclude Include="AgentManager.h" />
     <ClInclude Include="ConnectServerMgr.h" />
     <ClInclude Include="DBMsgHandler.h" />
+    <ClInclude Include="EventHandlerManager.hpp" />
     <ClInclude Include="GameService.h" />
     <ClInclude Include="MsgHandlerManager.hpp" />
     <ClInclude Include="protoc\DBExcute.pb.h" />

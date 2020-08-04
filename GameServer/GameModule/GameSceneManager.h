@@ -23,6 +23,12 @@ public:
 	//创建场景对象
 	GameScene* CreateScene(BattleSide& atk, BattleSide& def);
 
+	//刪除场景对象
+	void DeleteScene(unsigned long long uid);
+
+	//清除所有场景对象
+	void ClearAllScene();
+
 private:
 	std::map<unsigned long long, GameScene*> m_scenemap;
 };

@@ -25,12 +25,10 @@ bool DBMsgHandler::Init()
 
 void DBMsgHandler::RegisterMessageHanler()
 {
-	//CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_BAG_UNLOCK_REQ, &DBMsgHandler::OnMsgGateSvrHeartAck, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_DB_EXE_SQL_REQ, &DBMsgHandler::OnMsgDBExeSqlReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_LOGIN_VERIFY_REQ, &DBMsgHandler::OnMsgAccountLoginVerifyReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_REG_TO_DBSVR_REQ, &DBMsgHandler::OnMsgAccountRegToDBsvrReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_LOAD_LOGICSVR_LIST_FROM_DBSVR_REQ, &DBMsgHandler::OnMsgLoadLogicsvrListFromDBsvrReq, this);
-
 }
 
 CppMySQLQuery * DBMsgHandler::querySQL(const char * sqlcmd)
@@ -92,10 +90,13 @@ bool DBMsgHandler::OnMsgAccountLoginVerifyReq(NetPacket* pack)
 
 	int exectype = req.exectype();
 	ERROR_RETURN_TRUE(exectype != SQL_EXECUTE);
+	int sockfd = req.sockfd();
+	ERROR_RETURN_TRUE(sockfd != 0);
 	
 	int res = execSQL(req.sqlcmd().c_str());
-	DBExeSqlReq ack;
-	ack.set_exectype(res);
+	AccountLoginAck ack;
+	ack.set_res(res);
+	ack.set_sockfd(sockfd);
 	CGameService::GetInstancePtr()->SendData(pack->m_dwConnID, MSG_ACCOUNT_LOGIN_VERIFY_ACK, ack);
 
 	return true;
@@ -103,6 +104,19 @@ bool DBMsgHandler::OnMsgAccountLoginVerifyReq(NetPacket* pack)
 
 bool DBMsgHandler::OnMsgAccountRegToDBsvrReq(NetPacket* pack)
 {
+	DBExeSqlReq req;
+	req.ParsePartialFromArray(pack->m_pDataBuffer->buff, sizeof(pack->m_pDataBuffer->buff));
+
+	int exectype = req.exectype();
+	ERROR_RETURN_TRUE(exectype != SQL_EXECUTE);
+	int sockfd = req.sockfd();
+	ERROR_RETURN_TRUE(sockfd != 0);
+
+	int res = execSQL(req.sqlcmd().c_str());
+	AccountRegisterAck ack;
+	ack.set_res(res);
+	ack.set_sockfd(sockfd);
+	CGameService::GetInstancePtr()->SendData(pack->m_dwConnID, MSG_ACCOUNT_REG_TO_DBSVR_ACK, ack);
 	return true;
 }
 

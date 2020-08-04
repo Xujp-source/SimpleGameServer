@@ -1,5 +1,6 @@
 #ifndef __BATTLE_DATA_H__
 #define __BATTLE_DATA_H__
+#include<map>
 
 //每张参战卡牌的信息
 struct Card
@@ -17,8 +18,8 @@ struct BattleSide
 {
 	unsigned long long playeruid;
 	int is_robot;
-	unsigned long long carduid; //参战的唯一卡牌id
-	Card Entry[5];
+	unsigned long long carduid; //当前参战的唯一卡牌id
+	std::map<unsigned long long, Card> cardmap;
 };
 
 #endif

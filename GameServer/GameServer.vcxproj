@@ -134,6 +134,7 @@
     <ClCompile Include="GameModule\GameScene.cpp" />
     <ClCompile Include="GameModule\GameSceneGrid.cpp" />
     <ClCompile Include="GameModule\GameSceneManager.cpp" />
+    <ClCompile Include="GameModule\SkillModule.cpp" />
     <ClCompile Include="GameService.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="protoc\Battle.pb.cc" />
@@ -156,6 +157,7 @@
     <ClInclude Include="GameModule\GameScene.h" />
     <ClInclude Include="GameModule\GameSceneGrid.h" />
     <ClInclude Include="GameModule\GameSceneManager.h" />
+    <ClInclude Include="GameModule\SkillModule.h" />
     <ClInclude Include="GameService.h" />
     <ClInclude Include="MsgHandlerManager.hpp" />
     <ClInclude Include="protoc\Battle.pb.h" />

@@ -32,26 +32,28 @@ void LoginMsgHandler::RegisterMessageHanler()
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_REG_REQ, &LoginMsgHandler::OnMsgAccountRegReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_LOGIN_REQ, &LoginMsgHandler::OnMsgAccountLoginReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_SERVER_LIST_REQ, &LoginMsgHandler::OnMsgLoadLogicSvrListReq, this);
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_LOGIN_VERIFY_ACK, &LoginMsgHandler::OnMsgAccountRegFromDBAck, this);
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_REG_TO_DBSVR_ACK, &LoginMsgHandler::OnMsgAccountLoginFromDBAck, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_LOGIN_VERIFY_ACK, &LoginMsgHandler::OnMsgAccountLoginFromDBAck, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_REG_TO_DBSVR_ACK, &LoginMsgHandler::OnMsgAccountRegFromDBAck, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_LOAD_LOGICSVR_LIST_FROM_DBSVR_ACK, &LoginMsgHandler::OnMsgLoadLogicSvrListFromDBAck, this);
 }
 
+//逻辑服的心跳确认
 bool LoginMsgHandler::OnMsgLogicSvrHeartAck(NetPacket * pack)
 {
-	return false;
+	return true;
 }
 
+//DB操作服的心跳确认
 bool LoginMsgHandler::OnMsgDBSvrHeartAck(NetPacket * pack)
 {
-	return false;
+	return true;
 }
 
+//登录账号请求
 bool LoginMsgHandler::OnMsgAccountLoginReq(NetPacket * pack)
 {
 	//反序列化
 	AccountLoginReq req;
-	char *str = pack->m_pDataBuffer->buff;
 	req.ParsePartialFromArray(pack->m_pDataBuffer->buff, 1024);
 
 	//条件验证
@@ -66,6 +68,7 @@ bool LoginMsgHandler::OnMsgAccountLoginReq(NetPacket * pack)
 	DBExeSqlReq dbReq;
 	dbReq.set_exectype(SQL_EXECUTE);
 	dbReq.set_sqlcmd(szSql);
+	dbReq.set_sockfd(pack->m_dwConnID);
 
 	//推给DBServer验证账号
 	int m_DBConnID = CGameService::GetInstancePtr()->GetDBConnID();
@@ -74,16 +77,26 @@ bool LoginMsgHandler::OnMsgAccountLoginReq(NetPacket * pack)
 	return true;
 }
 
+//登录账号结果来自DBServer
 bool LoginMsgHandler::OnMsgAccountLoginFromDBAck(NetPacket * pack)
 {
-	return false;
+	//反序列化
+	AccountLoginAck ack;
+	ack.ParsePartialFromArray(pack->m_pDataBuffer->buff, 1024);
+
+	//条件验证
+	int m_dwConnID = ack.sockfd();
+	ERROR_RETURN_TRUE(m_dwConnID != 0);
+	CGameService::GetInstancePtr()->SendData(m_dwConnID, MSG_ACCOUNT_LOGIN_ACK, ack);
+
+	return true;
 }
 
+//注册账号请求
 bool LoginMsgHandler::OnMsgAccountRegReq(NetPacket * pack)
 {
 	//反序列化
 	AccountRegisterReq req;
-	char *str = pack->m_pDataBuffer->buff;
 	req.ParsePartialFromArray(pack->m_pDataBuffer->buff, 1024);
 
 	//条件验证
@@ -100,6 +113,7 @@ bool LoginMsgHandler::OnMsgAccountRegReq(NetPacket * pack)
 	DBExeSqlReq dbReq;
 	dbReq.set_exectype(SQL_EXECUTE);
 	dbReq.set_sqlcmd(szSql);
+	dbReq.set_sockfd(pack->m_dwConnID);
 
 	//推给DBServer注册账号
 	int m_DBConnID = CGameService::GetInstancePtr()->GetDBConnID();
@@ -108,11 +122,21 @@ bool LoginMsgHandler::OnMsgAccountRegReq(NetPacket * pack)
 	return true;
 }
 
+//注册账号结果来自DBServer
 bool LoginMsgHandler::OnMsgAccountRegFromDBAck(NetPacket * pack)
 {
-	return false;
+	//反序列化
+	AccountRegisterAck ack;
+	ack.ParsePartialFromArray(pack->m_pDataBuffer->buff, 1024);
+
+	//条件验证
+	int m_dwConnID = ack.sockfd();
+	ERROR_RETURN_TRUE(m_dwConnID != 0);
+	CGameService::GetInstancePtr()->SendData(m_dwConnID, MSG_ACCOUNT_REG_ACK, ack);
+	return true;
 }
 
+//加载逻辑服的列表
 bool LoginMsgHandler::OnMsgLoadLogicSvrListReq(NetPacket * pack)
 {
 	//构造sql语句
@@ -129,22 +153,40 @@ bool LoginMsgHandler::OnMsgLoadLogicSvrListReq(NetPacket * pack)
 	return true;
 }
 
+//加载逻辑服的列表结果来自DBServer
 bool LoginMsgHandler::OnMsgLoadLogicSvrListFromDBAck(NetPacket * pack)
 {
 	return false;
 }
 
+//选择进入哪个逻辑服
 bool LoginMsgHandler::OnMsgSelectEnterLogicSvrReq(NetPacket * pack)
 {
-	return false;
+	//反序列化
+	SelectEnterLogicSvrReq req;
+	req.ParsePartialFromArray(pack->m_pDataBuffer->buff, 1024);
+
+	//条件验证
+	unsigned long long account = req.account();
+	ERROR_RETURN_TRUE(account != 0);
+	int serverid = req.serverid();
+	ERROR_RETURN_TRUE(serverid != 0);
+
+	//这里暂时只考虑单服情况
+	int m_LogicConnID = CGameService::GetInstancePtr()->GetLogicConnID();
+	CGameService::GetInstancePtr()->SendData(m_LogicConnID, MSG_SELECT_ENTER_LOGICSVR_REQ, req);
+	
+	return true;
 }
 
+//选择进入哪个逻辑服结果来自LogicServer
 bool LoginMsgHandler::OnMsgSelectEnterLogicSvrFromLogicAck(NetPacket * pack)
 {
-	return false;
+	return true;
 }
 
+//主动断开连接请求
 bool LoginMsgHandler::OnMsgLostConnectReq(NetPacket * pack)
 {
-	return false;
+	return true;
 }

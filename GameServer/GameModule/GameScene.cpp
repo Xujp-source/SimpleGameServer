@@ -45,7 +45,6 @@ bool GameScene::BATTLECommand()
 	}
 	//执行当前命令操作
 	ExecBATTLECommand();
-
 	//回合数加一
 	RoundCount = RoundCount + 1;
 	//增加下一回合的结束时间戳
@@ -55,14 +54,8 @@ bool GameScene::BATTLECommand()
 	//重置命令
 	for (int i = 0; i < BATTLE_SIDE_COUNT; i++)
 	{
-		for (int j = 0; j < 5; j++)
-		{
-			if (Side[i].Entry[j].uid == Side[i].carduid)
-			{
-				Side[i].Entry[j].cmd = BATTLE_COMMAND_NONE;
-				break;
-			}
-		}
+		std::map<unsigned long long, Card>::iterator itor = Side[i].cardmap.find(Side[i].carduid);
+		itor->second.cmd = BATTLE_COMMAND_ATK;
 	}
 
 	return true;
@@ -114,14 +107,8 @@ bool GameScene::OnMsgCommandAtkReq(NetPacket * pack)
 	{
 		if (uid == Side[i].playeruid)
 		{
-			for (int j = 0; j < 5; j++)
-			{
-				if (Side[i].Entry[j].uid == Side[i].carduid)
-				{
-					Side[i].Entry[j].cmd = BATTLE_COMMAND_ATK;
-					break;
-				}
-			}
+			std::map<unsigned long long, Card>::iterator itor = Side[i].cardmap.find(Side[i].carduid);
+			itor->second.cmd = BATTLE_COMMAND_ATK;
 			CmdLock = BATTLE_COMMAND_LOCK;
 			break;
 		}

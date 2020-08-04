@@ -66,41 +66,62 @@ public:
 			return false;
 		}
 
-		std::map<int, CHandlerBase*>::iterator it = m_mapHandler.find(nMsgID);
+		std::vector<CHandlerBase*>* pMsgVector = NULL;
+		std::map<int, std::vector<CHandlerBase* >* >::iterator it = m_mapHandler.find(nMsgID);
 		if (it == m_mapHandler.end())
 		{
-			m_mapHandler.insert(std::make_pair(nMsgID, pSlot));
-			return true;
+			pMsgVector = new std::vector<CHandlerBase*>;
+			pMsgVector->push_back(pSlot);
+			m_mapHandler.insert(std::make_pair(nMsgID, pMsgVector));
 		}
-		return false;
+		else
+		{
+			pMsgVector = it->second;
+			pMsgVector->push_back(pSlot);
+		}
+
+		return true;
 	}
 
 	// 找到并执行对应模块的函数
 	template<typename TParam>
 	bool ExecuteMessage(int nMsgID, TParam* pData)
 	{
-		std::map<int, CHandlerBase*>::iterator itor = m_mapHandler.find(nMsgID);
-		if(itor != m_mapHandler.end())
+		std::map<int, std::vector<CHandlerBase* >* >::iterator itor = m_mapHandler.find(nMsgID);
+		if (itor == m_mapHandler.end())
 		{
-			(*(itor->second))((void*)pData);
-			return true;
+			return false;
 		}
-		return false;
+
+		std::vector<CHandlerBase* >* vtHandler = itor->second;
+		for (std::vector<CHandlerBase* >::iterator itorHandler = vtHandler->begin(); itorHandler != vtHandler->end(); itorHandler++)
+		{
+			(**itorHandler)((void*)pData);
+		}
+		return true;
 	}
 
 	bool ClearAll()
 	{
-		for (std::map<int, CHandlerBase* > ::iterator itor = m_mapHandler.begin(); itor != m_mapHandler.end(); itor++)
+		for (std::map<int, std::vector<CHandlerBase*>*>::iterator itor = m_mapHandler.begin(); itor != m_mapHandler.end(); itor++)
 		{
-			delete itor->second;
-			itor->second = nullptr;
+			std::vector<CHandlerBase* >* pVtHandler = itor->second;
+			for (std::vector<CHandlerBase* >::iterator itor2 = pVtHandler->begin(); itor2 != pVtHandler->end(); itor2++)
+			{
+				delete *itor2;
+			}
+
+			pVtHandler->clear();
+			delete pVtHandler;
 		}
+
 		m_mapHandler.clear();
+
 		return true;
 	}
 
 protected:
-	std::map<int, CHandlerBase*> m_mapHandler;
+	std::map<int, std::vector<CHandlerBase* >* > m_mapHandler;
 };
 
 class CMsgHandlerManager : public CHandlerManager

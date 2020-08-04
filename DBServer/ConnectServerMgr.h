@@ -2,7 +2,7 @@
 #define __CONNECT_SERVER_MGR_H__
 #include "stdafx.h"
 
-// 其他服连接DBServer后的对象管理
+// 其他服连接GameServer后的对象管理
 class ConnectServerMgr
 {
 private:
@@ -22,8 +22,7 @@ public:
 
 public:
 	//*******************消息处理定义**************************
-	bool OnMsgLogicSvrRegister(NetPacket* pack);  //逻辑服务器连接后的注册请求
-	bool OnMsgLogicSvrHeartReq(NetPacket* pack);  //逻辑服务器的心跳请求
+	
 	//*********************************************************
 
 private:

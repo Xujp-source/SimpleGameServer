@@ -12,8 +12,7 @@ enum
 	//ÊÂÎñ
 	SQL_TRANSACTION,
 	//replace
-	SQL_REPLACE,
-	SQL_END
+	SQL_REPLACE
 };
 
 

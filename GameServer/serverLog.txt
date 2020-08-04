@@ -1,1 +1,14 @@
-Info [2020-7-28 12:0:27]CELLLog::setLogPath success,<serverLog.txt,w>
+Info [2020-8-4 3:14:37]CELLLog::setLogPath success,<serverLog.txt,w>
+Info [2020-8-4 3:14:38]create socket<392> success...
+Info [2020-8-4 3:14:38]bind port<9897> success...
+Info [2020-8-4 3:14:38]listen port<392> success...
+Info [2020-8-4 3:14:38]thread<1>,time<1.000352>,socket<392>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 3:14:39]thread<1>,time<1.000156>,socket<392>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 3:14:40]thread<1>,time<1.000157>,socket<392>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 3:14:40]thread<1>,time<1.000171>,socket<392>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 3:14:41]thread<1>,time<1.000255>,socket<392>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 3:14:41]thread<1>,time<1.000255>,socket<392>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 3:14:42]thread<1>,time<1.000120>,socket<392>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 3:14:43]thread<1>,time<1.000672>,socket<392>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 3:14:44]thread<1>,time<1.000078>,socket<392>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 3:14:44]thread<1>,time<1.000053>,socket<392>,clients<0>,recv<0>,msg<0>
