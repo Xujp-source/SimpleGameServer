@@ -2,21 +2,54 @@
 
 //请求账号登录
 message AccountLoginReq
-{    
+{
 	uint64 account = 1;
 	string password = 2;
 }
 
+//登录账号结果
+message AccountLoginAck
+{
+	int32 res = 1;
+	int32 sockfd = 2;
+}
+
 //请求账号注册
 message AccountRegisterReq
-{    
+{
 	uint64 account = 1;
 	string password = 2;
 	string name = 3;
 }
 
+//账号注册结果
+message AccountRegisterAck
+{
+	int32 res = 1;
+	int32 sockfd = 2;
+}
+
+//请求选择进入哪个逻辑服
+message SelectEnterLogicSvrReq
+{
+	uint64 account = 1;
+	int32 serverid = 2;
+	int32 sockfd = 3; //服务器自己内部调用
+}
+
+//选择进入哪个逻辑服结果
+message SelectEnterLogicSvrAck
+{
+	uint64 account = 1;
+	int32  serverid = 2;
+	string serveraddr = 3;
+	int32  serverport = 4;
+	int32  logincode = 5;
+	int32  sockfd = 6;
+}
+
 //加载逻辑服列表
 message LoadLogicSvrReq
-{    
+{
 	
 }

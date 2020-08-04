@@ -44,6 +44,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_DBExcute_2eproto::offsets[] PR
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::DBExeSqlReq, exectype_),
   PROTOBUF_FIELD_OFFSET(::DBExeSqlReq, sqlcmd_),
+  PROTOBUF_FIELD_OFFSET(::DBExeSqlReq, sockfd_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::DBExeSqlReq)},
@@ -54,8 +55,9 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_DBExcute_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\016DBExcute.proto\"/\n\013DBExeSqlReq\022\020\n\010exect"
-  "ype\030\001 \001(\r\022\016\n\006sqlcmd\030\002 \001(\tb\006proto3"
+  "\n\016DBExcute.proto\"\?\n\013DBExeSqlReq\022\020\n\010exect"
+  "ype\030\001 \001(\r\022\016\n\006sqlcmd\030\002 \001(\t\022\016\n\006sockfd\030\003 \001("
+  "\005b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_DBExcute_2eproto_deps[1] = {
 };
@@ -64,7 +66,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_DBE
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_DBExcute_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_DBExcute_2eproto = {
-  false, false, descriptor_table_protodef_DBExcute_2eproto, "DBExcute.proto", 73,
+  false, false, descriptor_table_protodef_DBExcute_2eproto, "DBExcute.proto", 89,
   &descriptor_table_DBExcute_2eproto_once, descriptor_table_DBExcute_2eproto_sccs, descriptor_table_DBExcute_2eproto_deps, 1, 0,
   schemas, file_default_instances, TableStruct_DBExcute_2eproto::offsets,
   file_level_metadata_DBExcute_2eproto, 1, file_level_enum_descriptors_DBExcute_2eproto, file_level_service_descriptors_DBExcute_2eproto,
@@ -95,14 +97,18 @@ DBExeSqlReq::DBExeSqlReq(const DBExeSqlReq& from)
     sqlcmd_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_sqlcmd(),
       GetArena());
   }
-  exectype_ = from.exectype_;
+  ::memcpy(&exectype_, &from.exectype_,
+    static_cast<size_t>(reinterpret_cast<char*>(&sockfd_) -
+    reinterpret_cast<char*>(&exectype_)) + sizeof(sockfd_));
   // @@protoc_insertion_point(copy_constructor:DBExeSqlReq)
 }
 
 void DBExeSqlReq::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_DBExeSqlReq_DBExcute_2eproto.base);
   sqlcmd_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  exectype_ = 0u;
+  ::memset(&exectype_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sockfd_) -
+      reinterpret_cast<char*>(&exectype_)) + sizeof(sockfd_));
 }
 
 DBExeSqlReq::~DBExeSqlReq() {
@@ -138,7 +144,9 @@ void DBExeSqlReq::Clear() {
   (void) cached_has_bits;
 
   sqlcmd_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  exectype_ = 0u;
+  ::memset(&exectype_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sockfd_) -
+      reinterpret_cast<char*>(&exectype_)) + sizeof(sockfd_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -163,6 +171,13 @@ const char* DBExeSqlReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
           auto str = _internal_mutable_sqlcmd();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "DBExeSqlReq.sqlcmd"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 sockfd = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          sockfd_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -210,6 +225,12 @@ failure:
         2, this->_internal_sqlcmd(), target);
   }
 
+  // int32 sockfd = 3;
+  if (this->sockfd() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_sockfd(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -238,6 +259,13 @@ size_t DBExeSqlReq::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
         this->_internal_exectype());
+  }
+
+  // int32 sockfd = 3;
+  if (this->sockfd() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_sockfd());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -277,6 +305,9 @@ void DBExeSqlReq::MergeFrom(const DBExeSqlReq& from) {
   if (from.exectype() != 0) {
     _internal_set_exectype(from._internal_exectype());
   }
+  if (from.sockfd() != 0) {
+    _internal_set_sockfd(from._internal_sockfd());
+  }
 }
 
 void DBExeSqlReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -301,7 +332,12 @@ void DBExeSqlReq::InternalSwap(DBExeSqlReq* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   sqlcmd_.Swap(&other->sqlcmd_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(exectype_, other->exectype_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(DBExeSqlReq, sockfd_)
+      + sizeof(DBExeSqlReq::sockfd_)
+      - PROTOBUF_FIELD_OFFSET(DBExeSqlReq, exectype_)>(
+          reinterpret_cast<char*>(&exectype_),
+          reinterpret_cast<char*>(&other->exectype_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DBExeSqlReq::GetMetadata() const {

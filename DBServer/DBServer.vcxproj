@@ -135,7 +135,9 @@
     <ClCompile Include="GameService.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="protoc\DBExcute.pb.cc" />
+    <ClCompile Include="protoc\Login.pb.cc" />
     <ClCompile Include="protoc\MsgID.pb.cc" />
+    <ClCompile Include="protoc\Other.pb.cc" />
     <ClCompile Include="ServerEngine\3rd\uuid.cpp" />
     <ClCompile Include="ServerEngine\Common\CommonConvert.cpp" />
     <ClCompile Include="ServerEngine\Common\ConfigFile.cpp" />
@@ -154,7 +156,9 @@
     <ClInclude Include="GameService.h" />
     <ClInclude Include="MsgHandlerManager.hpp" />
     <ClInclude Include="protoc\DBExcute.pb.h" />
+    <ClInclude Include="protoc\Login.pb.h" />
     <ClInclude Include="protoc\MsgID.pb.h" />
+    <ClInclude Include="protoc\Other.pb.h" />
     <ClInclude Include="ServerDefine.h" />
     <ClInclude Include="ServerEngine\3rd\uuid.h" />
     <ClInclude Include="ServerEngine\CELL.hpp" />

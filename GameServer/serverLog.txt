@@ -1,14 +1,23 @@
-Info [2020-8-4 3:14:37]CELLLog::setLogPath success,<serverLog.txt,w>
-Info [2020-8-4 3:14:38]create socket<392> success...
-Info [2020-8-4 3:14:38]bind port<9897> success...
-Info [2020-8-4 3:14:38]listen port<392> success...
-Info [2020-8-4 3:14:38]thread<1>,time<1.000352>,socket<392>,clients<0>,recv<0>,msg<0>
-Info [2020-8-4 3:14:39]thread<1>,time<1.000156>,socket<392>,clients<0>,recv<0>,msg<0>
-Info [2020-8-4 3:14:40]thread<1>,time<1.000157>,socket<392>,clients<0>,recv<0>,msg<0>
-Info [2020-8-4 3:14:40]thread<1>,time<1.000171>,socket<392>,clients<0>,recv<0>,msg<0>
-Info [2020-8-4 3:14:41]thread<1>,time<1.000255>,socket<392>,clients<0>,recv<0>,msg<0>
-Info [2020-8-4 3:14:41]thread<1>,time<1.000255>,socket<392>,clients<0>,recv<0>,msg<0>
-Info [2020-8-4 3:14:42]thread<1>,time<1.000120>,socket<392>,clients<0>,recv<0>,msg<0>
-Info [2020-8-4 3:14:43]thread<1>,time<1.000672>,socket<392>,clients<0>,recv<0>,msg<0>
-Info [2020-8-4 3:14:44]thread<1>,time<1.000078>,socket<392>,clients<0>,recv<0>,msg<0>
-Info [2020-8-4 3:14:44]thread<1>,time<1.000053>,socket<392>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:8:7]CELLLog::setLogPath success,<serverLog.txt,w>
+Info [2020-8-4 5:8:7]create socket<400> success...
+Info [2020-8-4 5:8:7]bind port<9897> success...
+Info [2020-8-4 5:8:7]listen port<400> success...
+Info [2020-8-4 5:8:18]thread<1>,time<3.615206>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:8:18]thread<1>,time<2.841117>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:8:21]thread<1>,time<2.491130>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:8:24]thread<1>,time<1.833000>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:8:26]thread<1>,time<1.177033>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:14]thread<1>,time<1.477352>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:21]thread<1>,time<47.129037>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:23]thread<1>,time<1.000836>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:25]thread<1>,time<1.001507>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:27]thread<1>,time<1.000824>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:29]thread<1>,time<1.001286>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:35]thread<1>,time<1.000887>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:37]thread<1>,time<1.427290>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:37]thread<1>,time<1.123482>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:38]thread<1>,time<1.282295>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:40]thread<1>,time<1.434072>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:46]thread<1>,time<1.386469>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:47]thread<1>,time<4.920644>,socket<400>,clients<0>,recv<0>,msg<0>
+Info [2020-8-4 5:9:49]thread<1>,time<1.000128>,socket<400>,clients<0>,recv<0>,msg<0>

@@ -18,6 +18,10 @@ class EmptyReqDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<EmptyReq> _instance;
 } _EmptyReq_default_instance_;
+class LostConnectReqDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LostConnectReq> _instance;
+} _LostConnectReq_default_instance_;
 static void InitDefaultsscc_info_EmptyReq_Other_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -32,7 +36,21 @@ static void InitDefaultsscc_info_EmptyReq_Other_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_EmptyReq_Other_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_EmptyReq_Other_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Other_2eproto[1];
+static void InitDefaultsscc_info_LostConnectReq_Other_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_LostConnectReq_default_instance_;
+    new (ptr) ::LostConnectReq();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::LostConnectReq::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LostConnectReq_Other_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LostConnectReq_Other_2eproto}, {}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Other_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_Other_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Other_2eproto = nullptr;
 
@@ -42,29 +60,38 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Other_2eproto::offsets[] PROTO
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::LostConnectReq, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::EmptyReq)},
+  { 5, -1, sizeof(::LostConnectReq)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_EmptyReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_LostConnectReq_default_instance_),
 };
 
 const char descriptor_table_protodef_Other_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\013Other.proto\"\n\n\010EmptyReqb\006proto3"
+  "\n\013Other.proto\"\n\n\010EmptyReq\"\020\n\016LostConnect"
+  "Reqb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Other_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Other_2eproto_sccs[1] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Other_2eproto_sccs[2] = {
   &scc_info_EmptyReq_Other_2eproto.base,
+  &scc_info_LostConnectReq_Other_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Other_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Other_2eproto = {
-  false, false, descriptor_table_protodef_Other_2eproto, "Other.proto", 33,
-  &descriptor_table_Other_2eproto_once, descriptor_table_Other_2eproto_sccs, descriptor_table_Other_2eproto_deps, 1, 0,
+  false, false, descriptor_table_protodef_Other_2eproto, "Other.proto", 51,
+  &descriptor_table_Other_2eproto_once, descriptor_table_Other_2eproto_sccs, descriptor_table_Other_2eproto_deps, 2, 0,
   schemas, file_default_instances, TableStruct_Other_2eproto::offsets,
-  file_level_metadata_Other_2eproto, 1, file_level_enum_descriptors_Other_2eproto, file_level_service_descriptors_Other_2eproto,
+  file_level_metadata_Other_2eproto, 2, file_level_enum_descriptors_Other_2eproto, file_level_service_descriptors_Other_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -235,10 +262,178 @@ void EmptyReq::InternalSwap(EmptyReq* other) {
 }
 
 
+// ===================================================================
+
+void LostConnectReq::InitAsDefaultInstance() {
+}
+class LostConnectReq::_Internal {
+ public:
+};
+
+LostConnectReq::LostConnectReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:LostConnectReq)
+}
+LostConnectReq::LostConnectReq(const LostConnectReq& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:LostConnectReq)
+}
+
+void LostConnectReq::SharedCtor() {
+}
+
+LostConnectReq::~LostConnectReq() {
+  // @@protoc_insertion_point(destructor:LostConnectReq)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void LostConnectReq::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void LostConnectReq::ArenaDtor(void* object) {
+  LostConnectReq* _this = reinterpret_cast< LostConnectReq* >(object);
+  (void)_this;
+}
+void LostConnectReq::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void LostConnectReq::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const LostConnectReq& LostConnectReq::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_LostConnectReq_Other_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void LostConnectReq::Clear() {
+// @@protoc_insertion_point(message_clear_start:LostConnectReq)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* LostConnectReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* LostConnectReq::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:LostConnectReq)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:LostConnectReq)
+  return target;
+}
+
+size_t LostConnectReq::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:LostConnectReq)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void LostConnectReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:LostConnectReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  const LostConnectReq* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LostConnectReq>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:LostConnectReq)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:LostConnectReq)
+    MergeFrom(*source);
+  }
+}
+
+void LostConnectReq::MergeFrom(const LostConnectReq& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:LostConnectReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void LostConnectReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:LostConnectReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void LostConnectReq::CopyFrom(const LostConnectReq& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:LostConnectReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool LostConnectReq::IsInitialized() const {
+  return true;
+}
+
+void LostConnectReq::InternalSwap(LostConnectReq* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata LostConnectReq::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::EmptyReq* Arena::CreateMaybeMessage< ::EmptyReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::EmptyReq >(arena);
+}
+template<> PROTOBUF_NOINLINE ::LostConnectReq* Arena::CreateMaybeMessage< ::LostConnectReq >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::LostConnectReq >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

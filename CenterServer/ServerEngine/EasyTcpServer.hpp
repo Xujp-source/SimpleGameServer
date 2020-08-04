@@ -251,6 +251,7 @@ public:
 		//CELLLog::Info("client<%d> leave\n", pClient->sockfd());
 	}
 
+	//获取Connect对象
 	CELLClient* GetClientByFD(int fd)
 	{
 		for (auto pServer : _cellServers)
@@ -263,14 +264,31 @@ public:
 		return nullptr;
 	}
 
+	//主动断开连接
+	void DisConnect(int fd)
+	{
+		for (auto pServer : _cellServers)
+		{
+			CELLClient* pClient = pServer->GetClientByFD(fd);
+			if (pServer->GetClientByFD(fd) != nullptr)
+			{
+				pServer->OnClientLeave(pClient);
+				break;
+			}
+		}
+	}
+
+	//每秒回调
 	virtual bool OnSecondTimer()
 	{
+		//不做处理,开放给派生类的操作接口
 		return true;
 	}
 
+	//更新操作
 	virtual void OnUpdate()
 	{
-
+		//不做处理,开放给派生类的操作接口
 	}
 
 	//每秒操作
@@ -292,8 +310,6 @@ private:
 	{
 		while (pThread->isRun())
 		{
-			time4msg();
-			OnUpdate();
 			//伯克利套接字 BSD socket
 			fd_set fdRead;//描述符（socket） 集合
 						  //清理集合

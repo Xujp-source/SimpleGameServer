@@ -178,6 +178,7 @@ class DBExeSqlReq PROTOBUF_FINAL :
   enum : int {
     kSqlcmdFieldNumber = 2,
     kExectypeFieldNumber = 1,
+    kSockfdFieldNumber = 3,
   };
   // string sqlcmd = 2;
   void clear_sqlcmd();
@@ -213,6 +214,15 @@ class DBExeSqlReq PROTOBUF_FINAL :
   void _internal_set_exectype(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
+  // int32 sockfd = 3;
+  void clear_sockfd();
+  ::PROTOBUF_NAMESPACE_ID::int32 sockfd() const;
+  void set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_sockfd() const;
+  void _internal_set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
   // @@protoc_insertion_point(class_scope:DBExeSqlReq)
  private:
   class _Internal;
@@ -222,6 +232,7 @@ class DBExeSqlReq PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sqlcmd_;
   ::PROTOBUF_NAMESPACE_ID::uint32 exectype_;
+  ::PROTOBUF_NAMESPACE_ID::int32 sockfd_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_DBExcute_2eproto;
 };
@@ -335,6 +346,26 @@ inline void DBExeSqlReq::unsafe_arena_set_allocated_sqlcmd(
   sqlcmd_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       sqlcmd, GetArena());
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:DBExeSqlReq.sqlcmd)
+}
+
+// int32 sockfd = 3;
+inline void DBExeSqlReq::clear_sockfd() {
+  sockfd_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 DBExeSqlReq::_internal_sockfd() const {
+  return sockfd_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 DBExeSqlReq::sockfd() const {
+  // @@protoc_insertion_point(field_get:DBExeSqlReq.sockfd)
+  return _internal_sockfd();
+}
+inline void DBExeSqlReq::_internal_set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  sockfd_ = value;
+}
+inline void DBExeSqlReq::set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_sockfd(value);
+  // @@protoc_insertion_point(field_set:DBExeSqlReq.sockfd)
 }
 
 #ifdef __GNUC__

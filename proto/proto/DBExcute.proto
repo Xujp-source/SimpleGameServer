@@ -5,4 +5,5 @@ message DBExeSqlReq
 {
 	uint32 exectype = 1;
 	string sqlcmd  = 2;
+	int32 sockfd  = 3;
 }

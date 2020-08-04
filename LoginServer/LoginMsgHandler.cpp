@@ -1,6 +1,7 @@
 #include "LoginMsgHandler.h"
 #include "MsgHandlerManager.hpp"
 #include "GameService.h"
+#include "AgentManager.h"
 #include "./protoc/Login.pb.h"
 #include "./protoc/DBExcute.pb.h"
 
@@ -32,9 +33,11 @@ void LoginMsgHandler::RegisterMessageHanler()
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_REG_REQ, &LoginMsgHandler::OnMsgAccountRegReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_LOGIN_REQ, &LoginMsgHandler::OnMsgAccountLoginReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_SERVER_LIST_REQ, &LoginMsgHandler::OnMsgLoadLogicSvrListReq, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_SELECT_ENTER_LOGICSVR_REQ, &LoginMsgHandler::OnMsgSelectEnterLogicSvrReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_LOGIN_VERIFY_ACK, &LoginMsgHandler::OnMsgAccountLoginFromDBAck, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_ACCOUNT_REG_TO_DBSVR_ACK, &LoginMsgHandler::OnMsgAccountRegFromDBAck, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_LOAD_LOGICSVR_LIST_FROM_DBSVR_ACK, &LoginMsgHandler::OnMsgLoadLogicSvrListFromDBAck, this);
+	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_SELECT_ENTER_LOGICSVR_ACK, &LoginMsgHandler::OnMsgSelectEnterLogicSvrFromLogicAck, this);
 }
 
 //逻辑服的心跳确认
@@ -173,6 +176,7 @@ bool LoginMsgHandler::OnMsgSelectEnterLogicSvrReq(NetPacket * pack)
 	ERROR_RETURN_TRUE(serverid != 0);
 
 	//这里暂时只考虑单服情况
+	req.set_sockfd(pack->m_dwConnID);
 	int m_LogicConnID = CGameService::GetInstancePtr()->GetLogicConnID();
 	CGameService::GetInstancePtr()->SendData(m_LogicConnID, MSG_SELECT_ENTER_LOGICSVR_REQ, req);
 	
@@ -182,11 +186,37 @@ bool LoginMsgHandler::OnMsgSelectEnterLogicSvrReq(NetPacket * pack)
 //选择进入哪个逻辑服结果来自LogicServer
 bool LoginMsgHandler::OnMsgSelectEnterLogicSvrFromLogicAck(NetPacket * pack)
 {
+	//反序列化
+	SelectEnterLogicSvrAck ack;
+	ack.ParsePartialFromArray(pack->m_pDataBuffer->buff, 1024);
+
+	//条件验证
+	std::string serveraddr = ack.serveraddr();
+	ERROR_RETURN_TRUE(serveraddr.length() != 0);
+	int serverport = ack.serverport();
+	ERROR_RETURN_TRUE(serverport != 0);
+	int logincode = ack.logincode();
+	ERROR_RETURN_TRUE(logincode != 0);
+	int connectid = ack.sockfd();
+	ERROR_RETURN_TRUE(connectid != 0);
+
+	//返回给客户端结果
+	CGameService::GetInstancePtr()->SendData(connectid, MSG_SELECT_ENTER_LOGICSVR_ACK, ack);
+
 	return true;
 }
 
 //主动断开连接请求
 bool LoginMsgHandler::OnMsgLostConnectReq(NetPacket * pack)
 {
+	//析构业务层连接对象
+	Agent* agent = AgentManager::GetInstancePtr()->FindAgentByPort(pack->m_dwConnID);
+	delete agent;
+	agent = nullptr;
+	//移除fd和agent的映射关系
+	AgentManager::GetInstancePtr()->RemovePortToAgent(pack->m_dwConnID);
+	//断开传输层连接对象
+	CGameService::GetInstancePtr()->DisConnect(pack->m_dwConnID);
+
 	return true;
 }

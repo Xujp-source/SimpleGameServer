@@ -2,6 +2,12 @@
 
 //空操作
 message EmptyReq
-{    
+{
+
+}
+
+//主动断开连接请求
+message LostConnectReq
+{
 
 }

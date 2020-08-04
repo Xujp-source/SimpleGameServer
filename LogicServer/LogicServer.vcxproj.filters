@@ -126,6 +126,9 @@
     <ClCompile Include="LogicModule\CardModule.cpp">
       <Filter>LogicModule</Filter>
     </ClCompile>
+    <ClCompile Include="protoc\Login.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameService.h">
@@ -289,6 +292,9 @@
     </ClInclude>
     <ClInclude Include="LogicModule\CardModule.h">
       <Filter>LogicModule</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\Login.pb.h">
+      <Filter>protoc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

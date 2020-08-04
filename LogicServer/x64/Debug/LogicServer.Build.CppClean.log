@@ -11,9 +11,9 @@ g:\vs2017program\project1\logicserver\x64\debug\main.obj
 g:\vs2017program\project1\logicserver\x64\debug\logicmsghandler.obj
 g:\vs2017program\project1\logicserver\x64\debug\taskmodule.obj
 g:\vs2017program\project1\logicserver\x64\debug\storemodule.obj
-g:\vs2017program\project1\logicserver\x64\debug\rolemodule.obj
 g:\vs2017program\project1\logicserver\x64\debug\matchmodule.obj
 g:\vs2017program\project1\logicserver\x64\debug\mailmodule.obj
+g:\vs2017program\project1\logicserver\x64\debug\cardmodule.obj
 g:\vs2017program\project1\logicserver\x64\debug\basemodule.obj
 g:\vs2017program\project1\logicserver\x64\debug\bagmodule.obj
 g:\vs2017program\project1\logicserver\x64\debug\gameservice.obj
@@ -30,9 +30,8 @@ g:\vs2017program\project1\logicserver\x64\debug\commonconvert.obj
 g:\vs2017program\project1\logicserver\x64\debug\uuid.obj
 g:\vs2017program\project1\logicserver\x64\debug\store.pb.obj
 g:\vs2017program\project1\logicserver\x64\debug\other.pb.obj
-g:\vs2017program\project1\logicserver\x64\debug\cardmodule.obj
-g:\vs2017program\project1\x64\debug\logicserver.exe
 g:\vs2017program\project1\x64\debug\logicserver.ilk
+g:\vs2017program\project1\x64\debug\logicserver.exe
 g:\vs2017program\project1\x64\debug\logicserver.pdb
 g:\vs2017program\project1\logicserver\x64\debug\logicserver.tlog\cl.command.1.tlog
 g:\vs2017program\project1\logicserver\x64\debug\logicserver.tlog\cl.read.1.tlog

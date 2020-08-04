@@ -18,14 +18,44 @@ class AccountLoginReqDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AccountLoginReq> _instance;
 } _AccountLoginReq_default_instance_;
+class AccountLoginAckDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AccountLoginAck> _instance;
+} _AccountLoginAck_default_instance_;
 class AccountRegisterReqDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AccountRegisterReq> _instance;
 } _AccountRegisterReq_default_instance_;
+class AccountRegisterAckDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AccountRegisterAck> _instance;
+} _AccountRegisterAck_default_instance_;
+class SelectEnterLogicSvrReqDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SelectEnterLogicSvrReq> _instance;
+} _SelectEnterLogicSvrReq_default_instance_;
+class SelectEnterLogicSvrAckDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SelectEnterLogicSvrAck> _instance;
+} _SelectEnterLogicSvrAck_default_instance_;
 class LoadLogicSvrReqDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LoadLogicSvrReq> _instance;
 } _LoadLogicSvrReq_default_instance_;
+static void InitDefaultsscc_info_AccountLoginAck_Login_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_AccountLoginAck_default_instance_;
+    new (ptr) ::AccountLoginAck();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::AccountLoginAck::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AccountLoginAck_Login_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AccountLoginAck_Login_2eproto}, {}};
+
 static void InitDefaultsscc_info_AccountLoginReq_Login_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -39,6 +69,20 @@ static void InitDefaultsscc_info_AccountLoginReq_Login_2eproto() {
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AccountLoginReq_Login_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AccountLoginReq_Login_2eproto}, {}};
+
+static void InitDefaultsscc_info_AccountRegisterAck_Login_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_AccountRegisterAck_default_instance_;
+    new (ptr) ::AccountRegisterAck();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::AccountRegisterAck::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AccountRegisterAck_Login_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_AccountRegisterAck_Login_2eproto}, {}};
 
 static void InitDefaultsscc_info_AccountRegisterReq_Login_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -68,7 +112,35 @@ static void InitDefaultsscc_info_LoadLogicSvrReq_Login_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LoadLogicSvrReq_Login_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LoadLogicSvrReq_Login_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Login_2eproto[3];
+static void InitDefaultsscc_info_SelectEnterLogicSvrAck_Login_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_SelectEnterLogicSvrAck_default_instance_;
+    new (ptr) ::SelectEnterLogicSvrAck();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::SelectEnterLogicSvrAck::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SelectEnterLogicSvrAck_Login_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_SelectEnterLogicSvrAck_Login_2eproto}, {}};
+
+static void InitDefaultsscc_info_SelectEnterLogicSvrReq_Login_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_SelectEnterLogicSvrReq_default_instance_;
+    new (ptr) ::SelectEnterLogicSvrReq();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::SelectEnterLogicSvrReq::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SelectEnterLogicSvrReq_Login_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_SelectEnterLogicSvrReq_Login_2eproto}, {}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Login_2eproto[7];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_Login_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Login_2eproto = nullptr;
 
@@ -81,6 +153,13 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Login_2eproto::offsets[] PROTO
   PROTOBUF_FIELD_OFFSET(::AccountLoginReq, account_),
   PROTOBUF_FIELD_OFFSET(::AccountLoginReq, password_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::AccountLoginAck, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::AccountLoginAck, res_),
+  PROTOBUF_FIELD_OFFSET(::AccountLoginAck, sockfd_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::AccountRegisterReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -89,6 +168,32 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Login_2eproto::offsets[] PROTO
   PROTOBUF_FIELD_OFFSET(::AccountRegisterReq, password_),
   PROTOBUF_FIELD_OFFSET(::AccountRegisterReq, name_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::AccountRegisterAck, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::AccountRegisterAck, res_),
+  PROTOBUF_FIELD_OFFSET(::AccountRegisterAck, sockfd_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::SelectEnterLogicSvrReq, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::SelectEnterLogicSvrReq, account_),
+  PROTOBUF_FIELD_OFFSET(::SelectEnterLogicSvrReq, serverid_),
+  PROTOBUF_FIELD_OFFSET(::SelectEnterLogicSvrReq, sockfd_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::SelectEnterLogicSvrAck, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::SelectEnterLogicSvrAck, account_),
+  PROTOBUF_FIELD_OFFSET(::SelectEnterLogicSvrAck, serverid_),
+  PROTOBUF_FIELD_OFFSET(::SelectEnterLogicSvrAck, serveraddr_),
+  PROTOBUF_FIELD_OFFSET(::SelectEnterLogicSvrAck, serverport_),
+  PROTOBUF_FIELD_OFFSET(::SelectEnterLogicSvrAck, logincode_),
+  PROTOBUF_FIELD_OFFSET(::SelectEnterLogicSvrAck, sockfd_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::LoadLogicSvrReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -96,36 +201,55 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Login_2eproto::offsets[] PROTO
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::AccountLoginReq)},
-  { 7, -1, sizeof(::AccountRegisterReq)},
-  { 15, -1, sizeof(::LoadLogicSvrReq)},
+  { 7, -1, sizeof(::AccountLoginAck)},
+  { 14, -1, sizeof(::AccountRegisterReq)},
+  { 22, -1, sizeof(::AccountRegisterAck)},
+  { 29, -1, sizeof(::SelectEnterLogicSvrReq)},
+  { 37, -1, sizeof(::SelectEnterLogicSvrAck)},
+  { 48, -1, sizeof(::LoadLogicSvrReq)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_AccountLoginReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_AccountLoginAck_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_AccountRegisterReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_AccountRegisterAck_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_SelectEnterLogicSvrReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_SelectEnterLogicSvrAck_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_LoadLogicSvrReq_default_instance_),
 };
 
 const char descriptor_table_protodef_Login_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\013Login.proto\"4\n\017AccountLoginReq\022\017\n\007acco"
-  "unt\030\001 \001(\004\022\020\n\010password\030\002 \001(\t\"E\n\022AccountRe"
-  "gisterReq\022\017\n\007account\030\001 \001(\004\022\020\n\010password\030\002"
-  " \001(\t\022\014\n\004name\030\003 \001(\t\"\021\n\017LoadLogicSvrReqb\006p"
-  "roto3"
+  "unt\030\001 \001(\004\022\020\n\010password\030\002 \001(\t\".\n\017AccountLo"
+  "ginAck\022\013\n\003res\030\001 \001(\005\022\016\n\006sockfd\030\002 \001(\005\"E\n\022A"
+  "ccountRegisterReq\022\017\n\007account\030\001 \001(\004\022\020\n\010pa"
+  "ssword\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\"1\n\022AccountReg"
+  "isterAck\022\013\n\003res\030\001 \001(\005\022\016\n\006sockfd\030\002 \001(\005\"K\n"
+  "\026SelectEnterLogicSvrReq\022\017\n\007account\030\001 \001(\004"
+  "\022\020\n\010serverid\030\002 \001(\005\022\016\n\006sockfd\030\003 \001(\005\"\206\001\n\026S"
+  "electEnterLogicSvrAck\022\017\n\007account\030\001 \001(\004\022\020"
+  "\n\010serverid\030\002 \001(\005\022\022\n\nserveraddr\030\003 \001(\t\022\022\n\n"
+  "serverport\030\004 \001(\005\022\021\n\tlogincode\030\005 \001(\005\022\016\n\006s"
+  "ockfd\030\006 \001(\005\"\021\n\017LoadLogicSvrReqb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Login_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Login_2eproto_sccs[3] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Login_2eproto_sccs[7] = {
+  &scc_info_AccountLoginAck_Login_2eproto.base,
   &scc_info_AccountLoginReq_Login_2eproto.base,
+  &scc_info_AccountRegisterAck_Login_2eproto.base,
   &scc_info_AccountRegisterReq_Login_2eproto.base,
   &scc_info_LoadLogicSvrReq_Login_2eproto.base,
+  &scc_info_SelectEnterLogicSvrAck_Login_2eproto.base,
+  &scc_info_SelectEnterLogicSvrReq_Login_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Login_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Login_2eproto = {
-  false, false, descriptor_table_protodef_Login_2eproto, "Login.proto", 165,
-  &descriptor_table_Login_2eproto_once, descriptor_table_Login_2eproto_sccs, descriptor_table_Login_2eproto_deps, 3, 0,
+  false, false, descriptor_table_protodef_Login_2eproto, "Login.proto", 478,
+  &descriptor_table_Login_2eproto_once, descriptor_table_Login_2eproto_sccs, descriptor_table_Login_2eproto_deps, 7, 0,
   schemas, file_default_instances, TableStruct_Login_2eproto::offsets,
-  file_level_metadata_Login_2eproto, 3, file_level_enum_descriptors_Login_2eproto, file_level_service_descriptors_Login_2eproto,
+  file_level_metadata_Login_2eproto, 7, file_level_enum_descriptors_Login_2eproto, file_level_service_descriptors_Login_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -363,6 +487,237 @@ void AccountLoginReq::InternalSwap(AccountLoginReq* other) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AccountLoginReq::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void AccountLoginAck::InitAsDefaultInstance() {
+}
+class AccountLoginAck::_Internal {
+ public:
+};
+
+AccountLoginAck::AccountLoginAck(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:AccountLoginAck)
+}
+AccountLoginAck::AccountLoginAck(const AccountLoginAck& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&res_, &from.res_,
+    static_cast<size_t>(reinterpret_cast<char*>(&sockfd_) -
+    reinterpret_cast<char*>(&res_)) + sizeof(sockfd_));
+  // @@protoc_insertion_point(copy_constructor:AccountLoginAck)
+}
+
+void AccountLoginAck::SharedCtor() {
+  ::memset(&res_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sockfd_) -
+      reinterpret_cast<char*>(&res_)) + sizeof(sockfd_));
+}
+
+AccountLoginAck::~AccountLoginAck() {
+  // @@protoc_insertion_point(destructor:AccountLoginAck)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void AccountLoginAck::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void AccountLoginAck::ArenaDtor(void* object) {
+  AccountLoginAck* _this = reinterpret_cast< AccountLoginAck* >(object);
+  (void)_this;
+}
+void AccountLoginAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void AccountLoginAck::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const AccountLoginAck& AccountLoginAck::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AccountLoginAck_Login_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void AccountLoginAck::Clear() {
+// @@protoc_insertion_point(message_clear_start:AccountLoginAck)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&res_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sockfd_) -
+      reinterpret_cast<char*>(&res_)) + sizeof(sockfd_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AccountLoginAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int32 res = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          res_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 sockfd = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          sockfd_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AccountLoginAck::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:AccountLoginAck)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 res = 1;
+  if (this->res() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_res(), target);
+  }
+
+  // int32 sockfd = 2;
+  if (this->sockfd() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_sockfd(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:AccountLoginAck)
+  return target;
+}
+
+size_t AccountLoginAck::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:AccountLoginAck)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 res = 1;
+  if (this->res() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_res());
+  }
+
+  // int32 sockfd = 2;
+  if (this->sockfd() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_sockfd());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AccountLoginAck::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:AccountLoginAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AccountLoginAck* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AccountLoginAck>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AccountLoginAck)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:AccountLoginAck)
+    MergeFrom(*source);
+  }
+}
+
+void AccountLoginAck::MergeFrom(const AccountLoginAck& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:AccountLoginAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.res() != 0) {
+    _internal_set_res(from._internal_res());
+  }
+  if (from.sockfd() != 0) {
+    _internal_set_sockfd(from._internal_sockfd());
+  }
+}
+
+void AccountLoginAck::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:AccountLoginAck)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AccountLoginAck::CopyFrom(const AccountLoginAck& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:AccountLoginAck)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AccountLoginAck::IsInitialized() const {
+  return true;
+}
+
+void AccountLoginAck::InternalSwap(AccountLoginAck* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(AccountLoginAck, sockfd_)
+      + sizeof(AccountLoginAck::sockfd_)
+      - PROTOBUF_FIELD_OFFSET(AccountLoginAck, res_)>(
+          reinterpret_cast<char*>(&res_),
+          reinterpret_cast<char*>(&other->res_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AccountLoginAck::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -643,6 +998,830 @@ void AccountRegisterReq::InternalSwap(AccountRegisterReq* other) {
 
 // ===================================================================
 
+void AccountRegisterAck::InitAsDefaultInstance() {
+}
+class AccountRegisterAck::_Internal {
+ public:
+};
+
+AccountRegisterAck::AccountRegisterAck(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:AccountRegisterAck)
+}
+AccountRegisterAck::AccountRegisterAck(const AccountRegisterAck& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&res_, &from.res_,
+    static_cast<size_t>(reinterpret_cast<char*>(&sockfd_) -
+    reinterpret_cast<char*>(&res_)) + sizeof(sockfd_));
+  // @@protoc_insertion_point(copy_constructor:AccountRegisterAck)
+}
+
+void AccountRegisterAck::SharedCtor() {
+  ::memset(&res_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sockfd_) -
+      reinterpret_cast<char*>(&res_)) + sizeof(sockfd_));
+}
+
+AccountRegisterAck::~AccountRegisterAck() {
+  // @@protoc_insertion_point(destructor:AccountRegisterAck)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void AccountRegisterAck::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void AccountRegisterAck::ArenaDtor(void* object) {
+  AccountRegisterAck* _this = reinterpret_cast< AccountRegisterAck* >(object);
+  (void)_this;
+}
+void AccountRegisterAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void AccountRegisterAck::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const AccountRegisterAck& AccountRegisterAck::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AccountRegisterAck_Login_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void AccountRegisterAck::Clear() {
+// @@protoc_insertion_point(message_clear_start:AccountRegisterAck)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&res_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sockfd_) -
+      reinterpret_cast<char*>(&res_)) + sizeof(sockfd_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AccountRegisterAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int32 res = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          res_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 sockfd = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          sockfd_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AccountRegisterAck::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:AccountRegisterAck)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 res = 1;
+  if (this->res() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_res(), target);
+  }
+
+  // int32 sockfd = 2;
+  if (this->sockfd() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_sockfd(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:AccountRegisterAck)
+  return target;
+}
+
+size_t AccountRegisterAck::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:AccountRegisterAck)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // int32 res = 1;
+  if (this->res() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_res());
+  }
+
+  // int32 sockfd = 2;
+  if (this->sockfd() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_sockfd());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AccountRegisterAck::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:AccountRegisterAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AccountRegisterAck* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AccountRegisterAck>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:AccountRegisterAck)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:AccountRegisterAck)
+    MergeFrom(*source);
+  }
+}
+
+void AccountRegisterAck::MergeFrom(const AccountRegisterAck& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:AccountRegisterAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.res() != 0) {
+    _internal_set_res(from._internal_res());
+  }
+  if (from.sockfd() != 0) {
+    _internal_set_sockfd(from._internal_sockfd());
+  }
+}
+
+void AccountRegisterAck::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:AccountRegisterAck)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AccountRegisterAck::CopyFrom(const AccountRegisterAck& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:AccountRegisterAck)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AccountRegisterAck::IsInitialized() const {
+  return true;
+}
+
+void AccountRegisterAck::InternalSwap(AccountRegisterAck* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(AccountRegisterAck, sockfd_)
+      + sizeof(AccountRegisterAck::sockfd_)
+      - PROTOBUF_FIELD_OFFSET(AccountRegisterAck, res_)>(
+          reinterpret_cast<char*>(&res_),
+          reinterpret_cast<char*>(&other->res_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AccountRegisterAck::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void SelectEnterLogicSvrReq::InitAsDefaultInstance() {
+}
+class SelectEnterLogicSvrReq::_Internal {
+ public:
+};
+
+SelectEnterLogicSvrReq::SelectEnterLogicSvrReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:SelectEnterLogicSvrReq)
+}
+SelectEnterLogicSvrReq::SelectEnterLogicSvrReq(const SelectEnterLogicSvrReq& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&account_, &from.account_,
+    static_cast<size_t>(reinterpret_cast<char*>(&sockfd_) -
+    reinterpret_cast<char*>(&account_)) + sizeof(sockfd_));
+  // @@protoc_insertion_point(copy_constructor:SelectEnterLogicSvrReq)
+}
+
+void SelectEnterLogicSvrReq::SharedCtor() {
+  ::memset(&account_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sockfd_) -
+      reinterpret_cast<char*>(&account_)) + sizeof(sockfd_));
+}
+
+SelectEnterLogicSvrReq::~SelectEnterLogicSvrReq() {
+  // @@protoc_insertion_point(destructor:SelectEnterLogicSvrReq)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void SelectEnterLogicSvrReq::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void SelectEnterLogicSvrReq::ArenaDtor(void* object) {
+  SelectEnterLogicSvrReq* _this = reinterpret_cast< SelectEnterLogicSvrReq* >(object);
+  (void)_this;
+}
+void SelectEnterLogicSvrReq::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void SelectEnterLogicSvrReq::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const SelectEnterLogicSvrReq& SelectEnterLogicSvrReq::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SelectEnterLogicSvrReq_Login_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void SelectEnterLogicSvrReq::Clear() {
+// @@protoc_insertion_point(message_clear_start:SelectEnterLogicSvrReq)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&account_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sockfd_) -
+      reinterpret_cast<char*>(&account_)) + sizeof(sockfd_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SelectEnterLogicSvrReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // uint64 account = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          account_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 serverid = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          serverid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 sockfd = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          sockfd_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* SelectEnterLogicSvrReq::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:SelectEnterLogicSvrReq)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // uint64 account = 1;
+  if (this->account() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_account(), target);
+  }
+
+  // int32 serverid = 2;
+  if (this->serverid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_serverid(), target);
+  }
+
+  // int32 sockfd = 3;
+  if (this->sockfd() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_sockfd(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:SelectEnterLogicSvrReq)
+  return target;
+}
+
+size_t SelectEnterLogicSvrReq::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:SelectEnterLogicSvrReq)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // uint64 account = 1;
+  if (this->account() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_account());
+  }
+
+  // int32 serverid = 2;
+  if (this->serverid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_serverid());
+  }
+
+  // int32 sockfd = 3;
+  if (this->sockfd() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_sockfd());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void SelectEnterLogicSvrReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:SelectEnterLogicSvrReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  const SelectEnterLogicSvrReq* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SelectEnterLogicSvrReq>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:SelectEnterLogicSvrReq)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:SelectEnterLogicSvrReq)
+    MergeFrom(*source);
+  }
+}
+
+void SelectEnterLogicSvrReq::MergeFrom(const SelectEnterLogicSvrReq& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:SelectEnterLogicSvrReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.account() != 0) {
+    _internal_set_account(from._internal_account());
+  }
+  if (from.serverid() != 0) {
+    _internal_set_serverid(from._internal_serverid());
+  }
+  if (from.sockfd() != 0) {
+    _internal_set_sockfd(from._internal_sockfd());
+  }
+}
+
+void SelectEnterLogicSvrReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:SelectEnterLogicSvrReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void SelectEnterLogicSvrReq::CopyFrom(const SelectEnterLogicSvrReq& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:SelectEnterLogicSvrReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SelectEnterLogicSvrReq::IsInitialized() const {
+  return true;
+}
+
+void SelectEnterLogicSvrReq::InternalSwap(SelectEnterLogicSvrReq* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SelectEnterLogicSvrReq, sockfd_)
+      + sizeof(SelectEnterLogicSvrReq::sockfd_)
+      - PROTOBUF_FIELD_OFFSET(SelectEnterLogicSvrReq, account_)>(
+          reinterpret_cast<char*>(&account_),
+          reinterpret_cast<char*>(&other->account_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SelectEnterLogicSvrReq::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void SelectEnterLogicSvrAck::InitAsDefaultInstance() {
+}
+class SelectEnterLogicSvrAck::_Internal {
+ public:
+};
+
+SelectEnterLogicSvrAck::SelectEnterLogicSvrAck(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:SelectEnterLogicSvrAck)
+}
+SelectEnterLogicSvrAck::SelectEnterLogicSvrAck(const SelectEnterLogicSvrAck& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  serveraddr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_serveraddr().empty()) {
+    serveraddr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_serveraddr(),
+      GetArena());
+  }
+  ::memcpy(&account_, &from.account_,
+    static_cast<size_t>(reinterpret_cast<char*>(&sockfd_) -
+    reinterpret_cast<char*>(&account_)) + sizeof(sockfd_));
+  // @@protoc_insertion_point(copy_constructor:SelectEnterLogicSvrAck)
+}
+
+void SelectEnterLogicSvrAck::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_SelectEnterLogicSvrAck_Login_2eproto.base);
+  serveraddr_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&account_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sockfd_) -
+      reinterpret_cast<char*>(&account_)) + sizeof(sockfd_));
+}
+
+SelectEnterLogicSvrAck::~SelectEnterLogicSvrAck() {
+  // @@protoc_insertion_point(destructor:SelectEnterLogicSvrAck)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void SelectEnterLogicSvrAck::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  serveraddr_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void SelectEnterLogicSvrAck::ArenaDtor(void* object) {
+  SelectEnterLogicSvrAck* _this = reinterpret_cast< SelectEnterLogicSvrAck* >(object);
+  (void)_this;
+}
+void SelectEnterLogicSvrAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void SelectEnterLogicSvrAck::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const SelectEnterLogicSvrAck& SelectEnterLogicSvrAck::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SelectEnterLogicSvrAck_Login_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void SelectEnterLogicSvrAck::Clear() {
+// @@protoc_insertion_point(message_clear_start:SelectEnterLogicSvrAck)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  serveraddr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&account_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&sockfd_) -
+      reinterpret_cast<char*>(&account_)) + sizeof(sockfd_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* SelectEnterLogicSvrAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // uint64 account = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          account_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 serverid = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          serverid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string serveraddr = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_serveraddr();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "SelectEnterLogicSvrAck.serveraddr"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 serverport = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          serverport_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 logincode = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          logincode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // int32 sockfd = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          sockfd_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* SelectEnterLogicSvrAck::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:SelectEnterLogicSvrAck)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // uint64 account = 1;
+  if (this->account() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_account(), target);
+  }
+
+  // int32 serverid = 2;
+  if (this->serverid() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_serverid(), target);
+  }
+
+  // string serveraddr = 3;
+  if (this->serveraddr().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_serveraddr().data(), static_cast<int>(this->_internal_serveraddr().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "SelectEnterLogicSvrAck.serveraddr");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_serveraddr(), target);
+  }
+
+  // int32 serverport = 4;
+  if (this->serverport() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_serverport(), target);
+  }
+
+  // int32 logincode = 5;
+  if (this->logincode() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_logincode(), target);
+  }
+
+  // int32 sockfd = 6;
+  if (this->sockfd() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(6, this->_internal_sockfd(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:SelectEnterLogicSvrAck)
+  return target;
+}
+
+size_t SelectEnterLogicSvrAck::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:SelectEnterLogicSvrAck)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string serveraddr = 3;
+  if (this->serveraddr().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_serveraddr());
+  }
+
+  // uint64 account = 1;
+  if (this->account() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_account());
+  }
+
+  // int32 serverid = 2;
+  if (this->serverid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_serverid());
+  }
+
+  // int32 serverport = 4;
+  if (this->serverport() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_serverport());
+  }
+
+  // int32 logincode = 5;
+  if (this->logincode() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_logincode());
+  }
+
+  // int32 sockfd = 6;
+  if (this->sockfd() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_sockfd());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void SelectEnterLogicSvrAck::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:SelectEnterLogicSvrAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  const SelectEnterLogicSvrAck* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SelectEnterLogicSvrAck>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:SelectEnterLogicSvrAck)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:SelectEnterLogicSvrAck)
+    MergeFrom(*source);
+  }
+}
+
+void SelectEnterLogicSvrAck::MergeFrom(const SelectEnterLogicSvrAck& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:SelectEnterLogicSvrAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.serveraddr().size() > 0) {
+    _internal_set_serveraddr(from._internal_serveraddr());
+  }
+  if (from.account() != 0) {
+    _internal_set_account(from._internal_account());
+  }
+  if (from.serverid() != 0) {
+    _internal_set_serverid(from._internal_serverid());
+  }
+  if (from.serverport() != 0) {
+    _internal_set_serverport(from._internal_serverport());
+  }
+  if (from.logincode() != 0) {
+    _internal_set_logincode(from._internal_logincode());
+  }
+  if (from.sockfd() != 0) {
+    _internal_set_sockfd(from._internal_sockfd());
+  }
+}
+
+void SelectEnterLogicSvrAck::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:SelectEnterLogicSvrAck)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void SelectEnterLogicSvrAck::CopyFrom(const SelectEnterLogicSvrAck& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:SelectEnterLogicSvrAck)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool SelectEnterLogicSvrAck::IsInitialized() const {
+  return true;
+}
+
+void SelectEnterLogicSvrAck::InternalSwap(SelectEnterLogicSvrAck* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  serveraddr_.Swap(&other->serveraddr_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SelectEnterLogicSvrAck, sockfd_)
+      + sizeof(SelectEnterLogicSvrAck::sockfd_)
+      - PROTOBUF_FIELD_OFFSET(SelectEnterLogicSvrAck, account_)>(
+          reinterpret_cast<char*>(&account_),
+          reinterpret_cast<char*>(&other->account_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata SelectEnterLogicSvrAck::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 void LoadLogicSvrReq::InitAsDefaultInstance() {
 }
 class LoadLogicSvrReq::_Internal {
@@ -811,8 +1990,20 @@ PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::AccountLoginReq* Arena::CreateMaybeMessage< ::AccountLoginReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AccountLoginReq >(arena);
 }
+template<> PROTOBUF_NOINLINE ::AccountLoginAck* Arena::CreateMaybeMessage< ::AccountLoginAck >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::AccountLoginAck >(arena);
+}
 template<> PROTOBUF_NOINLINE ::AccountRegisterReq* Arena::CreateMaybeMessage< ::AccountRegisterReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::AccountRegisterReq >(arena);
+}
+template<> PROTOBUF_NOINLINE ::AccountRegisterAck* Arena::CreateMaybeMessage< ::AccountRegisterAck >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::AccountRegisterAck >(arena);
+}
+template<> PROTOBUF_NOINLINE ::SelectEnterLogicSvrReq* Arena::CreateMaybeMessage< ::SelectEnterLogicSvrReq >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::SelectEnterLogicSvrReq >(arena);
+}
+template<> PROTOBUF_NOINLINE ::SelectEnterLogicSvrAck* Arena::CreateMaybeMessage< ::SelectEnterLogicSvrAck >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::SelectEnterLogicSvrAck >(arena);
 }
 template<> PROTOBUF_NOINLINE ::LoadLogicSvrReq* Arena::CreateMaybeMessage< ::LoadLogicSvrReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::LoadLogicSvrReq >(arena);

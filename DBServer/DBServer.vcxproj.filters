@@ -81,6 +81,12 @@
     <ClCompile Include="protoc\DBExcute.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
+    <ClCompile Include="protoc\Login.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
+    <ClCompile Include="protoc\Other.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="protoc\MsgID.pb.h">
@@ -193,6 +199,12 @@
     </ClInclude>
     <ClInclude Include="EventHandlerManager.hpp">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\Login.pb.h">
+      <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\Other.pb.h">
+      <Filter>protoc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

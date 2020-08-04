@@ -38,6 +38,7 @@
     <ClCompile Include="protoc\Bag.pb.cc" />
     <ClCompile Include="protoc\DBExcute.pb.cc" />
     <ClCompile Include="protoc\EventID.pb.cc" />
+    <ClCompile Include="protoc\Login.pb.cc" />
     <ClCompile Include="protoc\MsgID.pb.cc" />
     <ClCompile Include="protoc\Other.pb.cc" />
     <ClCompile Include="protoc\Store.pb.cc" />
@@ -71,6 +72,7 @@
     <ClInclude Include="protoc\Bag.pb.h" />
     <ClInclude Include="protoc\DBExcute.pb.h" />
     <ClInclude Include="protoc\EventID.pb.h" />
+    <ClInclude Include="protoc\Login.pb.h" />
     <ClInclude Include="protoc\MsgID.pb.h" />
     <ClInclude Include="protoc\Other.pb.h" />
     <ClInclude Include="protoc\Store.pb.h" />

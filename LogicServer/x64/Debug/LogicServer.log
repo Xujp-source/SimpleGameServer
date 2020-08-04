@@ -3,12 +3,12 @@ g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C48
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(108): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(162): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(196): warning C4018: “<”: 有符号/无符号不匹配
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(304): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
   AgentManager.cpp
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   ConnectServerMgr.cpp
@@ -16,24 +16,24 @@ g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C48
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(108): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(162): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(196): warning C4018: “<”: 有符号/无符号不匹配
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(304): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
   GameService.cpp
 g:\vs2017program\project1\logicserver\gameservice.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(108): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(162): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(196): warning C4018: “<”: 有符号/无符号不匹配
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(304): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\player.h(28): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\playermanager.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -46,12 +46,12 @@ g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C48
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(108): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(162): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(196): warning C4018: “<”: 有符号/无符号不匹配
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(304): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\player.h(28): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\serverdata\bagdata.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -60,12 +60,12 @@ g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C48
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(108): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(162): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(196): warning C4018: “<”: 有符号/无符号不匹配
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(304): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\player.h(28): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
   CardModule.cpp
@@ -75,25 +75,26 @@ g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C48
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(108): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(162): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(196): warning C4018: “<”: 有符号/无符号不匹配
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(304): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\player.h(28): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
   MatchModule.cpp
+g:\vs2017program\project1\logicserver\logicmodule\matchmodule.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(108): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(162): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(196): warning C4018: “<”: 有符号/无符号不匹配
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(304): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\player.h(28): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
   StoreModule.cpp
@@ -101,12 +102,12 @@ g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C48
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(108): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(162): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(196): warning C4018: “<”: 有符号/无符号不匹配
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(304): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\player.h(28): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
   TaskModule.cpp
@@ -114,12 +115,12 @@ g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C48
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(108): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(162): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(196): warning C4018: “<”: 有符号/无符号不匹配
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(304): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\player.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\player.h(28): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
   LogicMsgHandler.cpp
@@ -131,12 +132,12 @@ g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件�
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
 g:\vs2017program\project1\logicserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(108): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(162): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(196): warning C4018: “<”: 有符号/无符号不匹配
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(304): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
   Object.cpp
 g:\vs2017program\project1\logicserver\serverengine\common\stdafx.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warning C4244: “return”: 从“double”转换到“time_t”，可能丢失数据
@@ -147,12 +148,12 @@ g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(19): warnin
 g:\vs2017program\project1\logicserver\player.h(28): warning C4244: “return”: 从“unsigned __int64”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\gameservice.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 g:\vs2017program\project1\logicserver\serverengine\cellbuffer.hpp(122): warning C4018: “>=”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(106): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(160): warning C4018: “<”: 有符号/无符号不匹配
-g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(194): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(108): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(162): warning C4018: “<”: 有符号/无符号不匹配
+g:\vs2017program\project1\logicserver\serverengine\cellserver.hpp(196): warning C4018: “<”: 有符号/无符号不匹配
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(149): warning C4309: “return”: 截断常量值
 g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(170): warning C4244: “return”: 从“SOCKET”转换到“int”，可能丢失数据
-g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(292): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
+g:\vs2017program\project1\logicserver\serverengine\easytcpserver.hpp(304): warning C4244: “参数”: 从“SOCKET”转换到“int”，可能丢失数据
 g:\vs2017program\project1\logicserver\logicmodule\bagmodule.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   PlayerManager.cpp
 g:\vs2017program\project1\logicserver\playermanager.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
@@ -164,12 +165,24 @@ g:\vs2017program\project1\logicserver\playermanager.cpp(59): warning C4244: “�
 g:\vs2017program\project1\logicserver\playermanager.cpp(66): warning C4244: “参数”: 从“unsigned __int64”转换到“int”，可能丢失数据
   Bag.pb.cc
   DBExcute.pb.cc
+g:\vs2017program\project1\logicserver\protoc\dbexcute.pb.cc(180): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
   EventID.pb.cc
-  MsgID.pb.cc
+  Login.pb.cc
+g:\vs2017program\project1\logicserver\protoc\login.pb.cc(571): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\logicserver\protoc\login.pb.cc(578): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\logicserver\protoc\login.pb.cc(1076): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\logicserver\protoc\login.pb.cc(1083): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\logicserver\protoc\login.pb.cc(1314): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\logicserver\protoc\login.pb.cc(1321): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\logicserver\protoc\login.pb.cc(1577): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\logicserver\protoc\login.pb.cc(1593): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\logicserver\protoc\login.pb.cc(1600): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
+g:\vs2017program\project1\logicserver\protoc\login.pb.cc(1607): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据
   正在生成代码...
 g:\vs2017program\project1\logicserver\serverengine\celltimestamp.hpp(20): warning C4717: “CELLTime::getNowInSec”: 如递归所有控件路径，函数将导致运行时堆栈溢出
 g:\vs2017program\project1\logicserver\player.cpp(56): warning C4715: “CPlayerObject::GetTemp”: 不是所有的控件路径都返回值
   正在编译...
+  MsgID.pb.cc
   Other.pb.cc
   Store.pb.cc
 g:\vs2017program\project1\logicserver\protoc\store.pb.cc(160): warning C4244: “=”: 从“google::protobuf::uint64”转换到“google::protobuf::int32”，可能丢失数据

@@ -47,26 +47,42 @@ struct TableStruct_Login_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[3]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[7]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Login_2eproto;
+class AccountLoginAck;
+class AccountLoginAckDefaultTypeInternal;
+extern AccountLoginAckDefaultTypeInternal _AccountLoginAck_default_instance_;
 class AccountLoginReq;
 class AccountLoginReqDefaultTypeInternal;
 extern AccountLoginReqDefaultTypeInternal _AccountLoginReq_default_instance_;
+class AccountRegisterAck;
+class AccountRegisterAckDefaultTypeInternal;
+extern AccountRegisterAckDefaultTypeInternal _AccountRegisterAck_default_instance_;
 class AccountRegisterReq;
 class AccountRegisterReqDefaultTypeInternal;
 extern AccountRegisterReqDefaultTypeInternal _AccountRegisterReq_default_instance_;
 class LoadLogicSvrReq;
 class LoadLogicSvrReqDefaultTypeInternal;
 extern LoadLogicSvrReqDefaultTypeInternal _LoadLogicSvrReq_default_instance_;
+class SelectEnterLogicSvrAck;
+class SelectEnterLogicSvrAckDefaultTypeInternal;
+extern SelectEnterLogicSvrAckDefaultTypeInternal _SelectEnterLogicSvrAck_default_instance_;
+class SelectEnterLogicSvrReq;
+class SelectEnterLogicSvrReqDefaultTypeInternal;
+extern SelectEnterLogicSvrReqDefaultTypeInternal _SelectEnterLogicSvrReq_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
+template<> ::AccountLoginAck* Arena::CreateMaybeMessage<::AccountLoginAck>(Arena*);
 template<> ::AccountLoginReq* Arena::CreateMaybeMessage<::AccountLoginReq>(Arena*);
+template<> ::AccountRegisterAck* Arena::CreateMaybeMessage<::AccountRegisterAck>(Arena*);
 template<> ::AccountRegisterReq* Arena::CreateMaybeMessage<::AccountRegisterReq>(Arena*);
 template<> ::LoadLogicSvrReq* Arena::CreateMaybeMessage<::LoadLogicSvrReq>(Arena*);
+template<> ::SelectEnterLogicSvrAck* Arena::CreateMaybeMessage<::SelectEnterLogicSvrAck>(Arena*);
+template<> ::SelectEnterLogicSvrReq* Arena::CreateMaybeMessage<::SelectEnterLogicSvrReq>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
 // ===================================================================
@@ -235,6 +251,154 @@ class AccountLoginReq PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
+class AccountLoginAck PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:AccountLoginAck) */ {
+ public:
+  inline AccountLoginAck() : AccountLoginAck(nullptr) {};
+  virtual ~AccountLoginAck();
+
+  AccountLoginAck(const AccountLoginAck& from);
+  AccountLoginAck(AccountLoginAck&& from) noexcept
+    : AccountLoginAck() {
+    *this = ::std::move(from);
+  }
+
+  inline AccountLoginAck& operator=(const AccountLoginAck& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AccountLoginAck& operator=(AccountLoginAck&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AccountLoginAck& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AccountLoginAck* internal_default_instance() {
+    return reinterpret_cast<const AccountLoginAck*>(
+               &_AccountLoginAck_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(AccountLoginAck& a, AccountLoginAck& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AccountLoginAck* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AccountLoginAck* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AccountLoginAck* New() const final {
+    return CreateMaybeMessage<AccountLoginAck>(nullptr);
+  }
+
+  AccountLoginAck* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AccountLoginAck>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AccountLoginAck& from);
+  void MergeFrom(const AccountLoginAck& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AccountLoginAck* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "AccountLoginAck";
+  }
+  protected:
+  explicit AccountLoginAck(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Login_2eproto);
+    return ::descriptor_table_Login_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResFieldNumber = 1,
+    kSockfdFieldNumber = 2,
+  };
+  // int32 res = 1;
+  void clear_res();
+  ::PROTOBUF_NAMESPACE_ID::int32 res() const;
+  void set_res(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_res() const;
+  void _internal_set_res(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 sockfd = 2;
+  void clear_sockfd();
+  ::PROTOBUF_NAMESPACE_ID::int32 sockfd() const;
+  void set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_sockfd() const;
+  void _internal_set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:AccountLoginAck)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::int32 res_;
+  ::PROTOBUF_NAMESPACE_ID::int32 sockfd_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Login_2eproto;
+};
+// -------------------------------------------------------------------
+
 class AccountRegisterReq PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:AccountRegisterReq) */ {
  public:
@@ -277,7 +441,7 @@ class AccountRegisterReq PROTOBUF_FINAL :
                &_AccountRegisterReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   friend void swap(AccountRegisterReq& a, AccountRegisterReq& b) {
     a.Swap(&b);
@@ -426,6 +590,521 @@ class AccountRegisterReq PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
+class AccountRegisterAck PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:AccountRegisterAck) */ {
+ public:
+  inline AccountRegisterAck() : AccountRegisterAck(nullptr) {};
+  virtual ~AccountRegisterAck();
+
+  AccountRegisterAck(const AccountRegisterAck& from);
+  AccountRegisterAck(AccountRegisterAck&& from) noexcept
+    : AccountRegisterAck() {
+    *this = ::std::move(from);
+  }
+
+  inline AccountRegisterAck& operator=(const AccountRegisterAck& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AccountRegisterAck& operator=(AccountRegisterAck&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AccountRegisterAck& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const AccountRegisterAck* internal_default_instance() {
+    return reinterpret_cast<const AccountRegisterAck*>(
+               &_AccountRegisterAck_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(AccountRegisterAck& a, AccountRegisterAck& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AccountRegisterAck* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AccountRegisterAck* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AccountRegisterAck* New() const final {
+    return CreateMaybeMessage<AccountRegisterAck>(nullptr);
+  }
+
+  AccountRegisterAck* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AccountRegisterAck>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AccountRegisterAck& from);
+  void MergeFrom(const AccountRegisterAck& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AccountRegisterAck* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "AccountRegisterAck";
+  }
+  protected:
+  explicit AccountRegisterAck(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Login_2eproto);
+    return ::descriptor_table_Login_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kResFieldNumber = 1,
+    kSockfdFieldNumber = 2,
+  };
+  // int32 res = 1;
+  void clear_res();
+  ::PROTOBUF_NAMESPACE_ID::int32 res() const;
+  void set_res(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_res() const;
+  void _internal_set_res(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 sockfd = 2;
+  void clear_sockfd();
+  ::PROTOBUF_NAMESPACE_ID::int32 sockfd() const;
+  void set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_sockfd() const;
+  void _internal_set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:AccountRegisterAck)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::int32 res_;
+  ::PROTOBUF_NAMESPACE_ID::int32 sockfd_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Login_2eproto;
+};
+// -------------------------------------------------------------------
+
+class SelectEnterLogicSvrReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:SelectEnterLogicSvrReq) */ {
+ public:
+  inline SelectEnterLogicSvrReq() : SelectEnterLogicSvrReq(nullptr) {};
+  virtual ~SelectEnterLogicSvrReq();
+
+  SelectEnterLogicSvrReq(const SelectEnterLogicSvrReq& from);
+  SelectEnterLogicSvrReq(SelectEnterLogicSvrReq&& from) noexcept
+    : SelectEnterLogicSvrReq() {
+    *this = ::std::move(from);
+  }
+
+  inline SelectEnterLogicSvrReq& operator=(const SelectEnterLogicSvrReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SelectEnterLogicSvrReq& operator=(SelectEnterLogicSvrReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const SelectEnterLogicSvrReq& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SelectEnterLogicSvrReq* internal_default_instance() {
+    return reinterpret_cast<const SelectEnterLogicSvrReq*>(
+               &_SelectEnterLogicSvrReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    4;
+
+  friend void swap(SelectEnterLogicSvrReq& a, SelectEnterLogicSvrReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SelectEnterLogicSvrReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SelectEnterLogicSvrReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SelectEnterLogicSvrReq* New() const final {
+    return CreateMaybeMessage<SelectEnterLogicSvrReq>(nullptr);
+  }
+
+  SelectEnterLogicSvrReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<SelectEnterLogicSvrReq>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const SelectEnterLogicSvrReq& from);
+  void MergeFrom(const SelectEnterLogicSvrReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SelectEnterLogicSvrReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "SelectEnterLogicSvrReq";
+  }
+  protected:
+  explicit SelectEnterLogicSvrReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Login_2eproto);
+    return ::descriptor_table_Login_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kAccountFieldNumber = 1,
+    kServeridFieldNumber = 2,
+    kSockfdFieldNumber = 3,
+  };
+  // uint64 account = 1;
+  void clear_account();
+  ::PROTOBUF_NAMESPACE_ID::uint64 account() const;
+  void set_account(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_account() const;
+  void _internal_set_account(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // int32 serverid = 2;
+  void clear_serverid();
+  ::PROTOBUF_NAMESPACE_ID::int32 serverid() const;
+  void set_serverid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_serverid() const;
+  void _internal_set_serverid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 sockfd = 3;
+  void clear_sockfd();
+  ::PROTOBUF_NAMESPACE_ID::int32 sockfd() const;
+  void set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_sockfd() const;
+  void _internal_set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:SelectEnterLogicSvrReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 account_;
+  ::PROTOBUF_NAMESPACE_ID::int32 serverid_;
+  ::PROTOBUF_NAMESPACE_ID::int32 sockfd_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Login_2eproto;
+};
+// -------------------------------------------------------------------
+
+class SelectEnterLogicSvrAck PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:SelectEnterLogicSvrAck) */ {
+ public:
+  inline SelectEnterLogicSvrAck() : SelectEnterLogicSvrAck(nullptr) {};
+  virtual ~SelectEnterLogicSvrAck();
+
+  SelectEnterLogicSvrAck(const SelectEnterLogicSvrAck& from);
+  SelectEnterLogicSvrAck(SelectEnterLogicSvrAck&& from) noexcept
+    : SelectEnterLogicSvrAck() {
+    *this = ::std::move(from);
+  }
+
+  inline SelectEnterLogicSvrAck& operator=(const SelectEnterLogicSvrAck& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline SelectEnterLogicSvrAck& operator=(SelectEnterLogicSvrAck&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const SelectEnterLogicSvrAck& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const SelectEnterLogicSvrAck* internal_default_instance() {
+    return reinterpret_cast<const SelectEnterLogicSvrAck*>(
+               &_SelectEnterLogicSvrAck_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(SelectEnterLogicSvrAck& a, SelectEnterLogicSvrAck& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(SelectEnterLogicSvrAck* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(SelectEnterLogicSvrAck* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline SelectEnterLogicSvrAck* New() const final {
+    return CreateMaybeMessage<SelectEnterLogicSvrAck>(nullptr);
+  }
+
+  SelectEnterLogicSvrAck* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<SelectEnterLogicSvrAck>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const SelectEnterLogicSvrAck& from);
+  void MergeFrom(const SelectEnterLogicSvrAck& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(SelectEnterLogicSvrAck* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "SelectEnterLogicSvrAck";
+  }
+  protected:
+  explicit SelectEnterLogicSvrAck(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Login_2eproto);
+    return ::descriptor_table_Login_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kServeraddrFieldNumber = 3,
+    kAccountFieldNumber = 1,
+    kServeridFieldNumber = 2,
+    kServerportFieldNumber = 4,
+    kLogincodeFieldNumber = 5,
+    kSockfdFieldNumber = 6,
+  };
+  // string serveraddr = 3;
+  void clear_serveraddr();
+  const std::string& serveraddr() const;
+  void set_serveraddr(const std::string& value);
+  void set_serveraddr(std::string&& value);
+  void set_serveraddr(const char* value);
+  void set_serveraddr(const char* value, size_t size);
+  std::string* mutable_serveraddr();
+  std::string* release_serveraddr();
+  void set_allocated_serveraddr(std::string* serveraddr);
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  std::string* unsafe_arena_release_serveraddr();
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  void unsafe_arena_set_allocated_serveraddr(
+      std::string* serveraddr);
+  private:
+  const std::string& _internal_serveraddr() const;
+  void _internal_set_serveraddr(const std::string& value);
+  std::string* _internal_mutable_serveraddr();
+  public:
+
+  // uint64 account = 1;
+  void clear_account();
+  ::PROTOBUF_NAMESPACE_ID::uint64 account() const;
+  void set_account(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_account() const;
+  void _internal_set_account(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  public:
+
+  // int32 serverid = 2;
+  void clear_serverid();
+  ::PROTOBUF_NAMESPACE_ID::int32 serverid() const;
+  void set_serverid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_serverid() const;
+  void _internal_set_serverid(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 serverport = 4;
+  void clear_serverport();
+  ::PROTOBUF_NAMESPACE_ID::int32 serverport() const;
+  void set_serverport(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_serverport() const;
+  void _internal_set_serverport(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 logincode = 5;
+  void clear_logincode();
+  ::PROTOBUF_NAMESPACE_ID::int32 logincode() const;
+  void set_logincode(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_logincode() const;
+  void _internal_set_logincode(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // int32 sockfd = 6;
+  void clear_sockfd();
+  ::PROTOBUF_NAMESPACE_ID::int32 sockfd() const;
+  void set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_sockfd() const;
+  void _internal_set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:SelectEnterLogicSvrAck)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr serveraddr_;
+  ::PROTOBUF_NAMESPACE_ID::uint64 account_;
+  ::PROTOBUF_NAMESPACE_ID::int32 serverid_;
+  ::PROTOBUF_NAMESPACE_ID::int32 serverport_;
+  ::PROTOBUF_NAMESPACE_ID::int32 logincode_;
+  ::PROTOBUF_NAMESPACE_ID::int32 sockfd_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Login_2eproto;
+};
+// -------------------------------------------------------------------
+
 class LoadLogicSvrReq PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:LoadLogicSvrReq) */ {
  public:
@@ -468,7 +1147,7 @@ class LoadLogicSvrReq PROTOBUF_FINAL :
                &_LoadLogicSvrReq_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    6;
 
   friend void swap(LoadLogicSvrReq& a, LoadLogicSvrReq& b) {
     a.Swap(&b);
@@ -662,6 +1341,50 @@ inline void AccountLoginReq::unsafe_arena_set_allocated_password(
 
 // -------------------------------------------------------------------
 
+// AccountLoginAck
+
+// int32 res = 1;
+inline void AccountLoginAck::clear_res() {
+  res_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AccountLoginAck::_internal_res() const {
+  return res_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AccountLoginAck::res() const {
+  // @@protoc_insertion_point(field_get:AccountLoginAck.res)
+  return _internal_res();
+}
+inline void AccountLoginAck::_internal_set_res(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  res_ = value;
+}
+inline void AccountLoginAck::set_res(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_res(value);
+  // @@protoc_insertion_point(field_set:AccountLoginAck.res)
+}
+
+// int32 sockfd = 2;
+inline void AccountLoginAck::clear_sockfd() {
+  sockfd_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AccountLoginAck::_internal_sockfd() const {
+  return sockfd_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AccountLoginAck::sockfd() const {
+  // @@protoc_insertion_point(field_get:AccountLoginAck.sockfd)
+  return _internal_sockfd();
+}
+inline void AccountLoginAck::_internal_set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  sockfd_ = value;
+}
+inline void AccountLoginAck::set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_sockfd(value);
+  // @@protoc_insertion_point(field_set:AccountLoginAck.sockfd)
+}
+
+// -------------------------------------------------------------------
+
 // AccountRegisterReq
 
 // uint64 account = 1;
@@ -848,11 +1571,312 @@ inline void AccountRegisterReq::unsafe_arena_set_allocated_name(
 
 // -------------------------------------------------------------------
 
+// AccountRegisterAck
+
+// int32 res = 1;
+inline void AccountRegisterAck::clear_res() {
+  res_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AccountRegisterAck::_internal_res() const {
+  return res_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AccountRegisterAck::res() const {
+  // @@protoc_insertion_point(field_get:AccountRegisterAck.res)
+  return _internal_res();
+}
+inline void AccountRegisterAck::_internal_set_res(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  res_ = value;
+}
+inline void AccountRegisterAck::set_res(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_res(value);
+  // @@protoc_insertion_point(field_set:AccountRegisterAck.res)
+}
+
+// int32 sockfd = 2;
+inline void AccountRegisterAck::clear_sockfd() {
+  sockfd_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AccountRegisterAck::_internal_sockfd() const {
+  return sockfd_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 AccountRegisterAck::sockfd() const {
+  // @@protoc_insertion_point(field_get:AccountRegisterAck.sockfd)
+  return _internal_sockfd();
+}
+inline void AccountRegisterAck::_internal_set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  sockfd_ = value;
+}
+inline void AccountRegisterAck::set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_sockfd(value);
+  // @@protoc_insertion_point(field_set:AccountRegisterAck.sockfd)
+}
+
+// -------------------------------------------------------------------
+
+// SelectEnterLogicSvrReq
+
+// uint64 account = 1;
+inline void SelectEnterLogicSvrReq::clear_account() {
+  account_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 SelectEnterLogicSvrReq::_internal_account() const {
+  return account_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 SelectEnterLogicSvrReq::account() const {
+  // @@protoc_insertion_point(field_get:SelectEnterLogicSvrReq.account)
+  return _internal_account();
+}
+inline void SelectEnterLogicSvrReq::_internal_set_account(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  account_ = value;
+}
+inline void SelectEnterLogicSvrReq::set_account(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_account(value);
+  // @@protoc_insertion_point(field_set:SelectEnterLogicSvrReq.account)
+}
+
+// int32 serverid = 2;
+inline void SelectEnterLogicSvrReq::clear_serverid() {
+  serverid_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrReq::_internal_serverid() const {
+  return serverid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrReq::serverid() const {
+  // @@protoc_insertion_point(field_get:SelectEnterLogicSvrReq.serverid)
+  return _internal_serverid();
+}
+inline void SelectEnterLogicSvrReq::_internal_set_serverid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  serverid_ = value;
+}
+inline void SelectEnterLogicSvrReq::set_serverid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_serverid(value);
+  // @@protoc_insertion_point(field_set:SelectEnterLogicSvrReq.serverid)
+}
+
+// int32 sockfd = 3;
+inline void SelectEnterLogicSvrReq::clear_sockfd() {
+  sockfd_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrReq::_internal_sockfd() const {
+  return sockfd_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrReq::sockfd() const {
+  // @@protoc_insertion_point(field_get:SelectEnterLogicSvrReq.sockfd)
+  return _internal_sockfd();
+}
+inline void SelectEnterLogicSvrReq::_internal_set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  sockfd_ = value;
+}
+inline void SelectEnterLogicSvrReq::set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_sockfd(value);
+  // @@protoc_insertion_point(field_set:SelectEnterLogicSvrReq.sockfd)
+}
+
+// -------------------------------------------------------------------
+
+// SelectEnterLogicSvrAck
+
+// uint64 account = 1;
+inline void SelectEnterLogicSvrAck::clear_account() {
+  account_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 SelectEnterLogicSvrAck::_internal_account() const {
+  return account_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint64 SelectEnterLogicSvrAck::account() const {
+  // @@protoc_insertion_point(field_get:SelectEnterLogicSvrAck.account)
+  return _internal_account();
+}
+inline void SelectEnterLogicSvrAck::_internal_set_account(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  
+  account_ = value;
+}
+inline void SelectEnterLogicSvrAck::set_account(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+  _internal_set_account(value);
+  // @@protoc_insertion_point(field_set:SelectEnterLogicSvrAck.account)
+}
+
+// int32 serverid = 2;
+inline void SelectEnterLogicSvrAck::clear_serverid() {
+  serverid_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrAck::_internal_serverid() const {
+  return serverid_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrAck::serverid() const {
+  // @@protoc_insertion_point(field_get:SelectEnterLogicSvrAck.serverid)
+  return _internal_serverid();
+}
+inline void SelectEnterLogicSvrAck::_internal_set_serverid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  serverid_ = value;
+}
+inline void SelectEnterLogicSvrAck::set_serverid(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_serverid(value);
+  // @@protoc_insertion_point(field_set:SelectEnterLogicSvrAck.serverid)
+}
+
+// string serveraddr = 3;
+inline void SelectEnterLogicSvrAck::clear_serveraddr() {
+  serveraddr_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& SelectEnterLogicSvrAck::serveraddr() const {
+  // @@protoc_insertion_point(field_get:SelectEnterLogicSvrAck.serveraddr)
+  return _internal_serveraddr();
+}
+inline void SelectEnterLogicSvrAck::set_serveraddr(const std::string& value) {
+  _internal_set_serveraddr(value);
+  // @@protoc_insertion_point(field_set:SelectEnterLogicSvrAck.serveraddr)
+}
+inline std::string* SelectEnterLogicSvrAck::mutable_serveraddr() {
+  // @@protoc_insertion_point(field_mutable:SelectEnterLogicSvrAck.serveraddr)
+  return _internal_mutable_serveraddr();
+}
+inline const std::string& SelectEnterLogicSvrAck::_internal_serveraddr() const {
+  return serveraddr_.Get();
+}
+inline void SelectEnterLogicSvrAck::_internal_set_serveraddr(const std::string& value) {
+  
+  serveraddr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void SelectEnterLogicSvrAck::set_serveraddr(std::string&& value) {
+  
+  serveraddr_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:SelectEnterLogicSvrAck.serveraddr)
+}
+inline void SelectEnterLogicSvrAck::set_serveraddr(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  serveraddr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:SelectEnterLogicSvrAck.serveraddr)
+}
+inline void SelectEnterLogicSvrAck::set_serveraddr(const char* value,
+    size_t size) {
+  
+  serveraddr_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:SelectEnterLogicSvrAck.serveraddr)
+}
+inline std::string* SelectEnterLogicSvrAck::_internal_mutable_serveraddr() {
+  
+  return serveraddr_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* SelectEnterLogicSvrAck::release_serveraddr() {
+  // @@protoc_insertion_point(field_release:SelectEnterLogicSvrAck.serveraddr)
+  return serveraddr_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void SelectEnterLogicSvrAck::set_allocated_serveraddr(std::string* serveraddr) {
+  if (serveraddr != nullptr) {
+    
+  } else {
+    
+  }
+  serveraddr_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), serveraddr,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:SelectEnterLogicSvrAck.serveraddr)
+}
+inline std::string* SelectEnterLogicSvrAck::unsafe_arena_release_serveraddr() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:SelectEnterLogicSvrAck.serveraddr)
+  GOOGLE_DCHECK(GetArena() != nullptr);
+  
+  return serveraddr_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      GetArena());
+}
+inline void SelectEnterLogicSvrAck::unsafe_arena_set_allocated_serveraddr(
+    std::string* serveraddr) {
+  GOOGLE_DCHECK(GetArena() != nullptr);
+  if (serveraddr != nullptr) {
+    
+  } else {
+    
+  }
+  serveraddr_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      serveraddr, GetArena());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:SelectEnterLogicSvrAck.serveraddr)
+}
+
+// int32 serverport = 4;
+inline void SelectEnterLogicSvrAck::clear_serverport() {
+  serverport_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrAck::_internal_serverport() const {
+  return serverport_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrAck::serverport() const {
+  // @@protoc_insertion_point(field_get:SelectEnterLogicSvrAck.serverport)
+  return _internal_serverport();
+}
+inline void SelectEnterLogicSvrAck::_internal_set_serverport(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  serverport_ = value;
+}
+inline void SelectEnterLogicSvrAck::set_serverport(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_serverport(value);
+  // @@protoc_insertion_point(field_set:SelectEnterLogicSvrAck.serverport)
+}
+
+// int32 logincode = 5;
+inline void SelectEnterLogicSvrAck::clear_logincode() {
+  logincode_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrAck::_internal_logincode() const {
+  return logincode_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrAck::logincode() const {
+  // @@protoc_insertion_point(field_get:SelectEnterLogicSvrAck.logincode)
+  return _internal_logincode();
+}
+inline void SelectEnterLogicSvrAck::_internal_set_logincode(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  logincode_ = value;
+}
+inline void SelectEnterLogicSvrAck::set_logincode(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_logincode(value);
+  // @@protoc_insertion_point(field_set:SelectEnterLogicSvrAck.logincode)
+}
+
+// int32 sockfd = 6;
+inline void SelectEnterLogicSvrAck::clear_sockfd() {
+  sockfd_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrAck::_internal_sockfd() const {
+  return sockfd_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 SelectEnterLogicSvrAck::sockfd() const {
+  // @@protoc_insertion_point(field_get:SelectEnterLogicSvrAck.sockfd)
+  return _internal_sockfd();
+}
+inline void SelectEnterLogicSvrAck::_internal_set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  sockfd_ = value;
+}
+inline void SelectEnterLogicSvrAck::set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_sockfd(value);
+  // @@protoc_insertion_point(field_set:SelectEnterLogicSvrAck.sockfd)
+}
+
+// -------------------------------------------------------------------
+
 // LoadLogicSvrReq
 
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

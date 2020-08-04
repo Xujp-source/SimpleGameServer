@@ -81,6 +81,9 @@
     <ClCompile Include="MatchModule.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="protoc\Other.pb.cc">
+      <Filter>protoc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h">
@@ -193,6 +196,9 @@
     </ClInclude>
     <ClInclude Include="EventHandlerManager.hpp">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="protoc\Other.pb.h">
+      <Filter>protoc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

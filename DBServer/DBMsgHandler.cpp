@@ -2,6 +2,7 @@
 #include "MsgHandlerManager.hpp"
 #include "GameService.h"
 #include "./protoc/DBExcute.pb.h"
+#include "./protoc/Login.pb.h"
 
 DBMsgHandler::DBMsgHandler(void)
 {
