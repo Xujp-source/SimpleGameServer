@@ -39,8 +39,6 @@ enum BATTLE_COMMAND
 {
 	//³õÊ¼»¯¿ÕÃüÁî
 	BATTLE_COMMAND_NONE,
-	//·¢ÆðÆÕÍ¨¹¥»÷ÃüÁî
-	BATTLE_COMMAND_ATK,
 	//·¢ÆðÊÍ·Å¼¼ÄÜÃüÁî
 	BATTLE_COMMAND_SKILL,
 	//·¢Æð·ÀÓùÃüÁî

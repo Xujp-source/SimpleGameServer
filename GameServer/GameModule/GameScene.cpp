@@ -1,4 +1,5 @@
 #include "GameScene.h"
+#include "./Skill/SkillModule.h"
 #include "../MsgHandlerManager.hpp"
 #include "../protoc/Battle.pb.h"
 
@@ -13,7 +14,6 @@ GameScene::~GameScene()
 
 void GameScene::RegisterMessageHanler()
 {
-	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_COMMAND_ATK_REQ, &GameScene::OnMsgCommandAtkReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_COMMAND_SKILL_REQ, &GameScene::OnMsgCommandSkillReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_COMMAND_DEFINE_REQ, &GameScene::OnMsgCommandDefineReq, this);
 	CMsgHandlerManager::GetInstancePtr()->RegisterMessageHandle(MSG_COMMAND_USING_REQ, &GameScene::OnMsgCommandUsingReq, this);
@@ -54,9 +54,10 @@ bool GameScene::BATTLECommand()
 	//重置命令
 	for (int i = 0; i < BATTLE_SIDE_COUNT; i++)
 	{
-		std::map<unsigned long long, Card>::iterator itor = Side[i].cardmap.find(Side[i].carduid);
-		itor->second.cmd = BATTLE_COMMAND_ATK;
+		std::map<unsigned long long, Card*>::iterator itor = Side[i].card_map.find(Side[i].card_uid);
+		itor->second->cur_cmd = BATTLE_COMMAND_NONE;
 	}
+	//状态同步给GameScene里的所有玩家
 
 	return true;
 }
@@ -85,15 +86,28 @@ bool GameScene::BATTLENextRoundCheck()
 
 bool GameScene::ExecBATTLECommand()
 {
-	return false;
+	for (int i = 0; i < BATTLE_SIDE_COUNT; i++)
+	{
+		std::map<unsigned long long, Card*>::iterator itor = Side[i].card_map.find(Side[i].card_uid);
+		switch (itor->second->cur_cmd)
+		{
+		case BATTLE_COMMAND_SKILL:
+			SKillModule::GetInstancePtr()->CastSkill(Side[i], itor->second->skill_id);
+			break;
+		default:
+			break;
+
+		}
+	}
+	return true;
 }
 
-bool GameScene::OnMsgCommandAtkReq(NetPacket * pack)
+bool GameScene::OnMsgCommandSkillReq(NetPacket * pack)
 {
 	ERROR_RETURN_TRUE(Mode == BATTLE_MODE_BATTLE);
 	ERROR_RETURN_TRUE(CmdLock != BATTLE_COMMAND_UNLOCK);
 	//反序列化
-	CommandAtkReq req;
+	CommandSkillReq req;
 	char *str = pack->m_pDataBuffer->buff;
 	req.ParsePartialFromArray(pack->m_pDataBuffer->buff, 1024);
 
@@ -101,25 +115,20 @@ bool GameScene::OnMsgCommandAtkReq(NetPacket * pack)
 	unsigned long long uid = req.uid();
 	ERROR_RETURN_TRUE(uid != 0);
 	int command = req.cmd();
-	ERROR_RETURN_TRUE(command != BATTLE_COMMAND_ATK);
+	ERROR_RETURN_TRUE(command != BATTLE_COMMAND_SKILL);
 
 	for (int i = 0; i < BATTLE_SIDE_COUNT; i++)
 	{
-		if (uid == Side[i].playeruid)
+		if (uid == Side[i].player_uid)
 		{
-			std::map<unsigned long long, Card>::iterator itor = Side[i].cardmap.find(Side[i].carduid);
-			itor->second.cmd = BATTLE_COMMAND_ATK;
+			std::map<unsigned long long, Card*>::iterator itor = Side[i].card_map.find(Side[i].card_uid);
+			itor->second->cur_cmd = BATTLE_COMMAND_SKILL;
 			CmdLock = BATTLE_COMMAND_LOCK;
 			break;
 		}
 	}
 
 	return true;
-}
-
-bool GameScene::OnMsgCommandSkillReq(NetPacket * pack)
-{
-	return false;
 }
 
 bool GameScene::OnMsgCommandDefineReq(NetPacket * pack)

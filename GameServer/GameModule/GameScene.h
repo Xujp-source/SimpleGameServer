@@ -43,7 +43,6 @@ public:
 
 public:
 	//*******************消息处理定义**************************
-	bool OnMsgCommandAtkReq(NetPacket* pack);           //普通攻击请求
 	bool OnMsgCommandSkillReq(NetPacket* pack);         //释放技能请求
 	bool OnMsgCommandDefineReq(NetPacket* pack);        //防御请求
 	bool OnMsgCommandUsingReq(NetPacket* pack);         //使用道具请求

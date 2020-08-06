@@ -34,6 +34,9 @@
     <Filter Include="GameModule">
       <UniqueIdentifier>{406c7349-9ed2-4a25-b312-6058bed07e2a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameModule\Skill">
+      <UniqueIdentifier>{862b4043-5ab7-4de5-8dc8-b0bb3849e5f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ServerEngine\3rd\uuid.cpp">
@@ -93,8 +96,20 @@
     <ClCompile Include="protoc\Other.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
-    <ClCompile Include="GameModule\SkillModule.cpp">
-      <Filter>GameModule</Filter>
+    <ClCompile Include="GameModule\Skill\Buff.cpp">
+      <Filter>GameModule\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="GameModule\Skill\SkillModule.cpp">
+      <Filter>GameModule\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="GameModule\Skill\SkillCondition.cpp">
+      <Filter>GameModule\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="GameModule\Skill\SkillGeneratorModule.cpp">
+      <Filter>GameModule\Skill</Filter>
+    </ClCompile>
+    <ClCompile Include="GameModule\Skill\SkillScript.cpp">
+      <Filter>GameModule\Skill</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -221,8 +236,20 @@
     <ClInclude Include="protoc\Other.pb.h">
       <Filter>protoc</Filter>
     </ClInclude>
-    <ClInclude Include="GameModule\SkillModule.h">
-      <Filter>GameModule</Filter>
+    <ClInclude Include="GameModule\Skill\Buff.h">
+      <Filter>GameModule\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="GameModule\Skill\SkillModule.h">
+      <Filter>GameModule\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="GameModule\Skill\SkillCondition.h">
+      <Filter>GameModule\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="GameModule\Skill\SkillGeneratorModule.h">
+      <Filter>GameModule\Skill</Filter>
+    </ClInclude>
+    <ClInclude Include="GameModule\Skill\SkillScript.h">
+      <Filter>GameModule\Skill</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

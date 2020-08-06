@@ -134,7 +134,11 @@
     <ClCompile Include="GameModule\GameScene.cpp" />
     <ClCompile Include="GameModule\GameSceneGrid.cpp" />
     <ClCompile Include="GameModule\GameSceneManager.cpp" />
-    <ClCompile Include="GameModule\SkillModule.cpp" />
+    <ClCompile Include="GameModule\Skill\Buff.cpp" />
+    <ClCompile Include="GameModule\Skill\SkillCondition.cpp" />
+    <ClCompile Include="GameModule\Skill\SkillGeneratorModule.cpp" />
+    <ClCompile Include="GameModule\Skill\SkillModule.cpp" />
+    <ClCompile Include="GameModule\Skill\SkillScript.cpp" />
     <ClCompile Include="GameService.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="protoc\Battle.pb.cc" />
@@ -157,7 +161,11 @@
     <ClInclude Include="GameModule\GameScene.h" />
     <ClInclude Include="GameModule\GameSceneGrid.h" />
     <ClInclude Include="GameModule\GameSceneManager.h" />
-    <ClInclude Include="GameModule\SkillModule.h" />
+    <ClInclude Include="GameModule\Skill\Buff.h" />
+    <ClInclude Include="GameModule\Skill\SkillCondition.h" />
+    <ClInclude Include="GameModule\Skill\SkillGeneratorModule.h" />
+    <ClInclude Include="GameModule\Skill\SkillModule.h" />
+    <ClInclude Include="GameModule\Skill\SkillScript.h" />
     <ClInclude Include="GameService.h" />
     <ClInclude Include="MsgHandlerManager.hpp" />
     <ClInclude Include="protoc\Battle.pb.h" />
