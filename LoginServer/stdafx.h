@@ -14,6 +14,7 @@
 // protoc
 #include"./protoc/MsgID.pb.h"
 #include"./protoc/Other.pb.h"
+#include"./protoc/DBExcute.pb.h"
 
 // engine
 #include"./ServerEngine/Common/fdtouid.h"

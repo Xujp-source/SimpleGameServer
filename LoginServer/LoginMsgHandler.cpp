@@ -67,7 +67,7 @@ bool LoginMsgHandler::OnMsgAccountLoginReq(NetPacket * pack)
 
 	//构造sql语句
 	char szSql[128] = { 0 };
-	snprintf(szSql, 128, "select * from account where id = %d and password = %s", account, password.c_str());
+	snprintf(szSql, 128, "select * from account where id = %lld and password = %s", account, password.c_str());
 	DBExeSqlReq dbReq;
 	dbReq.set_exectype(SQL_EXECUTE);
 	dbReq.set_sqlcmd(szSql);
@@ -112,7 +112,7 @@ bool LoginMsgHandler::OnMsgAccountRegReq(NetPacket * pack)
 
 	//构造sql语句
 	char szSql[128] = { 0 };
-	snprintf(szSql, 128, "insert into account values(%d, %s, %s)", account, password.c_str(), name.c_str());
+	snprintf(szSql, 128, "insert into account values(%lld, %s, %s)", account, password.c_str(), name.c_str());
 	DBExeSqlReq dbReq;
 	dbReq.set_exectype(SQL_EXECUTE);
 	dbReq.set_sqlcmd(szSql);

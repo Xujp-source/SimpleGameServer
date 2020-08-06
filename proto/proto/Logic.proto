@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+
+//请求加载角色列表
+message LoadPlayerListReq
+{
+	uint64 account = 1;
+	int32 logincode = 2;
+}
+
+//角色对象
+message PlayerOb
+{
+	uint64 uid = 1;
+	string name = 2;
+	uint64 createtime = 3;
+}
+
+//加载角色列表结果返回
+message LoadPlayerListAck
+{
+	repeated PlayerOb user = 1;
+}

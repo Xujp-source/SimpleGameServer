@@ -31,6 +31,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -47,7 +48,7 @@ struct TableStruct_Login_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[7]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[9]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -69,6 +70,12 @@ extern AccountRegisterReqDefaultTypeInternal _AccountRegisterReq_default_instanc
 class LoadLogicSvrReq;
 class LoadLogicSvrReqDefaultTypeInternal;
 extern LoadLogicSvrReqDefaultTypeInternal _LoadLogicSvrReq_default_instance_;
+class LogonPack;
+class LogonPackDefaultTypeInternal;
+extern LogonPackDefaultTypeInternal _LogonPack_default_instance_;
+class MainPack;
+class MainPackDefaultTypeInternal;
+extern MainPackDefaultTypeInternal _MainPack_default_instance_;
 class SelectEnterLogicSvrAck;
 class SelectEnterLogicSvrAckDefaultTypeInternal;
 extern SelectEnterLogicSvrAckDefaultTypeInternal _SelectEnterLogicSvrAck_default_instance_;
@@ -81,10 +88,89 @@ template<> ::AccountLoginReq* Arena::CreateMaybeMessage<::AccountLoginReq>(Arena
 template<> ::AccountRegisterAck* Arena::CreateMaybeMessage<::AccountRegisterAck>(Arena*);
 template<> ::AccountRegisterReq* Arena::CreateMaybeMessage<::AccountRegisterReq>(Arena*);
 template<> ::LoadLogicSvrReq* Arena::CreateMaybeMessage<::LoadLogicSvrReq>(Arena*);
+template<> ::LogonPack* Arena::CreateMaybeMessage<::LogonPack>(Arena*);
+template<> ::MainPack* Arena::CreateMaybeMessage<::MainPack>(Arena*);
 template<> ::SelectEnterLogicSvrAck* Arena::CreateMaybeMessage<::SelectEnterLogicSvrAck>(Arena*);
 template<> ::SelectEnterLogicSvrReq* Arena::CreateMaybeMessage<::SelectEnterLogicSvrReq>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
+enum RequestCode : int {
+  RequestNone = 0,
+  User = 1,
+  RequestCode_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  RequestCode_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool RequestCode_IsValid(int value);
+constexpr RequestCode RequestCode_MIN = RequestNone;
+constexpr RequestCode RequestCode_MAX = User;
+constexpr int RequestCode_ARRAYSIZE = RequestCode_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* RequestCode_descriptor();
+template<typename T>
+inline const std::string& RequestCode_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, RequestCode>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function RequestCode_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    RequestCode_descriptor(), enum_t_value);
+}
+inline bool RequestCode_Parse(
+    const std::string& name, RequestCode* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<RequestCode>(
+    RequestCode_descriptor(), name, value);
+}
+enum ActionCode : int {
+  ActionNone = 0,
+  Logon = 1,
+  Login = 2,
+  ActionCode_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  ActionCode_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool ActionCode_IsValid(int value);
+constexpr ActionCode ActionCode_MIN = ActionNone;
+constexpr ActionCode ActionCode_MAX = Login;
+constexpr int ActionCode_ARRAYSIZE = ActionCode_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ActionCode_descriptor();
+template<typename T>
+inline const std::string& ActionCode_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ActionCode>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ActionCode_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ActionCode_descriptor(), enum_t_value);
+}
+inline bool ActionCode_Parse(
+    const std::string& name, ActionCode* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ActionCode>(
+    ActionCode_descriptor(), name, value);
+}
+enum ReturnCode : int {
+  ReturnNone = 0,
+  Succeed = 1,
+  Fail = 2,
+  ReturnCode_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  ReturnCode_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool ReturnCode_IsValid(int value);
+constexpr ReturnCode ReturnCode_MIN = ReturnNone;
+constexpr ReturnCode ReturnCode_MAX = Fail;
+constexpr int ReturnCode_ARRAYSIZE = ReturnCode_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ReturnCode_descriptor();
+template<typename T>
+inline const std::string& ReturnCode_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ReturnCode>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ReturnCode_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ReturnCode_descriptor(), enum_t_value);
+}
+inline bool ReturnCode_Parse(
+    const std::string& name, ReturnCode* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ReturnCode>(
+    ReturnCode_descriptor(), name, value);
+}
 // ===================================================================
 
 class AccountLoginReq PROTOBUF_FINAL :
@@ -1227,6 +1313,365 @@ class LoadLogicSvrReq PROTOBUF_FINAL :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Login_2eproto;
 };
+// -------------------------------------------------------------------
+
+class MainPack PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:MainPack) */ {
+ public:
+  inline MainPack() : MainPack(nullptr) {};
+  virtual ~MainPack();
+
+  MainPack(const MainPack& from);
+  MainPack(MainPack&& from) noexcept
+    : MainPack() {
+    *this = ::std::move(from);
+  }
+
+  inline MainPack& operator=(const MainPack& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline MainPack& operator=(MainPack&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const MainPack& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const MainPack* internal_default_instance() {
+    return reinterpret_cast<const MainPack*>(
+               &_MainPack_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  friend void swap(MainPack& a, MainPack& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(MainPack* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(MainPack* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline MainPack* New() const final {
+    return CreateMaybeMessage<MainPack>(nullptr);
+  }
+
+  MainPack* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<MainPack>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const MainPack& from);
+  void MergeFrom(const MainPack& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(MainPack* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "MainPack";
+  }
+  protected:
+  explicit MainPack(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Login_2eproto);
+    return ::descriptor_table_Login_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kLogonpackFieldNumber = 4,
+    kRequestcodeFieldNumber = 1,
+    kActioncodeFieldNumber = 2,
+    kReturncodeFieldNumber = 3,
+  };
+  // .LogonPack logonpack = 4;
+  bool has_logonpack() const;
+  private:
+  bool _internal_has_logonpack() const;
+  public:
+  void clear_logonpack();
+  const ::LogonPack& logonpack() const;
+  ::LogonPack* release_logonpack();
+  ::LogonPack* mutable_logonpack();
+  void set_allocated_logonpack(::LogonPack* logonpack);
+  private:
+  const ::LogonPack& _internal_logonpack() const;
+  ::LogonPack* _internal_mutable_logonpack();
+  public:
+  void unsafe_arena_set_allocated_logonpack(
+      ::LogonPack* logonpack);
+  ::LogonPack* unsafe_arena_release_logonpack();
+
+  // .RequestCode requestcode = 1;
+  void clear_requestcode();
+  ::RequestCode requestcode() const;
+  void set_requestcode(::RequestCode value);
+  private:
+  ::RequestCode _internal_requestcode() const;
+  void _internal_set_requestcode(::RequestCode value);
+  public:
+
+  // .ActionCode actioncode = 2;
+  void clear_actioncode();
+  ::ActionCode actioncode() const;
+  void set_actioncode(::ActionCode value);
+  private:
+  ::ActionCode _internal_actioncode() const;
+  void _internal_set_actioncode(::ActionCode value);
+  public:
+
+  // .ReturnCode returncode = 3;
+  void clear_returncode();
+  ::ReturnCode returncode() const;
+  void set_returncode(::ReturnCode value);
+  private:
+  ::ReturnCode _internal_returncode() const;
+  void _internal_set_returncode(::ReturnCode value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:MainPack)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::LogonPack* logonpack_;
+  int requestcode_;
+  int actioncode_;
+  int returncode_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Login_2eproto;
+};
+// -------------------------------------------------------------------
+
+class LogonPack PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:LogonPack) */ {
+ public:
+  inline LogonPack() : LogonPack(nullptr) {};
+  virtual ~LogonPack();
+
+  LogonPack(const LogonPack& from);
+  LogonPack(LogonPack&& from) noexcept
+    : LogonPack() {
+    *this = ::std::move(from);
+  }
+
+  inline LogonPack& operator=(const LogonPack& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline LogonPack& operator=(LogonPack&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const LogonPack& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const LogonPack* internal_default_instance() {
+    return reinterpret_cast<const LogonPack*>(
+               &_LogonPack_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  friend void swap(LogonPack& a, LogonPack& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(LogonPack* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(LogonPack* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline LogonPack* New() const final {
+    return CreateMaybeMessage<LogonPack>(nullptr);
+  }
+
+  LogonPack* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<LogonPack>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const LogonPack& from);
+  void MergeFrom(const LogonPack& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(LogonPack* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "LogonPack";
+  }
+  protected:
+  explicit LogonPack(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Login_2eproto);
+    return ::descriptor_table_Login_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUsernameFieldNumber = 1,
+    kPasswordFieldNumber = 2,
+  };
+  // string username = 1;
+  void clear_username();
+  const std::string& username() const;
+  void set_username(const std::string& value);
+  void set_username(std::string&& value);
+  void set_username(const char* value);
+  void set_username(const char* value, size_t size);
+  std::string* mutable_username();
+  std::string* release_username();
+  void set_allocated_username(std::string* username);
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  std::string* unsafe_arena_release_username();
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  void unsafe_arena_set_allocated_username(
+      std::string* username);
+  private:
+  const std::string& _internal_username() const;
+  void _internal_set_username(const std::string& value);
+  std::string* _internal_mutable_username();
+  public:
+
+  // string password = 2;
+  void clear_password();
+  const std::string& password() const;
+  void set_password(const std::string& value);
+  void set_password(std::string&& value);
+  void set_password(const char* value);
+  void set_password(const char* value, size_t size);
+  std::string* mutable_password();
+  std::string* release_password();
+  void set_allocated_password(std::string* password);
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  std::string* unsafe_arena_release_password();
+  GOOGLE_PROTOBUF_RUNTIME_DEPRECATED("The unsafe_arena_ accessors for"
+  "    string fields are deprecated and will be removed in a"
+  "    future release.")
+  void unsafe_arena_set_allocated_password(
+      std::string* password);
+  private:
+  const std::string& _internal_password() const;
+  void _internal_set_password(const std::string& value);
+  std::string* _internal_mutable_password();
+  public:
+
+  // @@protoc_insertion_point(class_scope:LogonPack)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr username_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr password_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Login_2eproto;
+};
 // ===================================================================
 
 
@@ -1866,6 +2311,317 @@ inline void SelectEnterLogicSvrAck::set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 va
 
 // LoadLogicSvrReq
 
+// -------------------------------------------------------------------
+
+// MainPack
+
+// .RequestCode requestcode = 1;
+inline void MainPack::clear_requestcode() {
+  requestcode_ = 0;
+}
+inline ::RequestCode MainPack::_internal_requestcode() const {
+  return static_cast< ::RequestCode >(requestcode_);
+}
+inline ::RequestCode MainPack::requestcode() const {
+  // @@protoc_insertion_point(field_get:MainPack.requestcode)
+  return _internal_requestcode();
+}
+inline void MainPack::_internal_set_requestcode(::RequestCode value) {
+  
+  requestcode_ = value;
+}
+inline void MainPack::set_requestcode(::RequestCode value) {
+  _internal_set_requestcode(value);
+  // @@protoc_insertion_point(field_set:MainPack.requestcode)
+}
+
+// .ActionCode actioncode = 2;
+inline void MainPack::clear_actioncode() {
+  actioncode_ = 0;
+}
+inline ::ActionCode MainPack::_internal_actioncode() const {
+  return static_cast< ::ActionCode >(actioncode_);
+}
+inline ::ActionCode MainPack::actioncode() const {
+  // @@protoc_insertion_point(field_get:MainPack.actioncode)
+  return _internal_actioncode();
+}
+inline void MainPack::_internal_set_actioncode(::ActionCode value) {
+  
+  actioncode_ = value;
+}
+inline void MainPack::set_actioncode(::ActionCode value) {
+  _internal_set_actioncode(value);
+  // @@protoc_insertion_point(field_set:MainPack.actioncode)
+}
+
+// .ReturnCode returncode = 3;
+inline void MainPack::clear_returncode() {
+  returncode_ = 0;
+}
+inline ::ReturnCode MainPack::_internal_returncode() const {
+  return static_cast< ::ReturnCode >(returncode_);
+}
+inline ::ReturnCode MainPack::returncode() const {
+  // @@protoc_insertion_point(field_get:MainPack.returncode)
+  return _internal_returncode();
+}
+inline void MainPack::_internal_set_returncode(::ReturnCode value) {
+  
+  returncode_ = value;
+}
+inline void MainPack::set_returncode(::ReturnCode value) {
+  _internal_set_returncode(value);
+  // @@protoc_insertion_point(field_set:MainPack.returncode)
+}
+
+// .LogonPack logonpack = 4;
+inline bool MainPack::_internal_has_logonpack() const {
+  return this != internal_default_instance() && logonpack_ != nullptr;
+}
+inline bool MainPack::has_logonpack() const {
+  return _internal_has_logonpack();
+}
+inline void MainPack::clear_logonpack() {
+  if (GetArena() == nullptr && logonpack_ != nullptr) {
+    delete logonpack_;
+  }
+  logonpack_ = nullptr;
+}
+inline const ::LogonPack& MainPack::_internal_logonpack() const {
+  const ::LogonPack* p = logonpack_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::LogonPack*>(
+      &::_LogonPack_default_instance_);
+}
+inline const ::LogonPack& MainPack::logonpack() const {
+  // @@protoc_insertion_point(field_get:MainPack.logonpack)
+  return _internal_logonpack();
+}
+inline void MainPack::unsafe_arena_set_allocated_logonpack(
+    ::LogonPack* logonpack) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(logonpack_);
+  }
+  logonpack_ = logonpack;
+  if (logonpack) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:MainPack.logonpack)
+}
+inline ::LogonPack* MainPack::release_logonpack() {
+  auto temp = unsafe_arena_release_logonpack();
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::LogonPack* MainPack::unsafe_arena_release_logonpack() {
+  // @@protoc_insertion_point(field_release:MainPack.logonpack)
+  
+  ::LogonPack* temp = logonpack_;
+  logonpack_ = nullptr;
+  return temp;
+}
+inline ::LogonPack* MainPack::_internal_mutable_logonpack() {
+  
+  if (logonpack_ == nullptr) {
+    auto* p = CreateMaybeMessage<::LogonPack>(GetArena());
+    logonpack_ = p;
+  }
+  return logonpack_;
+}
+inline ::LogonPack* MainPack::mutable_logonpack() {
+  // @@protoc_insertion_point(field_mutable:MainPack.logonpack)
+  return _internal_mutable_logonpack();
+}
+inline void MainPack::set_allocated_logonpack(::LogonPack* logonpack) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete logonpack_;
+  }
+  if (logonpack) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(logonpack);
+    if (message_arena != submessage_arena) {
+      logonpack = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, logonpack, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  logonpack_ = logonpack;
+  // @@protoc_insertion_point(field_set_allocated:MainPack.logonpack)
+}
+
+// -------------------------------------------------------------------
+
+// LogonPack
+
+// string username = 1;
+inline void LogonPack::clear_username() {
+  username_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& LogonPack::username() const {
+  // @@protoc_insertion_point(field_get:LogonPack.username)
+  return _internal_username();
+}
+inline void LogonPack::set_username(const std::string& value) {
+  _internal_set_username(value);
+  // @@protoc_insertion_point(field_set:LogonPack.username)
+}
+inline std::string* LogonPack::mutable_username() {
+  // @@protoc_insertion_point(field_mutable:LogonPack.username)
+  return _internal_mutable_username();
+}
+inline const std::string& LogonPack::_internal_username() const {
+  return username_.Get();
+}
+inline void LogonPack::_internal_set_username(const std::string& value) {
+  
+  username_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void LogonPack::set_username(std::string&& value) {
+  
+  username_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:LogonPack.username)
+}
+inline void LogonPack::set_username(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  username_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:LogonPack.username)
+}
+inline void LogonPack::set_username(const char* value,
+    size_t size) {
+  
+  username_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:LogonPack.username)
+}
+inline std::string* LogonPack::_internal_mutable_username() {
+  
+  return username_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* LogonPack::release_username() {
+  // @@protoc_insertion_point(field_release:LogonPack.username)
+  return username_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void LogonPack::set_allocated_username(std::string* username) {
+  if (username != nullptr) {
+    
+  } else {
+    
+  }
+  username_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), username,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:LogonPack.username)
+}
+inline std::string* LogonPack::unsafe_arena_release_username() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:LogonPack.username)
+  GOOGLE_DCHECK(GetArena() != nullptr);
+  
+  return username_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      GetArena());
+}
+inline void LogonPack::unsafe_arena_set_allocated_username(
+    std::string* username) {
+  GOOGLE_DCHECK(GetArena() != nullptr);
+  if (username != nullptr) {
+    
+  } else {
+    
+  }
+  username_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      username, GetArena());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:LogonPack.username)
+}
+
+// string password = 2;
+inline void LogonPack::clear_password() {
+  password_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline const std::string& LogonPack::password() const {
+  // @@protoc_insertion_point(field_get:LogonPack.password)
+  return _internal_password();
+}
+inline void LogonPack::set_password(const std::string& value) {
+  _internal_set_password(value);
+  // @@protoc_insertion_point(field_set:LogonPack.password)
+}
+inline std::string* LogonPack::mutable_password() {
+  // @@protoc_insertion_point(field_mutable:LogonPack.password)
+  return _internal_mutable_password();
+}
+inline const std::string& LogonPack::_internal_password() const {
+  return password_.Get();
+}
+inline void LogonPack::_internal_set_password(const std::string& value) {
+  
+  password_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
+}
+inline void LogonPack::set_password(std::string&& value) {
+  
+  password_.Set(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:LogonPack.password)
+}
+inline void LogonPack::set_password(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  password_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArena());
+  // @@protoc_insertion_point(field_set_char:LogonPack.password)
+}
+inline void LogonPack::set_password(const char* value,
+    size_t size) {
+  
+  password_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:LogonPack.password)
+}
+inline std::string* LogonPack::_internal_mutable_password() {
+  
+  return password_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline std::string* LogonPack::release_password() {
+  // @@protoc_insertion_point(field_release:LogonPack.password)
+  return password_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void LogonPack::set_allocated_password(std::string* password) {
+  if (password != nullptr) {
+    
+  } else {
+    
+  }
+  password_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), password,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:LogonPack.password)
+}
+inline std::string* LogonPack::unsafe_arena_release_password() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:LogonPack.password)
+  GOOGLE_DCHECK(GetArena() != nullptr);
+  
+  return password_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      GetArena());
+}
+inline void LogonPack::unsafe_arena_set_allocated_password(
+    std::string* password) {
+  GOOGLE_DCHECK(GetArena() != nullptr);
+  if (password != nullptr) {
+    
+  } else {
+    
+  }
+  password_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      password, GetArena());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:LogonPack.password)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
@@ -1881,9 +2637,33 @@ inline void SelectEnterLogicSvrAck::set_sockfd(::PROTOBUF_NAMESPACE_ID::int32 va
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 
+
+PROTOBUF_NAMESPACE_OPEN
+
+template <> struct is_proto_enum< ::RequestCode> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::RequestCode>() {
+  return ::RequestCode_descriptor();
+}
+template <> struct is_proto_enum< ::ActionCode> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ActionCode>() {
+  return ::ActionCode_descriptor();
+}
+template <> struct is_proto_enum< ::ReturnCode> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::ReturnCode>() {
+  return ::ReturnCode_descriptor();
+}
+
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 
