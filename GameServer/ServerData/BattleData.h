@@ -18,10 +18,11 @@ struct Card
 	int cur_cri;       //当前暴击
 	int cur_cdef;      //当前抗暴
 
-	int cur_cmd;
-	int skill_id;
-	int card_id;
-	unsigned long long uid;
+	int cur_cmd;       //当前回合操作的指令
+	int skill_id;      //当前回合使用的技能id
+
+	int card_id;               //卡牌id
+	unsigned long long uid;    //卡牌uid
 	std::map<int, int> cd_map; //技能id - 技能cd
 
 };
@@ -29,9 +30,10 @@ struct Card
 //一个阵营的信息
 struct BattleSide
 {
-	unsigned long long player_uid;
-	int is_robot;
+	int cmd_lock;   //当前回合指令锁
+	int is_robot;   //是否AI
 	unsigned long long card_uid; //当前参战的唯一卡牌id
+	unsigned long long player_uid;
 	std::map<unsigned long long, Card*> card_map;
 };
 

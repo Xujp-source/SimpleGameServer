@@ -27,7 +27,6 @@ bool GameScene::Init()
 	RoundCount = 1;
 	RoundEndTime = RoundEndTime + ROUND_TIME;
 	EndTime = EndTime + BATTLE_MAX_TIME;
-	CmdLock = BATTLE_COMMAND_UNLOCK;
 	return true;
 }
 
@@ -49,11 +48,12 @@ bool GameScene::BATTLECommand()
 	RoundCount = RoundCount + 1;
 	//增加下一回合的结束时间戳
 	RoundEndTime = CELLTime::getNowInSec() + ROUND_TIME;
-	//解锁命令操作
-	CmdLock = BATTLE_COMMAND_UNLOCK;
-	//重置命令
+	//重置命令和解锁命令锁
 	for (int i = 0; i < BATTLE_SIDE_COUNT; i++)
 	{
+		ERROR_RETURN_TRUE(Side[i].cmd_lock != COMMAND_UNLOCK);
+		Side[i].cmd_lock = COMMAND_UNLOCK;
+
 		std::map<unsigned long long, Card*>::iterator itor = Side[i].card_map.find(Side[i].card_uid);
 		itor->second->cur_cmd = BATTLE_COMMAND_NONE;
 	}
@@ -92,7 +92,7 @@ bool GameScene::ExecBATTLECommand()
 		switch (itor->second->cur_cmd)
 		{
 		case BATTLE_COMMAND_SKILL:
-			SKillModule::GetInstancePtr()->CastSkill(Side[i], itor->second->skill_id);
+			SKillModule::GetInstancePtr()->CastSkill(Side[ATK_TARGET], Side[DEFINE_TARGET], itor->second->skill_id);
 			break;
 		default:
 			break;
@@ -105,7 +105,6 @@ bool GameScene::ExecBATTLECommand()
 bool GameScene::OnMsgCommandSkillReq(NetPacket * pack)
 {
 	ERROR_RETURN_TRUE(Mode == BATTLE_MODE_BATTLE);
-	ERROR_RETURN_TRUE(CmdLock != BATTLE_COMMAND_UNLOCK);
 	//反序列化
 	CommandSkillReq req;
 	char *str = pack->m_pDataBuffer->buff;
@@ -121,9 +120,12 @@ bool GameScene::OnMsgCommandSkillReq(NetPacket * pack)
 	{
 		if (uid == Side[i].player_uid)
 		{
+			//给当前回合上指令锁（防作弊）
+			ERROR_RETURN_TRUE(Side[i].cmd_lock != COMMAND_LOCK);
+			Side[i].cmd_lock = COMMAND_LOCK;
+			//当前回合的指令
 			std::map<unsigned long long, Card*>::iterator itor = Side[i].card_map.find(Side[i].card_uid);
 			itor->second->cur_cmd = BATTLE_COMMAND_SKILL;
-			CmdLock = BATTLE_COMMAND_LOCK;
 			break;
 		}
 	}

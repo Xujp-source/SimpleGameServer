@@ -61,8 +61,6 @@ public:
 	unsigned long long RoundEndTime;
 	//战斗持续的最大时间(结束时间戳)
 	unsigned long long EndTime;
-	//当前回合指令锁
-	int CmdLock;
 
 };
 

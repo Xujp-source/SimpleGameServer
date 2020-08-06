@@ -54,10 +54,10 @@ enum BATTLE_COMMAND
 
 enum BATTLE_ROUND_LOCK
 {
-	//当前回合收到指令后的加锁标记
-	BATTLE_COMMAND_LOCK,
 	//下一回合指令解锁标记
-	BATTLE_COMMAND_UNLOCK
+	COMMAND_UNLOCK,
+	//当前回合收到指令后的加锁标记
+	COMMAND_LOCK
 };
 
 
