@@ -129,6 +129,9 @@
     <ClCompile Include="protoc\Login.pb.cc">
       <Filter>protoc</Filter>
     </ClCompile>
+    <ClCompile Include="AccountVerify.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameService.h">
@@ -295,6 +298,12 @@
     </ClInclude>
     <ClInclude Include="protoc\Login.pb.h">
       <Filter>protoc</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountVerify.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerData\CardData.h">
+      <Filter>ServerData</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

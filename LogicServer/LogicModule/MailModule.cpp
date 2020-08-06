@@ -31,11 +31,6 @@ bool CMailModule::SendMail(int descid, int itemid)
 	return false;
 }
 
-bool CMailModule::OnMsgLoadMailReq(NetPacket * pNetPacket)
-{
-	return false;
-}
-
 bool CMailModule::OnMsgReadMailReq(NetPacket * pNetPacket)
 {
 	return false;

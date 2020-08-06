@@ -14,6 +14,8 @@ private:
 public:
 	static CGameService* GetInstancePtr();
 
+	inline int GetDBConnID() { return m_dwDBConnID; }
+
 	//服务初始化
 	bool Init();
 

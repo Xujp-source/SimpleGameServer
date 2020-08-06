@@ -22,13 +22,18 @@ public:
 	bool OnMsgDBSvrHeartAck(NetPacket* pack);			//DB操作服的心跳确认
 
 	bool OnMsgLoadPlayerListReq(NetPacket* pack);		//加载角色列表
+	bool OnMsgLoadPlayerListAck(NetPacket* pack);		//角色列表结果来自DB
 	bool OnMsgCreatePlayerReq(NetPacket* pack);			//创建角色
+	bool OnMsgCreatePlayerAck(NetPacket* pack);			//创建角色结果来自DB
 	bool OnMsgSelectPlayerEnterReq(NetPacket* pack);	//选择角色进入游戏
 
 	bool OnMsgSelectEnterLogicSvrReq(NetPacket* pack);	//选择进入的逻辑服来自loginserver（记录即将连接accountid用于验证）
 	bool OnMsgLostConnectReq(NetPacket* pack);			//主动断开连接请求
 	bool OnMsgLogoutReq(NetPacket* pack);				//登出请求
 	//*********************************************************
+
+private:
+	std::map<unsigned long long, int> account_map;
 };
 
 #endif

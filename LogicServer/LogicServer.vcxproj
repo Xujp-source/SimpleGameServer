@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AccountVerify.cpp" />
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="AgentManager.cpp" />
     <ClCompile Include="ConnectServerMgr.cpp" />
@@ -52,6 +53,7 @@
     <ClCompile Include="ServerEngine\DBInterFace\DBConnectPool.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccountVerify.h" />
     <ClInclude Include="Agent.h" />
     <ClInclude Include="AgentManager.h" />
     <ClInclude Include="ConnectServerMgr.h" />
@@ -77,6 +79,7 @@
     <ClInclude Include="protoc\Other.pb.h" />
     <ClInclude Include="protoc\Store.pb.h" />
     <ClInclude Include="ServerData\BagData.h" />
+    <ClInclude Include="ServerData\CardData.h" />
     <ClInclude Include="ServerData\RoleData.h" />
     <ClInclude Include="ServerData\StoreData.h" />
     <ClInclude Include="ServerDefine.h" />
