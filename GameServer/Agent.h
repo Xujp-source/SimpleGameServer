@@ -5,40 +5,35 @@
 #include "./ServerEngine/MessageHeader.hpp"
 #include <map>
 
-// Á¬½Ó¶ÔÏó»ùÀà
+// è¿æ¥å¯¹è±¡åŸºç±»
 class Agent
 {
 private:
 	int fd;
-
 public:
 	Agent();
 	virtual ~Agent();
-
 	void RegisterMessageHanler();
-
 public:
-	//ÍÆËÍÍøÂçÏûÏ¢
+	//æ¨é€ç½‘ç»œæ¶ˆæ¯
 	bool SendData(int MsgID, const google::protobuf::Message& pdata);
 
-	//ÉèÖÃsockfd
+	//è®¾ç½®sockfd
 	inline void SetFd(int sockfd) { fd = sockfd; }
 
-	//»ñµÃsockfd
+	//è·å¾—sockfd
 	inline int GetFd() { return fd; }
 
-	//ÊÇ·ñÊÇÍæ¼Ò¶ÔÏó
+	//æ˜¯å¦æ˜¯ç©å®¶å¯¹è±¡
 	virtual bool IsUser() { return false; }
-
 public:
-	//*******************ÏûÏ¢´¦Àí¶¨Òå**************************
-	bool OnMsgClientHeartReq(NetPacket* pack);	  //À´×ÔClientµÄĞÄÌøÇëÇó
+	//*******************æ¶ˆæ¯å¤„ç†å®šä¹‰**************************
+	bool OnMsgClientHeartReq(NetPacket* pack);	  //æ¥è‡ªClientçš„å¿ƒè·³è¯·æ±‚
 	//*********************************************************
-	
 public:
-	//ÍøÂçÏûÏ¢±Ã
+	//ç½‘ç»œæ¶ˆæ¯æ³µ
 	CHandlerManager m_NetMessagePump;
-	//»Øµ÷ÊÂ¼ş
+	//å›è°ƒäº‹ä»¶
 	CEventHandler m_EventPump;
 
 };
