@@ -6,62 +6,48 @@
 class GameScene
 {
 private:
-	//³¡¾°uid
+	//åœºæ™¯uid
 	unsigned long long m_uid;
-
 public:
 	GameScene();
-
 	virtual ~GameScene();
-
 	void RegisterMessageHanler();
-
-	//³õÊ¼»¯³¡¾°¶ÔÏó
+	//åˆå§‹åŒ–åœºæ™¯å¯¹è±¡
 	bool Init();
-
-	//´¦ÀíÕ½¶·×´Ì¬
+	//å¤„ç†æˆ˜æ–—çŠ¶æ€
 	bool BATTLECommand();
-
-	//Õ½¶·½áÊø
+	//æˆ˜æ–—ç»“æŸ
 	bool BATTLEFinish();
-
-	//Õ½¶·ÊÇ·ñ³¬Ê±¼ì²â
+	//æˆ˜æ–—æ˜¯å¦è¶…æ—¶æ£€æµ‹
 	bool BATTLETimeOutCheck();
-
-	//ÊÇ·ñ½øÈëÏÂÒ»»ØºÏ¼ì²â
+	//æ˜¯å¦è¿›å…¥ä¸‹ä¸€å›åˆæ£€æµ‹
 	bool BATTLENextRoundCheck();
-
-	//Ö´ĞĞÕ½¶·Ö¸Áî
+	//æ‰§è¡Œæˆ˜æ–—æŒ‡ä»¤
 	bool ExecBATTLECommand();
-
 public:
-	//»ñÈ¡³¡¾°uid
+	//è·å–åœºæ™¯uid
 	inline int GetUid() { return m_uid; }
-
-	//ÉèÖÃ³¡¾°uid
+	//è®¾ç½®åœºæ™¯uid
 	inline void SetUid(int uid) { m_uid = uid; }
-
 public:
-	//*******************ÏûÏ¢´¦Àí¶¨Òå**************************
-	bool OnMsgCommandSkillReq(NetPacket* pack);         //ÊÍ·Å¼¼ÄÜÇëÇó
-	bool OnMsgCommandDefineReq(NetPacket* pack);        //·ÀÓùÇëÇó
-	bool OnMsgCommandUsingReq(NetPacket* pack);         //Ê¹ÓÃµÀ¾ßÇëÇó
-	bool OnMsgCommandChangeCardReq(NetPacket* pack);    //ÇĞ»»¿¨ÅÆÇëÇó
-	bool OnMsgCommandEscapeReq(NetPacket* pack);        //ÌÓÅÜÇëÇó
+	//*******************æ¶ˆæ¯å¤„ç†å®šä¹‰**************************
+	bool OnMsgCommandSkillReq(NetPacket* pack);         //é‡Šæ”¾æŠ€èƒ½è¯·æ±‚
+	bool OnMsgCommandDefineReq(NetPacket* pack);        //é˜²å¾¡è¯·æ±‚
+	bool OnMsgCommandUsingReq(NetPacket* pack);         //ä½¿ç”¨é“å…·è¯·æ±‚
+	bool OnMsgCommandChangeCardReq(NetPacket* pack);    //åˆ‡æ¢å¡ç‰Œè¯·æ±‚
+	bool OnMsgCommandEscapeReq(NetPacket* pack);        //é€ƒè·‘è¯·æ±‚
 	//*********************************************************
-
 public:
-	//µ±Ç°µÄÄ£Ê½
+	//å½“å‰çš„æ¨¡å¼
 	int Mode;
-	//³¡ÉÏÕóÓª
+	//åœºä¸Šé˜µè¥
 	BattleSide Side[BATTLE_SIDE_COUNT];
-	//µ±Ç°Õ½¶·»ØºÏÊı
+	//å½“å‰æˆ˜æ–—å›åˆæ•°
 	int RoundCount;
-	//µ±Ç°»ØºÏÖ¸ÁîµÄ²Ù×÷½áÊøÊ±¼ä´Á
+	//å½“å‰å›åˆæŒ‡ä»¤çš„æ“ä½œç»“æŸæ—¶é—´æˆ³
 	unsigned long long RoundEndTime;
-	//Õ½¶·³ÖĞøµÄ×î´óÊ±¼ä(½áÊøÊ±¼ä´Á)
+	//æˆ˜æ–—æŒç»­çš„æœ€å¤§æ—¶é—´(ç»“æŸæ—¶é—´æˆ³)
 	unsigned long long EndTime;
-
 };
 
 #endif
